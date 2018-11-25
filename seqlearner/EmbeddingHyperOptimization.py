@@ -31,17 +31,19 @@ def embed(labeled_data, unlabeled_data):
     k = {{choice([2, 3, 4, 5, 6, 7, 8, 9, 10])}}
     epoch = {{choice([50])}}
     func = {{choice(["sum", "weighted_sum", "average", "weighted_average"])}}
-
+    window_size = {{choice([5, 10, 15])}}
+    lr = {{choice([.1, .2, 1e-2, 1e-3])}}
+    wordNgrams = {{choice([i for i in range(5, 16)])}}
     options = {}
     if embedding is "freq2vec":
         options = {"func": func, "emb_dim": emb_dim,
                    "gamma": 0.1, "epochs": epoch}
     elif embedding is "sent2vec":
-        options = {"func": func, "emb_dim": emb_dim}
+        options = {"func": func, "emb_dim": emb_dim, "lr": lr, "wordNgrams": wordNgrams}
     elif embedding is "skipgram":
-        options = {"func": func, "emb_dim": emb_dim}
+        options = {"func": func, "emb_dim": emb_dim, "window_size": window_size}
     elif options is "word2vec":
-        options = {"func": func, "emb_dim": emb_dim}
+        options = {"func": func, "emb_dim": emb_dim, "window_size": window_size}
 
     mtl = MultiTaskLearner(labeled_data, unlabeled_data)
     mtl.learner(word_length=word_length, k=k, embedding=embedding, ssl=None, **options)
