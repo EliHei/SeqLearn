@@ -1,4 +1,4 @@
-# SeqLearner
+# SeqLearner [![PyPI version](https://badge.fury.io/py/seqlearner.svg)](https://badge.fury.io/py/seqlearner)
 The multitask learning package for semi-supervised learning on biological sequences
 
 <div float="left">
