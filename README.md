@@ -8,11 +8,11 @@ The multitask learning package for semi-supervised learning on biological sequen
 <div float="right">
 </div>
 
-### Introduction
+## Introduction
 A tensorflow implementation of multitask learning package for semi-supervised learning on biological sequences
 
 
-### Getting Started
+## Getting Started
 
 ## Installation
 ```python
@@ -20,14 +20,14 @@ pip install seqlearner
 ```
 
 
-### File Illustration
+## File Illustration
 This repo is divided into 3 directories.
  1. The `seqlearner` directory contains all codes and jupyter notebooks.
  2. The `seqlearner/data/` directory is place where data is in.
  3. The `seqlearner/results/` directory contains all results plots, Logs and etc.
 
 
-### Sample Example
+## Sample Example
 After Embedding the protein sequences with embedding methods, we provide some visualization for it. TSNE and UMAP have been used for visualizing embedding of 2 protein families to gather some evaluation about the embedding.
 With this evaluation we want to get some intuition about how well protein families are seperated via this embedding and the corresponding function.
 
