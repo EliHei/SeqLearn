@@ -342,8 +342,7 @@ class MultiTaskLearner:
             protein_family_freq = pd.Series(self.labels).value_counts().iloc[0]
         else:
             protein_family = family
-            print(pd.Series(self.labels).value_counts().index.tolist())
-            protein_family_freq = pd.Series(self.labels).value_counts().loc[family, :]
+            protein_family_freq = pd.Series(self.labels).value_counts().loc[family]
         random_samples = np.random.choice(len(self.labels), int(proportion * protein_family_freq), replace=False)
         embedding_weights = pd.DataFrame(self.embedding)
         embedding_weights = pd.concat(
@@ -387,5 +386,4 @@ class MultiTaskLearner:
         plt.plot(xs[1], ys[1], 'o', label=labels[1], markersize=14)
         plt.legend()
         plt.savefig(path + "%s_%s.pdf" % (method, self.func))
-        plt.show()
         print("The plot has been saved in " + path)

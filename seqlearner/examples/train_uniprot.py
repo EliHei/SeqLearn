@@ -43,8 +43,8 @@ def train():
 
     freq2vec_embedding = mtl.embed(word_length=3, embedding="freq2vec", func="weighted_average", emb_dim=25, gamma=0.1,
                                    epochs=1)
-    mtl.visualize(method="TNSE", family="DEFL family", proportion=2.0)
-    mtl.visualize(method="UMAP", family="DEFL family", proportion=2.0)
+    mtl.visualize(method="TNSE", family="ATCase/OTCase family", proportion=2.0)
+    mtl.visualize(method="UMAP", family="ATCase/OTCase family", proportion=2.0)
     # class_scores, overall_score, class_freqs = mtl.learner(3, 5, "freq2vec", "label_spreading", func="sum", emb_dim=2,
     #                                                        gamma=0.1, epochs=1)
 
