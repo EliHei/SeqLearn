@@ -47,3 +47,5 @@ This will save a plot for you in `seqlearner/results/` folder which the points a
 <embed src="./seqlearner/results/visualization/Freq2Vec/weighted_average/DEFL family/UMAP_weighted_average.pdf" width="500" height="375"
  type='application/pdf'>
 </div>
+
+[[seqlearner/results/visualization/Freq2Vec/weighted_average/DEFL family/UMAP_weighted_average.pdf]]
