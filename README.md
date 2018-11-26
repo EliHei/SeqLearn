@@ -42,4 +42,4 @@ visualize(method="TSNE", proportion=2.0)
 ```
 This will save a plot for you in `seqlearner/results/` folder which the points are samples from 2 protein families which has the most samples in the dataset. Here is a sample plot.
 
-![Alt text](seqlearner/results/visualization/Freq2Vec/Temp/DEFL family/UMAP_DEFL family_weighted_average.pdf?raw=true "UMAP Visualization of DEFL family against other protein families")
+![](seqlearner/results/visualization/Freq2Vec/Temp/DEFL family/UMAP_DEFL family_weighted_average.pdf?raw=true)
