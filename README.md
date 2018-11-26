@@ -29,7 +29,7 @@ This repo is divided into 3 directories.
 
 ## Sample Example
 After Embedding the protein sequences with embedding methods, we provide some visualization for it. TSNE and UMAP have been used for visualizing embedding of 2 protein families to gather some evaluation about the embedding.
-With this evaluation we want to get some intuition about how well protein families are seperated via this embedding and the corresponding function.
+With this evaluation we want to give some intuition about how well protein families are seperated via this embedding and the corresponding function.
 
 Here is a simple example for calculating the embedding using `Freq2Vec` and visualize it via `TSNE` method.
 First, you have to calculate and save the embedding via `learner` method.
@@ -41,3 +41,5 @@ after calculating the freq2vec embedding with 25 dimensions, we would like to vi
 visualize(method="TSNE", proportion=2.0)
 ```
 This will save a plot for you in `seqlearner/results/` folder which the points are samples from 2 protein families which has the most samples in the dataset. Here is a sample plot.
+
+![Alt text](seqlearner/results/visualization/Freq2Vec/Temp/DEFL family/UMAP_DEFL family_weighted_average.pdf?raw=true "UMAP Visualization of DEFL family against other protein families")
