@@ -1,5 +1,6 @@
 from keras.optimizers import Adam
 import numpy as np
+import pandas as pd
 
 class WordEmbedder:
     def __init__(self, sequences, word_length, window_size, emb_dim, loss, epochs):
@@ -13,6 +14,7 @@ class WordEmbedder:
         self.adj_matrix = None
         self.corpus = []
         self.vocab = set()
+        self.vocabulary = pd.Series()
         self.sentences = []
         self.embedding_layer = None
         self.__corpus_maker()
@@ -40,12 +42,11 @@ class WordEmbedder:
         self.input = self.sentences
         self.vocab = dict(list(enumerate(self.vocab)))
         self.vocab_aux = self.vocab
+        self.vocab_indices = list(v for k, v in self.vocab.items())
         self.vocab = dict((v, k) for k, v in self.vocab.items())
         self.corpus = list(map(lambda x: list(map(lambda y: self.vocab.get(y, -1), x)), self.corpus))
         self.sentences = list(map(lambda x: list(map(lambda y: self.vocab.get(y, -1), x)), self.sentences))
         self.__freq_calc()
-        print(np.array(self.sentences).shape)
-        print(np.array(self.corpus).shape)
 
 
     def __neighbor_counter(self, idx, word_list):

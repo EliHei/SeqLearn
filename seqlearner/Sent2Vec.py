@@ -34,7 +34,7 @@ class Sent2Vec:
 
     def sent2vec(self):
         self.__corpus_maker()
-        embed = ('../fastText/./fasttext sent2vec'
+        embed = ('./fastText/./fasttext sent2vec'
                  ' -input ../aux/Sent2Vec_sentences_aux.txt'
                  ' -output ../models/sent2vec'
                  ' -dim {}'

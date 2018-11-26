@@ -26,8 +26,8 @@ def preprocess():
 
     n_samples = data.shape[0]
     print(data["Protein families"].value_counts().shape[0])
-    labeled_data = data.iloc[:n_samples - 1, :]
-    unlabeled_data = data.iloc[n_samples - 1:, :]
+    labeled_data = data.iloc[:n_samples // 100, :]
+    unlabeled_data = data.iloc[n_samples // 100: n_samples // 100 + 1, :]
 
     pd.DataFrame.to_csv(labeled_data, data_path + "labeled.csv", header=["sequence", "label"])
     pd.DataFrame.to_csv(pd.DataFrame(unlabeled_data["Sequence"]), data_path + "unlabeled.csv",
@@ -39,8 +39,12 @@ def preprocess():
 
 def train():
     np.seterr(divide='ignore', invalid='ignore')
-    mtl = MultiTaskLearner(data_path + "labeled_batch.csv", data_path + "unlabeled_batch.csv")
+    mtl = MultiTaskLearner(data_path + "labeled.csv", data_path + "unlabeled.csv")
 
+    freq2vec_embedding = mtl.embed(word_length=3, embedding="freq2vec", func="weighted_average", emb_dim=25, gamma=0.1,
+                                   epochs=1)
+    mtl.visualize(method="TNSE", family="DEFL family", proportion=2.0)
+    mtl.visualize(method="UMAP", family="DEFL family", proportion=2.0)
     # class_scores, overall_score, class_freqs = mtl.learner(3, 5, "freq2vec", "label_spreading", func="sum", emb_dim=2,
     #                                                        gamma=0.1, epochs=1)
 
@@ -76,17 +80,17 @@ def train():
     #                         random_state=None, shrinking=True,
     #                         tol=0.001, verbose=False))
 
-    mtl.learner(3, 5, "sent2vec", "pseudo_labeling", emb_dim=50,
-                file="../data/skipgram_embedding_50_10_3.txt",
-                func="weighted_average", sample_rate=0.0,
-                alg=svm.SVC(C=1.0, cache_size=200, class_weight=None,
-                            coef0=0.0,
-                            decision_function_shape='ovr', degree=3,
-                            gamma='auto', kernel='rbf',
-                            max_iter=-1, probability=False,
-                            random_state=None, shrinking=True,
-                            tol=0.001, verbose=False))
-
+    # mtl.learner(3, 5, "sent2vec", "pseudo_labeling", emb_dim=50,
+    #             file="../data/skipgram_embedding_50_10_3.txt",
+    #             func="weighted_average", sample_rate=0.0,
+    #             alg=svm.SVC(C=1.0, cache_size=200, class_weight=None,
+    #                         coef0=0.0,
+    #                         decision_function_shape='ovr', degree=3,
+    #                         gamma='auto', kernel='rbf',
+    #                         max_iter=-1, probability=False,
+    #                         random_state=None, shrinking=True,
+    #                         tol=0.001, verbose=False))
+    #
     # mtl.learner(3, 5, "load_embedding", "pseudo_labeling",
     #             file="../data/skipgram_embedding_50_10_3.txt",
     #             func="average", sample_rate=0.0,
@@ -239,7 +243,8 @@ def classify():
     scores = pd.DataFrame(pd.concat([scores, scores_2], axis=1))
     print(scores)
     for idx, family in enumerate(families):
-        print(family + " & " + "%.2f%% & %.4f & %.4f & " % (100 * scores.iloc[idx, 0], scores.iloc[idx, 1], scores.iloc[idx, 2]), end="")
+        print(family + " & " + "%.2f%% & %.4f & %.4f & " % (
+            100 * scores.iloc[idx, 0], scores.iloc[idx, 1], scores.iloc[idx, 2]), end="")
         print("%.2f%% & %.4f & %.4f \\\\" % (100 * scores.iloc[idx, 3], scores.iloc[idx, 4], scores.iloc[idx, 5]))
     scores["family"] = families
     # scores = mtl.classify(method="GradientBoosting", embedding="Freq2Vec", func="weighted_average")
@@ -253,7 +258,7 @@ def classify():
 if __name__ == '__main__':
     preprocess()
     # classify()
-    # train()
+    train()
     # visualization(embedding_path="../data/uniprot/Skipgram_weighted_average_Encoding.csv", method="UMAP", func="weighted_average")
     # visualization(embedding_path="../data/uniprot/Freq2Vec_weighted_average_Encoding.csv", method="UMAP",
     #               func="weighted_average")

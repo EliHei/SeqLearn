@@ -1,3 +1,4 @@
+import os
 import sys
 from functools import reduce
 
@@ -5,6 +6,7 @@ import numpy as np
 import pandas as pd
 import pomegranate as pm
 import umap
+from matplotlib import pyplot as plt
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.manifold import TSNE
@@ -13,8 +15,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 
-from .Embedding import Embedding
-from .SemiSupervisedLearner import SemiSupervisedLearner
+from seqlearner.Embedding import Embedding
+from seqlearner.SemiSupervisedLearner import SemiSupervisedLearner
 
 sys.setrecursionlimit(35000)
 
@@ -49,17 +51,18 @@ class MultiTaskLearner:
         self.classes = list(set(self.labels))
         self.classes.remove(-1)
         self.sequences = self.seq_labeled + self.seq_unlabeled
-        self.embedding = None
+        self.embedding_method = None
         self.ssl = None
         self.class_freq = None
         self.class_scores = None
         self.overal_score = 0
 
     def learner(self, word_length, k, embedding, ssl, **options):
-        self.embedding = embedding
+        self.embedding_method = embedding
         self.ssl = ssl
+        self.func = options.get("func", None)
         print("Start embedding with " + embedding + " ...")
-        emb = self.__embedding(word_length, options)
+        self.embedding = self.embed(word_length, **options)
         print("Embedding has been finished!")
         if ssl is None:
             return
@@ -72,39 +75,44 @@ class MultiTaskLearner:
         # print(np.delete(np.array(labelings[0]), idx[0], 0).shape)
         # print(np.array(emb)[idx].shape, np.array(labelings[0])[idx].shape)
         scores = list(map(lambda labels: np.mean(list(map(
-            lambda i: self.__semi_supervised_learner(np.delete(np.stack(emb, axis=0), i, 0),
+            lambda i: self.__semi_supervised_learner(np.delete(np.stack(self.embedding, axis=0), i, 0),
                                                      np.delete(np.array(labels), i, 0),
-                                                     np.array(emb)[i],
+                                                     np.array(self.embedding)[i],
                                                      np.array(labels)[i], options), idx))),
                           labelings))
         self.class_scores = dict(zip(self.classes, scores))
         self.__calc_overal_score()
         return self.class_scores, self.overal_score, self.class_freq
 
-    def __embedding(self, word_length, options):
+    def embed(self, word_length, **options):
+        self.func = options.get("func", None)
+        if self.embedding_method is None:
+            if options.get("embedding", None) is None:
+                raise Exception("The embedding must have specified")
+            self.embedding_method = options.get("embedding", None)
         embed = Embedding(self.sequences, word_length)
-        if self.embedding is "skipgram":
-            embedding = embed.skipgram(
+        if self.embedding_method is "skipgram":
+            self.embedding = embed.skipgram(
                 func=options.get("func", "sum"),
                 window_size=options.get("window_size", 10),
                 emb_dim=options.get("emb_dim", 10),
                 loss=options.get("loss", "mean_squared_error"),
                 epochs=options.get("epochs", 100)
             )
-            return embedding
+            return self.embedding
 
-        elif self.embedding is "freq2vec":
-            embedding = embed.freq2vec(
+        elif self.embedding_method is "freq2vec":
+            self.embedding = embed.freq2vec(
                 func=options.get("func", "sum"),
                 window_size=options.get("window_size", 10),
                 emb_dim=options.get("emb_dim", 10),
                 loss=options.get("loss", "mean_squared_error"),
                 epochs=options.get("epochs", 100)
             )
-            return embedding
+            return self.embedding
 
-        elif self.embedding is "sent2vec":
-            embedding = embed.sent2vec(
+        elif self.embedding_method is "sent2vec":
+            self.embedding = embed.sent2vec(
                 emb_dim=options.get("emb_dim", 10),
                 epoch=options.get("epoch", 1000),
                 lr=options.get("lr", .2),
@@ -116,24 +124,26 @@ class MultiTaskLearner:
                 dropoutK=options.get("dropoutK", 4),
                 bucket=options.get("bucket", 400)
             )
-            return embedding
+            return self.embedding
 
-        elif self.embedding is "load_embedding":
-            embedding = embed.load_embedding(
+        elif self.embedding_method is "load_embedding":
+            self.embedding = embed.load_embedding(
                 func=options.get("func", "sum"),
                 file=options.get("file")
             )
-            return embedding
+            return self.embedding
 
-        elif self.embedding is "word2vec":
-            embedding = embed.word2vec(
+        elif self.embedding_method is "word2vec":
+            self.embedding = embed.word2vec(
                 func=options.get("func", "sum"),
                 window_size=options.get("window_size", 10),
                 emb_dim=options.get("emb_dim", 10),
                 workers=options.get("workers", 2),
                 epochs=options.get("epochs", 100)
             )
-            return embedding
+            return self.embedding
+        else:
+            raise Exception("Embedding method is not valid.")
 
     def __semi_supervised_learner(self, X, y, X_t, y_t, options):
         SSL = SemiSupervisedLearner(X, y, X_t, y_t)
@@ -326,12 +336,56 @@ class MultiTaskLearner:
         elif method is "UMAP":
             return self.__umap()
 
-    def visualize(self, embedding_method="Freq2Vec", method="TSNE"):
-        if embedding_method is "Skipgram":
-            pass
-        elif embedding_method is "Sent2Vec":
-            pass
-        elif embedding_method is "Freq2Vec":
-            pass
+    def visualize(self, method="TSNE", family=None, proportion=1.5):
+        if family is None:
+            protein_family = str(pd.Series(self.labels).value_counts().index[0])
+            protein_family_freq = pd.Series(self.labels).value_counts().iloc[0]
         else:
-            raise Exception("Please input a valid embedding name")
+            protein_family = family
+            print(pd.Series(self.labels).value_counts().index.tolist())
+            protein_family_freq = pd.Series(self.labels).value_counts().loc[family, :]
+        random_samples = np.random.choice(len(self.labels), int(proportion * protein_family_freq), replace=False)
+        embedding_weights = pd.DataFrame(self.embedding)
+        embedding_weights = pd.concat(
+            [embedding_weights.iloc[random_samples], embedding_weights.iloc[random_samples]],
+            axis=0)
+        protein_families = pd.DataFrame(self.labels, columns=["label"])
+        p_samples = protein_families[protein_families["label"] == protein_family].index.tolist()
+        protein_families = pd.concat([protein_families.iloc[random_samples], protein_families.iloc[p_samples]],
+                                     axis=0)
+        protein_families = pd.DataFrame(protein_families).reset_index()
+        if method == "TSNE":
+            tsne = TSNE(n_components=2)
+            embedding = tsne.fit_transform(embedding_weights)
+        else:
+            embedding = umap.UMAP(n_components=2, metric="correlation").fit_transform(embedding_weights)
+        embedding = pd.DataFrame(embedding)
+        embedding["label"] = protein_families["label"]
+        pfam_emb = embedding.loc[embedding["label"] == protein_family, [0, 1]]
+        pfam_emb_others = embedding.loc[embedding["label"] != protein_family, [0, 1]]
+        if protein_family.__contains__("/"):
+            protein_family = '-'.join(protein_family.split('/'))
+        self.__plot([pfam_emb[0], pfam_emb_others[0]], [pfam_emb[1], pfam_emb_others[1]],
+                    [protein_family, "Others"], method)
+
+    def __plot(self, xs, ys, labels, method="tsne"):
+        path = "../results/visualization/%s/%s/%s/" % (self.embedding_method, self.func, labels[0])
+        os.makedirs(path, exist_ok=True)
+        plt.close("all")
+        plt.figure(figsize=(30, 30))
+        plt.plot(xs[0], ys[0], 'ro', label=labels[0], markersize=14)
+        plt.legend()
+        plt.savefig(path + "%s_%s_%s.pdf" % (method, labels[0], self.func))
+        plt.close("all")
+        plt.figure(figsize=(30, 30))
+        plt.plot(xs[1], ys[1], 'bo', label=labels[1], markersize=14)
+        plt.legend()
+        plt.savefig(path + "%s_%s_%s.pdf" % (method, labels[1], self.func))
+        plt.close("all")
+        plt.figure(figsize=(30, 30))
+        plt.plot(xs[0], ys[0], 'o', label=labels[0], markersize=14)
+        plt.plot(xs[1], ys[1], 'o', label=labels[1], markersize=14)
+        plt.legend()
+        plt.savefig(path + "%s_%s.pdf" % (method, self.func))
+        plt.show()
+        print("The plot has been saved in " + path)

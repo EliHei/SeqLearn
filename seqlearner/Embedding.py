@@ -1,12 +1,12 @@
 import os
 
 import numpy as np
+import pandas as pd
 
-from .EmbeddingLoader import EmbeddingLoader
-from .Freq2Vec import Freq2Vec
-from .GensimWord2Vec import GensimWord2Vec
-from .Sent2Vec import Sent2Vec
-from .SkipGram import SkipGram
+from seqlearner.Freq2Vec import Freq2Vec
+from seqlearner.GensimWord2Vec import GensimWord2Vec
+from seqlearner.Sent2Vec import Sent2Vec
+from seqlearner.SkipGram import SkipGram
 
 
 class Embedding:
@@ -85,7 +85,7 @@ class Embedding:
         return self.encoding
 
     def load_embedding(self, func, file):
-        embed = EmbeddingLoader(self.sequences, self.word_length, file)
+        embed = Embedding(self.sequences, self.word_length, file)
         embed.embed()
         embed.__name__ = "LoadEmbedding"
         self.sentences = embed.sentences
@@ -130,8 +130,11 @@ class Embedding:
     def __save_embedding(self, embedding=None, file_path="../results/embeddings/"):
         if embedding is None:
             raise Exception("embedding has to be a WordEmbedder child class like Freq2Vec, ... .")
-        file_path += embedding.__name__
+        file_path += embedding.__name__ + "/"
         os.makedirs(file_path, exist_ok=True)
-        save_path = file_path + "_".join(
+        embedding_weights = pd.concat([pd.Series(embedding.vocab_indices), pd.DataFrame(embedding.embedding_layer)],
+                                      axis=1)
+        embedding_weights.columns = ["words"] + ["dim_%d" % i for i in range(embedding.emb_dim)]
+        save_path = file_path + embedding.__name__ + "_" + "_".join(
             [str(embedding.emb_dim), str(embedding.window_size), str(embedding.word_length)]) + ".csv"
-        np.savetxt(fname=save_path, X=embedding.embedding_layer, delimiter=',')
+        embedding_weights.to_csv(save_path)

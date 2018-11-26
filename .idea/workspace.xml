@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="" />
+    <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="delete">
+      <change afterPath="$PROJECT_DIR$/seqlearner/EmbeddingLoader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seqlearner/Embedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/seqlearner/Embedding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seqlearner/MultiTaskLearner.py" beforeDir="false" afterPath="$PROJECT_DIR$/seqlearner/MultiTaskLearner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seqlearner/Sent2Vec.py" beforeDir="false" afterPath="$PROJECT_DIR$/seqlearner/Sent2Vec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seqlearner/WordEmbedder.py" beforeDir="false" afterPath="$PROJECT_DIR$/seqlearner/WordEmbedder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seqlearner/examples/train_uniprot.py" beforeDir="false" afterPath="$PROJECT_DIR$/seqlearner/examples/train_uniprot.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -9,60 +18,92 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/SeqLearn$MultiTaskLearner.coverage" NAME="MultiTaskLearner Coverage Results" MODIFIED="1543234456562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner" />
+    <SUITE FILE_PATH="coverage/SeqLearn$train_uniprot.coverage" NAME="train_uniprot Coverage Results" MODIFIED="1543235216791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner/examples" />
+    <SUITE FILE_PATH="coverage/SeqLearn$EmbeddingHyperOptimization.coverage" NAME="EmbeddingHyperOptimization Coverage Results" MODIFIED="1543172359173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner" />
+    <SUITE FILE_PATH="coverage/SeqLearn$Embedding__1_.coverage" NAME="Embedding (1) Coverage Results" MODIFIED="1543230833653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MultiTaskLearner.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/MultiTaskLearner.py">
+      <file leaf-file-name="train_uniprot.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seqlearner/examples/train_uniprot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="660">
+              <caret line="248" column="31" selection-start-line="248" selection-start-column="31" selection-end-line="248" selection-end-column="31" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tester.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/tester.py">
+      <file leaf-file-name="MultiTaskLearner.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/seqlearner/MultiTaskLearner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+            <state relative-caret-position="353">
+              <caret line="357" column="39" lean-forward="true" selection-start-line="357" selection-start-column="39" selection-end-line="357" selection-end-column="39" />
               <folding>
-                <element signature="e#0#46#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PseudoLabeler.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/PseudoLabeler.py">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+            <state relative-caret-position="333">
+              <caret line="42" column="180" selection-start-line="42" selection-start-column="180" selection-end-line="42" selection-end-column="180" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmbeddingHyperOptimization.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seqlearner/EmbeddingHyperOptimization.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SkipGram.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/SkipGram.py">
+      <file leaf-file-name="Embedding.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seqlearner/Embedding.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="100" column="13" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="13" />
+            <state relative-caret-position="380">
+              <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SemiSupervisedLearner.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/code/SemiSupervisedLearner.py">
+      <file leaf-file-name="EmbeddingLoader.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seqlearner/EmbeddingLoader.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="Freq2Vec.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seqlearner/Freq2Vec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="-257">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WordEmbedder.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seqlearner/WordEmbedder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,10 +133,17 @@
       <find>xrange</find>
       <find>pri</find>
       <find>print</find>
+      <find>EmbeddingLoader</find>
+      <find>freq2vec</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="a956aa955f0f6a01487f83aace0bc5607738e10a" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -123,18 +171,37 @@
         <option value="$PROJECT_DIR$/semisup/methods/scikitTSVM.py" />
         <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/methods/qns3vm.py" />
         <option value="$PROJECT_DIR$/code/SemiSupervisedLearner.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/seqlearner/Freq2Vec.py" />
+        <option value="$PROJECT_DIR$/seqlearner/__init__.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/seqlearner/EmbeddingHyperOptimization.py" />
+        <option value="$PROJECT_DIR$/seqlearner/WordEmbedder.py" />
+        <option value="$PROJECT_DIR$/seqlearner/Sent2Vec.py" />
+        <option value="$PROJECT_DIR$/seqlearner/Embedding.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/seqlearner/examples/train_uniprot.py" />
+        <option value="$PROJECT_DIR$/seqlearner/MultiTaskLearner.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="x" value="494" />
+    <option name="y" value="22" />
+    <option name="width" value="714" />
+    <option name="height" value="825" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -142,8 +209,17 @@
         <subPane>
           <expand>
             <path>
-              <item name="Deepoo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Deepoo" type="462c0819:PsiDirectoryNode" />
+              <item name="SeqLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeqLearn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SeqLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeqLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="seqlearner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SeqLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -179,12 +255,128 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/seqlearner" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/README.md</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -198,56 +390,59 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.tester">
-    <configuration name="Embedding" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Deepoo" />
+  <component name="RunManager" selected="Python.train_uniprot">
+    <configuration name="Embedding (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SeqLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/seqlearner" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/Embedding.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/seqlearner/Embedding.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="skipgram_V2 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Deepoo" />
+    <configuration name="EmbeddingHyperOptimization" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SeqLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/seqlearner" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/SkipGram.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/seqlearner/EmbeddingHyperOptimization.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="skipgram_V2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Deepoo" />
+    <configuration name="MultiTaskLearner" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SeqLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../skipgram/codes" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/seqlearner" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../skipgram/codes/skipgram_V2.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/seqlearner/MultiTaskLearner.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -265,44 +460,46 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="tester" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Deepoo" />
+    <configuration name="train_uniprot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SeqLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/seqlearner/examples" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/tester.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/seqlearner/examples/train_uniprot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.skipgram_V2" />
-      <item itemvalue="Python.skipgram_V2 (1)" />
-      <item itemvalue="Python.tester" />
-      <item itemvalue="Python.Embedding" />
       <item itemvalue="Python.test" />
+      <item itemvalue="Python.train_uniprot" />
+      <item itemvalue="Python.EmbeddingHyperOptimization" />
+      <item itemvalue="Python.MultiTaskLearner" />
+      <item itemvalue="Python.Embedding (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.tester" />
+        <item itemvalue="Python.train_uniprot" />
+        <item itemvalue="Python.MultiTaskLearner" />
+        <item itemvalue="Python.Embedding (1)" />
+        <item itemvalue="Python.EmbeddingHyperOptimization" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.Embedding" />
-        <item itemvalue="Python.skipgram_V2 (1)" />
-        <item itemvalue="Python.skipgram_V2" />
       </list>
     </recent_temporary>
   </component>
@@ -312,6 +509,9 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="" />
+      <changelist id="" name="Add package modules (change to package structure)" comment="" />
+      <changelist id="" name="Add package modules (change to package structure)" comment="" />
+      <changelist id="" name="version 0.0.2 release" comment="" />
       <created>1528704254029</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -324,33 +524,139 @@
       <option name="project" value="LOCAL" />
       <updated>1529303145452</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add README.md">
+      <created>1543172555035</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1543172555035</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add package modules (change to package structure)">
+      <created>1543172637940</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1543172637940</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add package modules (change to package structure)">
+      <created>1543173032635</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1543173032635</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add package modules (change to package structure)">
+      <created>1543173191695</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1543173191695</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Delete unnecessary files">
+      <created>1543173568490</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1543173568490</updated>
+    </task>
+    <task id="LOCAL-00007" summary="delete unnecessary files">
+      <created>1543173710299</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1543173710299</updated>
+    </task>
+    <task id="LOCAL-00008" summary="delete unnecessary files">
+      <created>1543173847276</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1543173847276</updated>
+    </task>
+    <task id="LOCAL-00009" summary="version 0.0.2 release">
+      <created>1543174701454</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1543174701454</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update embedding hyper-parameters for each embedding algorithm">
+      <created>1543182974777</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1543182974777</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32969698" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50208336" side_tool="true" weight="0.32900944" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" visible="true" weight="0.32900944" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Python Console" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16388889" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49791667" visible="true" weight="0.43878788" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32969698" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.32969698" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32969698" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26752505" />
       <window_info anchor="right" id="R Packages" order="4" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32900944" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32848486" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.3297568" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -360,165 +666,24 @@
       <path value="$PROJECT_DIR$/semisup" />
     </ignored-roots>
     <MESSAGE value="start" />
-    <option name="LAST_COMMIT_MESSAGE" value="start" />
+    <MESSAGE value="Add README.md" />
+    <MESSAGE value="Add package modules (change to package structure)" />
+    <MESSAGE value="Delete unnecessary files" />
+    <MESSAGE value="delete unnecessary files" />
+    <MESSAGE value="version 0.0.2 release" />
+    <MESSAGE value="update embedding hyper-parameters for each embedding algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="update embedding hyper-parameters for each embedding algorithm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/SkipGram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/SemiSupervisedLearner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/SkipGram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/data_preprocess.py" />
-    <entry file="file://$PROJECT_DIR$/code/Embedding.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="40" column="231" selection-start-line="40" selection-start-column="231" selection-end-line="40" selection-end-column="231" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/SemiSupervisedLearner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/SkipGram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="93" column="80" selection-start-line="93" selection-start-column="80" selection-end-line="93" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/data_preprocess.py" />
-    <entry file="file://$PROJECT_DIR$/code/Embedding.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/SemiSupervisedLearner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/SkipGram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="93" column="80" selection-start-line="93" selection-start-column="80" selection-end-line="93" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/data_preprocess.py" />
-    <entry file="file://$PROJECT_DIR$/code/Embedding.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="62" column="21" lean-forward="true" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/SemiSupervisedLearner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/SkipGram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="93" column="80" selection-start-line="93" selection-start-column="80" selection-end-line="93" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/data_preprocess.py" />
-    <entry file="file://$PROJECT_DIR$/code/Embedding.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_preprocess.py" />
-    <entry file="file://$PROJECT_DIR$/../skipgram/codes/skipgram-pep2vec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_preprocess.py" />
-    <entry file="file://$PROJECT_DIR$/../skipgram/codes/skipgram-pep2vec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_preprocess.py" />
-    <entry file="file://$PROJECT_DIR$/../skipgram/codes/skipgram-pep2vec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skipgram/codes/skipgram-pep2vec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/-1410993762/pomegranate/NaiveBayes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="110" column="16" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../skipgram/codes/skipgram-pep2vec.py" />
+    <entry file="file://$PROJECT_DIR$/../skipgram/codes/skipgram-pep2vec.py" />
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/-1410993762/pomegranate/NaiveBayes.py" />
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/keras/preprocessing/text.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-126">
@@ -530,13 +695,7 @@
     <entry file="file://$PROJECT_DIR$/PseudoLabeler.py" />
     <entry file="file://$PROJECT_DIR$/data_preprocess.py" />
     <entry file="file://$PROJECT_DIR$/SeqLearner.py" />
-    <entry file="file://$PROJECT_DIR$/../skipgram/codes/skipgram_V2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../skipgram/codes/skipgram_V2.py" />
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/io/parsers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -560,26 +719,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="6" column="72" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/Embedding.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/-1410993762/pomegranate/bayes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9228" />
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/-1410993762/pomegranate/bayes.py" />
     <entry file="file://$PROJECT_DIR$/code/tester.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -590,57 +733,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sklearn/semi_supervised/label_propagation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4200">
-          <caret line="293" selection-start-line="293" selection-end-line="293" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sklearn/semi_supervised/label_propagation.py" />
     <entry file="file://$PROJECT_DIR$/semisup/methods/scikitTSVM.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
           <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/methods/qns3vm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="768" column="27" selection-start-line="768" selection-start-column="22" selection-end-line="768" selection-end-column="27" />
-          <folding>
-            <element signature="e#2860#2879#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sklearn/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
-          <caret line="175" column="6" selection-start-line="175" selection-start-column="6" selection-end-line="175" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/-1410993762/pomegranate/BayesClassifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/MultiTaskLearner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/methods/qns3vm.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sklearn/base.py" />
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/-1410993762/pomegranate/BayesClassifier.py" />
     <entry file="file://$PROJECT_DIR$/code/PseudoLabeler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -651,19 +754,186 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/code/SemiSupervisedLearner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/code/SkipGram.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
+        <state relative-caret-position="1440">
           <caret line="100" column="13" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/SemiSupervisedLearner.py">
+    <entry file="file://$PROJECT_DIR$/code/MultiTaskLearner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="390">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="13" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/Embedding.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/aux/Freq2Vec_vocab_aux.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner.egg-info/PKG-INFO">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Deep-Clustering/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" lean-forward="true" selection-start-line="10" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/pandas/io/parsers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="716" selection-start-line="716" selection-end-line="716" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/tester.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/test.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/SkipGram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/WordEmbedder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/lib/seqlearner/Embedding.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/EmbeddingLoader.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/pandas/core/reshape/concat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="211" selection-start-line="211" selection-end-line="211" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/Sent2Vec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/Freq2Vec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-257">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/EmbeddingHyperOptimization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/Embedding.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="42" column="180" selection-start-line="42" selection-start-column="180" selection-end-line="42" selection-end-column="180" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/examples/train_uniprot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="248" column="31" selection-start-line="248" selection-start-column="31" selection-end-line="248" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/MultiTaskLearner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="357" column="39" lean-forward="true" selection-start-line="357" selection-start-column="39" selection-end-line="357" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
