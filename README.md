@@ -27,7 +27,7 @@ This repo is divided into 3 directories.
  3. The `seqlearner/results/` directory contains all results plots, Logs and etc.
 
 
-## Sample Example
+## Examples
 After Embedding the protein sequences with embedding methods, we provide some visualization for it. TSNE and UMAP have been used for visualizing embedding of 2 protein families to gather some evaluation about the embedding.
 With this evaluation we want to give some intuition about how well protein families are seperated via this embedding and the corresponding function.
 
