@@ -47,8 +47,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+            <state relative-caret-position="705">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
         </entry>
@@ -223,6 +223,46 @@
               <item name="SeqLearn" type="b2602c69:ProjectViewProjectNode" />
               <item name="SeqLearn" type="462c0819:PsiDirectoryNode" />
               <item name="seqlearner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SeqLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeqLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="seqlearner" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SeqLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeqLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="seqlearner" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="visualization" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SeqLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeqLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="seqlearner" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="visualization" type="462c0819:PsiDirectoryNode" />
+              <item name="Freq2Vec" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SeqLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeqLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="seqlearner" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="visualization" type="462c0819:PsiDirectoryNode" />
+              <item name="Freq2Vec" type="462c0819:PsiDirectoryNode" />
+              <item name="weighted_average" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SeqLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeqLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="seqlearner" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="visualization" type="462c0819:PsiDirectoryNode" />
+              <item name="Freq2Vec" type="462c0819:PsiDirectoryNode" />
+              <item name="weighted_average" type="462c0819:PsiDirectoryNode" />
+              <item name="DEFL family" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SeqLearn" type="b2602c69:ProjectViewProjectNode" />
@@ -530,7 +570,21 @@
       <option name="project" value="LOCAL" />
       <updated>1543237354726</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Fix minor bug in readme.md">
+      <created>1543237516906</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1543237516906</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Fix minor bug in readme.md">
+      <created>1543237645330</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1543237645330</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -835,8 +889,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+        <state relative-caret-position="705">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
