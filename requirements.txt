@@ -1,0 +1,7 @@
+numpy
+pandas
+tensorflow
+keras
+gensim
+pomegranate
+matplotlib
