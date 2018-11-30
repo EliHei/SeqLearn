@@ -8,6 +8,7 @@ from seqlearner.GensimWord2Vec import GensimWord2Vec
 from seqlearner.Sent2Vec import Sent2Vec
 from seqlearner.SkipGram import SkipGram
 
+
 class Embedding:
     """
         Embedding Algorithm to be instantiated. Algorithms are Skipgram, Freq2Vec,
