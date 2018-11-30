@@ -1,15 +1,53 @@
 from subprocess import Popen, PIPE
+
 import numpy as np
 import pandas as pd
 
 
 class Sent2Vec:
-    def __init__(self, sequences, word_length, emb_dim, epoch, lr, wordNgrams, loss, neg, thread, t,
+    """
+        Sent2Vec Embedding Method. This class is wrapper for Sent2Vec Embedding
+        method to apply on a set of sequences. Child class of WordEmbedder.
+
+        Parameters
+        ----------
+        sequences : numpy ndarray, list, or DataFrame
+           sequences of data like protein sequences
+        word_length : integer
+            The length of each word in sequences to be separated from each other.
+        emb_dim: integer
+            Number of embedding vector dimensions.
+        epochs: integer
+            Number of epochs for training the embedding.
+        lr: float
+                learning rate
+        wordNgrams: integer
+            max length of word n-gram
+        loss: {"ns", "hs", "softmax"}, default "ns"
+            loss function
+        neg: integer
+            number of negatives sampled
+        thread: integer
+            number of threads
+        t: float
+            sampling threshold
+        dropoutK: integer
+            number of n-grams dropped when training a sent2vec model
+        bucket: integer
+            number of hash buckets for vocabulary
+
+        See also
+        --------
+        Sent2Vec.sent2vec : compute Sent2Vec embedding using fasttext.
+
+    """
+
+    def __init__(self, sequences, word_length, emb_dim, epochs, lr, wordNgrams, loss, neg, thread, t,
                  dropoutK, bucket):
         self.sequences = sequences
         self.word_length = word_length
         self.emb_dim = emb_dim
-        self.epoch = epoch
+        self.epoch = epochs
         self.lr = lr
         self.wordNgrams = wordNgrams
         self.loss = loss
@@ -33,6 +71,25 @@ class Sent2Vec:
             out.write("\n".join(self.corpus))
 
     def sent2vec(self):
+        """
+            Train Embedding layer on vocabulary in order to get embedding weights
+            for each word in vocabulary. compress each in `emb_dim` vectors.
+
+            Parameters
+            ----------
+            No parameters are needed.
+
+            Returns
+            -------
+            encoding: list of embedding vectors for sentences
+
+            Example
+            --------
+            >>> import pandas as pd
+            >>> sequences = pd.read_csv("./sequences.csv", header=None)
+            >>> s2v = Sent2Vec(sequences, word_length=3, emb_dim=25, epoch=100, lr=0.2, wordNgrams=5, loss="hs", neg=20, thread=10, t=0.0000005, dropoutK=2, bucket=4000000)
+            >>> encoding = s2v.sent2vec()
+        """
         self.__corpus_maker()
         embed = ('./fastText/./fasttext sent2vec'
                  ' -input ../aux/Sent2Vec_sentences_aux.txt'
