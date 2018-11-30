@@ -22,6 +22,22 @@ sys.setrecursionlimit(35000)
 
 
 class MultiTaskLearner:
+    """
+        MultiTaskLearner is class for do both embedding and semi-supervised task.
+        It is a wrapper for Embedding and SemiSupervisedLearner.
+
+        Parameters
+        ----------
+        file_labeled : basestring, numpy ndarray, pandas DataFrame
+            labeled sequences' path or matrix of labeled sequences with labels
+        file_unlabeled : basestring, numpy ndarray, pandas DataFrame
+            unlabeled sequences' path or matrix of unlabeled sequences
+
+        See also
+        --------
+        MultiTaskLearner.learner : computes embedding and label the sequences respectively
+        MultiTaskLearner.embed : computes embedding with the specified embedding method
+    """
     def __init__(self, file_labeled, file_unlabeled):
         self.file_labeled = file_labeled
         self.file_unlabeled = file_unlabeled
@@ -55,9 +71,38 @@ class MultiTaskLearner:
         self.ssl = None
         self.class_freq = None
         self.class_scores = None
-        self.overal_score = 0
+        self.overall_score = 0
 
     def learner(self, word_length, k, embedding, ssl, **options):
+        """
+            Applies the specific embedding method with its hyper-parameters. Next, will train
+            a semi-supervised learning method and label the unlabeled sequences. Finally will
+            compute the scores of embedding predictions.
+
+            Parameters
+            ----------
+            word_length : integer
+                The length of words to be separated from each other in sequences
+            k : integer
+                Number of chunks in cross-validation
+            embedding : basestring
+                The embedding method for computing embedding the sequences
+            ssl : basestring
+                The semi-supervised learning method to be applied
+            options : dict
+                dict of hyper-parameters with values for embedding method and semi-supervised learning method
+
+            Returns
+            -------
+            scores, overall_scores, frequencies: matrix of class scores, overall scores, each class sample frequency
+
+            Example
+            --------
+            >>> labeled_path = "../data/labeled.csv"
+            >>> unlabeled_path = "../data/unlabeled.csv"
+            >>> mtl = MultiTaskLearner(labeled_path, unlabeled_path)
+            >>> scores, overall_scores, class_freqs = mtl.learner(word_length=5, k=10, embedding="freq2vec", ssl="label_spreading")
+        """
         self.embedding_method = embedding
         self.ssl = ssl
         self.func = options.get("func", None)
@@ -75,16 +120,37 @@ class MultiTaskLearner:
         # print(np.delete(np.array(labelings[0]), idx[0], 0).shape)
         # print(np.array(emb)[idx].shape, np.array(labelings[0])[idx].shape)
         scores = list(map(lambda labels: np.mean(list(map(
-            lambda i: self.__semi_supervised_learner(np.delete(np.stack(self.embedding, axis=0), i, 0),
-                                                     np.delete(np.array(labels), i, 0),
-                                                     np.array(self.embedding)[i],
-                                                     np.array(labels)[i], options), idx))),
+            lambda i: self.semi_supervised_learner(np.delete(np.stack(self.embedding, axis=0), i, 0),
+                                                   np.delete(np.array(labels), i, 0),
+                                                   np.array(self.embedding)[i],
+                                                   np.array(labels)[i], options), idx))),
                           labelings))
         self.class_scores = dict(zip(self.classes, scores))
         self.__calc_overal_score()
-        return self.class_scores, self.overal_score, self.class_freq
+        return self.class_scores, self.overall_score, self.class_freq
 
     def embed(self, word_length, **options):
+        """
+            Applies the embedding method on sequences with specified embedding method.
+
+            Parameters
+            ----------
+            word_length : integer
+                The length of words to be separated from each other in sequences
+            options : dict
+                dict of hyper-parameters with values for embedding method
+
+            Returns
+            -------
+            encoding : list of embedding vectors for each sentence
+
+            Example
+            --------
+            >>> labeled_path = "../data/labeled.csv"
+            >>> unlabeled_path = "../data/unlabeled.csv"
+            >>> mtl = MultiTaskLearner(labeled_path, unlabeled_path)
+            >>> encoding = mtl.embed(word_length=5)
+        """
         self.func = options.get("func", None)
         if self.embedding_method is None:
             if options.get("embedding", None) is None:
@@ -145,7 +211,36 @@ class MultiTaskLearner:
         else:
             raise Exception("Embedding method is not valid.")
 
-    def __semi_supervised_learner(self, X, y, X_t, y_t, options):
+    def semi_supervised_learner(self, X, y, X_t, y_t, options):
+        """
+            Applies the semi-supervised learning method on sequences.
+
+            Parameters
+            ----------
+            X : list, numpy ndarray, pandas DataFrame
+                list of training embedding vectors for learning
+            y : list, numpy ndarray, pandas DataFrame
+                list of training labels.
+            X_t : list, numpy ndarray, pandas DataFrame
+                list of test embedding vectors for learning
+            y_t : list, numpy ndarray, pandas DataFrame
+                list of test labels.
+            options : dict
+                dict of hyper-parameters with values for semi-supervised method
+
+            Returns
+            -------
+            score : the score of learning model on test data
+
+            Example
+            --------
+            >>> labeled_path = "../data/labeled.csv"
+            >>> unlabeled_path = "../data/unlabeled.csv"
+            >>> mtl = MultiTaskLearner(labeled_path, unlabeled_path)
+            >>> encoding = mtl.embed(word_length=5)
+            >>> X, y, X_t, y_t = train_test_split(mtl.sequences, mtl.labels, test_size=0.33)
+            >>> score = mtl.semi_supervised_learner(X, y, X_t, y_t)
+        """
         SSL = SemiSupervisedLearner(X, y, X_t, y_t)
         if self.ssl is "label_spreading":
             score = SSL.label_spreading(
@@ -261,9 +356,9 @@ class MultiTaskLearner:
         # for i in self.classes:
         #     self.overal_score = self.class_freq[i] * self.class_scores[i]
         normalized_scores = [self.class_freq[c] * self.class_scores[c] for c in self.classes]
-        self.overal_score = reduce(lambda x, y: x + y, normalized_scores)
+        self.overall_score = reduce(lambda x, y: x + y, normalized_scores)
 
-    def classify(self, embedding_path="../data/uniprot/", embedding="Freq2Vec", method="SVM",
+    def __classify(self, embedding_path="../data/uniprot/", embedding="Freq2Vec", method="SVM",
                  func="weighted_average"):
         def learn(x_data, label_name, classifier):
             y_data = self.__one_versus_all_maker_v2(label_name)
