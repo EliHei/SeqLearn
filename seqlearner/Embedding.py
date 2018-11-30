@@ -118,6 +118,7 @@ class Embedding:
 
             Example
             --------
+            >>> import pandas as pd
             >>> sequences = pd.read_csv("./sequences.csv", header=None)
             >>> embed = Embedding(sequences, word_length=5)
             >>> skipgram_embedding = embed.freq2vec(func="sum", window_size=50, emb_dim=25, loss="mean_squared_error", epochs=250)
@@ -166,6 +167,7 @@ class Embedding:
 
             Example
             --------
+            >>> import pandas as pd
             >>> sequences = pd.read_csv("./sequences.csv", header=None)
             >>> embed = Embedding(sequences, word_length=5)
             >>> skipgram_embedding = embed.word2vec(func="sum", window_size=50, emb_dim=25, workers=2, epochs=250)
@@ -224,6 +226,7 @@ class Embedding:
 
             Example
             --------
+            >>> import pandas as pd
             >>> sequences = pd.read_csv("./sequences.csv", header=None)
             >>> embed = Embedding(sequences, word_length=5)
             >>> skipgram_embedding = embed.sent2vec(emb_dim=50, epochs=1000, lr=0.5, wordNgrams=5, loss="ns", neg=10, thread=10, t=0.000005, dropoutK=4, bucket=4000000)
@@ -254,6 +257,7 @@ class Embedding:
 
             Example
             --------
+            >>> import pandas as pd
             >>> sequences = pd.read_csv("./sequences.csv", header=None)
             >>> embed = Embedding(sequences, word_length=5)
             >>> skipgram_embedding = embed.load_embedding(func="weighted_average", file="./embedding.csv")
