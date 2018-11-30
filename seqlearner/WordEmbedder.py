@@ -1,8 +1,38 @@
-from keras.optimizers import Adam
 import numpy as np
 import pandas as pd
+from keras.optimizers import Adam
+
 
 class WordEmbedder:
+    """
+        WordEmbedder is a helper class for every embedding algorithms. It
+        does extract all possible words, adjacency matrix, corpus from
+        the given sequences. It is parent class of SkipGram, Freq2Vec, GensimWord2Vec.
+
+        Parameters
+        ----------
+        sequences : numpy ndarray, list, or DataFrame
+           sequences of data like protein sequences
+        word_length : integer
+            The length of each word in sequences to be separated from each other.
+        window_size: integer
+            Size of window for counting the number of neighbors.
+        emb_dim: integer
+            Number of embedding vector dimensions.
+        loss: basestring
+            The loss function is going to be used on training phase.
+        epochs: integer
+            Number of epochs for training the embedding.
+
+        See also
+        --------
+        SkipGram : Skipgram Embedding
+        Freq2Vec : Freq2Vec Embedding
+        GensimWord2Vec : Word2Vec Embedding
+        Sent2Vec : Sent2Vec Embedding
+
+    """
+
     def __init__(self, sequences, word_length, window_size, emb_dim, loss, epochs):
         self.sequences = sequences
         self.word_length = word_length
@@ -47,7 +77,6 @@ class WordEmbedder:
         self.corpus = list(map(lambda x: list(map(lambda y: self.vocab.get(y, -1), x)), self.corpus))
         self.sentences = list(map(lambda x: list(map(lambda y: self.vocab.get(y, -1), x)), self.sentences))
         self.__freq_calc()
-
 
     def __neighbor_counter(self, idx, word_list):
         def __adder(idx1, idx2):
