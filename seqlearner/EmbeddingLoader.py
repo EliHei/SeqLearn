@@ -2,6 +2,27 @@ import pandas as pd
 
 
 class EmbeddingLoader:
+    """
+        class
+        Embedding Algorithm to be instantiated. Algorithms are Skipgram, Freq2Vec,
+        Sent2Vec and etc. Can be thought as a blackbox which applies a specific
+        embedding algorithm on the sequences. It also can save the embedding layer
+        and encoding.
+
+        Parameters
+        ----------
+        sequences : numpy ndarray, list, or DataFrame
+           sequences of data like protein sequences
+        word_length : integer
+            The length of each word in sequences to be separated from each other.
+        file : basestring
+            The path which the embedding is saved.
+
+        See also
+        --------
+        Embedding.load_embedding : loads an existing embedding to apply
+
+    """
     def __init__(self, sequences, word_length, file):
         self.sequences = sequences
         self.word_length = word_length
@@ -32,4 +53,7 @@ class EmbeddingLoader:
         self.__freq_calc()
 
     def embed(self):
+        """
+            do the embedding based on the corresponding embedding layer which has just been loaded.
+        """
         self.__corpus_maker()

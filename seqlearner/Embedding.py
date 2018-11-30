@@ -245,7 +245,7 @@ class Embedding:
             func : {'sum', 'average', 'weighted_sum', 'weighted_average'}
                 The function which is going to be applied over each sequence in
                 order to compute its embedding vector.
-            file : string
+            file : basestring
                 The path which the embedding is saved.
 
             Returns
