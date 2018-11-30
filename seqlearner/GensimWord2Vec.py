@@ -5,7 +5,50 @@ from .WordEmbedder import WordEmbedder
 
 
 class GensimWord2Vec(WordEmbedder):
+    """
+        Word2Vec Embedding Method. This class is wrapper for Word2Vec Embedding
+        method to apply on a set of sequences. Child class of WordEmbedder.
+
+        Parameters
+        ----------
+        sequences : numpy ndarray, list, or DataFrame
+           sequences of data like protein sequences
+        word_length : integer
+            The length of each word in sequences to be separated from each other.
+        window_size: integer
+            Size of window for counting the number of neighbors.
+        emb_dim: integer
+            Number of embedding vector dimensions.
+        loss: basestring
+            The loss function is going to be used on training phase.
+        epochs: integer
+            Number of epochs for training the embedding.
+
+        See also
+        --------
+        Word2Vec.word2vec_maker : build a model and train it!
+
+    """
     def word2vec_maker(self):
+        """
+            Train Embedding layer on vocabulary in order to get embedding weights
+            for each word in vocabulary. compress each in `emb_dim` vectors.
+
+            Parameters
+            ----------
+            No parameters are needed.
+
+            Returns
+            -------
+            Nothing will be returned.
+
+            Example
+            --------
+            >>> import pandas as pd
+            >>> sequences = pd.read_csv("./sequences.csv", header=None)
+            >>> freq2vec = GensimWord2Vec(sequences, word_length=3, window_size=5, emb_dim=25, loss="mean_squared_error", epochs=250)
+            >>> freq2vec.word2vec_maker()
+        """
         word2vec = Word2Vec(self.input, size=self.emb_dim, window=self.window_size, min_count=1,
                             workers=2)  # TODO: workers=self.loss ?
         word2vec.save(''.join(['../models/word2vec', '_',
