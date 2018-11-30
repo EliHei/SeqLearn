@@ -2,9 +2,9 @@ import sklearn.svm
 import numpy as np
 import random
 
-from frameworks.CPLELearning import CPLELearningModel
-from methods import scikitTSVM
-from examples.plotutils import evaluate_and_plot
+from seqlearner.semisup.frameworks.CPLELearning import CPLELearningModel
+from seqlearner.semisup.methods import scikitTSVM
+from seqlearner.semisup.examples.plotutils import evaluate_and_plot
 
 kernel = "linear"
 
@@ -34,25 +34,25 @@ ysupervised = ys[ys!=-1]
     
 # compare models     
 lbl = "Purely supervised SVM:"
-print lbl
+print(lbl)
 model = sklearn.svm.SVC(kernel=kernel, probability=True)
 model.fit(Xsupervised, ysupervised)
 evaluate_and_plot(model, Xs, ys, ytrue, lbl, 1)
 
 lbl =  "S3VM (Gieseke et al. 2012):"
-print lbl
+print(lbl)
 model = scikitTSVM.SKTSVM(kernel=kernel)
 model.fit(Xs, ys.astype(int))
 evaluate_and_plot(model, Xs, ys, ytrue, lbl, 2)
 
 lbl = "CPLE(pessimistic) SVM:"
-print lbl
+print(lbl)
 model = CPLELearningModel(sklearn.svm.SVC(kernel=kernel, probability=True), predict_from_probabilities=True)
 model.fit(Xs, ys.astype(int))
 evaluate_and_plot(model, Xs, ys, ytrue, lbl, 3)
 
 lbl = "CPLE(optimistic) SVM:"
-print lbl
+print(lbl)
 CPLELearningModel.pessimistic = False
 model = CPLELearningModel(sklearn.svm.SVC(kernel=kernel, probability=True), predict_from_probabilities=True)
 model.fit(Xs, ys.astype(int))
