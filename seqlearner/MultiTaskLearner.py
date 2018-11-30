@@ -239,9 +239,13 @@ class MultiTaskLearner:
             >>> mtl = MultiTaskLearner(labeled_path, unlabeled_path)
             >>> encoding = mtl.embed(word_length=5)
             >>> X, y, X_t, y_t = train_test_split(mtl.sequences, mtl.labels, test_size=0.33)
-            >>> score = mtl.semi_supervised_learner(X, y, X_t, y_t)
+            >>> score = mtl.semi_supervised_learner(X, y, X_t, y_t, ssl="label_spreading")
         """
         SSL = SemiSupervisedLearner(X, y, X_t, y_t)
+        if self.ssl is None:
+            if options.get("ssl", None) is None:
+                raise Exception("The semi-supervised learning method must specified")
+            self.ssl = options.get("ssl", None)
         if self.ssl is "label_spreading":
             score = SSL.label_spreading(
                 kernel=options.get("kernel", "rbf"),
