@@ -71,7 +71,7 @@ class Embedding:
             >>> sequences = pd.read_csv("./sequences.csv", header=None)
             >>> embed = Embedding(sequences, word_length=5)
             >>> skipgram_embedding = embed.skipgram(func="sum", window_size=50, emb_dim=25, loss="mean_squared_error", epochs=250)
-            """
+        """
         skipgram = SkipGram(self.sequences, self.word_length, window_size, emb_dim, loss, epochs)
         skipgram.skipgram_maker()
         skipgram.__name__ = "Skipgram"
@@ -206,19 +206,19 @@ class Embedding:
             lr: float, default 1.
                 learning rate
             wordNgrams: integer, 10
-
-            loss: {"ns", ... }, default "ns"
-
+                max length of word n-gram
+            loss: {"ns", "hs", "softmax"}, default "ns"
+                loss function
             neg: integer, default 10
-
+                number of negatives sampled
             thread: integer, default 10
-
+                number of threads
             t: float, default 0.000005
-
+                sampling threshold
             dropoutK: integer, default 4
-
+                number of n-grams dropped when training a sent2vec model
             bucket: integer, default 4000000
-
+                number of hash buckets for vocabulary
 
             Returns
             -------
