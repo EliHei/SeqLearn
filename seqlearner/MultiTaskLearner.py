@@ -114,7 +114,7 @@ class MultiTaskLearner:
         elif self.embedding_method is "sent2vec":
             self.embedding = embed.sent2vec(
                 emb_dim=options.get("emb_dim", 10),
-                epoch=options.get("epoch", 1000),
+                epochs=options.get("epoch", 1000),
                 lr=options.get("lr", .2),
                 wordNgrams=options.get("wordNgrams", 10),
                 loss=options.get("loss", "ns"),

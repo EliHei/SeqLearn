@@ -6,7 +6,8 @@ from .WordEmbedder import WordEmbedder
 
 class GensimWord2Vec(WordEmbedder):
     def word2vec_maker(self):
-        word2vec = Word2Vec(self.input, size=self.emb_dim, window=self.window_size, min_count=1, workers=2)
+        word2vec = Word2Vec(self.input, size=self.emb_dim, window=self.window_size, min_count=1,
+                            workers=2)  # TODO: workers=self.loss ?
         word2vec.save(''.join(['../models/word2vec', '_',
                                str(self.emb_dim), '_',
                                str(self.window_size), '_',
