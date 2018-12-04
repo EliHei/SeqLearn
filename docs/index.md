@@ -1,7 +1,6 @@
-# SeqLearner: The multitask learning package for semi-supervised learning on biological sequences
+# SeqLearner
+SeqLearner is a multitask learning package for semi-supervised learning on biological sequences
 
-
-## Commands
 
 ## Project layout
 

@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/about.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/embeddings/freq2vec.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/embeddings/sent2vec.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/embeddings/skipgram.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/embeddings/word2vec.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -77,11 +71,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mkdocs.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mkdocs.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mkdocs.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/index.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="60">
+                <caret line="4" column="17" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="17" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -154,7 +160,6 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/seqlearner/test.py" />
         <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/seqlearner/EmbeddingLoader.py" />
         <option value="$PROJECT_DIR$/seqlearner/WordEmbedder.py" />
         <option value="$PROJECT_DIR$/seqlearner/Freq2Vec.py" />
@@ -174,6 +179,8 @@
         <option value="$PROJECT_DIR$/seqlearner/__init__.py" />
         <option value="$PROJECT_DIR$/seqlearner/__init__.py" />
         <option value="$PROJECT_DIR$/mkdocs.yml" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/docs/index.md" />
       </list>
     </option>
   </component>
@@ -239,11 +246,6 @@
               <item name="SeqLearner" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
               <item name="embeddings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SeqLearner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SeqLearner" type="462c0819:PsiDirectoryNode" />
-              <item name="seqlearner" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -730,7 +732,21 @@
       <option name="project" value="LOCAL" />
       <updated>1543940492036</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Update mkdocs and add some md files for embedding">
+      <created>1543941079122</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1543941079122</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Add build docs icon in readme.md">
+      <created>1543941171280</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1543941171280</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TodoView">
@@ -808,8 +824,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/semisup" />
     </ignored-roots>
-    <MESSAGE value="Fix minor bug in readme.md" />
-    <MESSAGE value="Add new results" />
     <MESSAGE value="Show PDF in readme" />
     <MESSAGE value="README.md will never show PDF!! :(" />
     <MESSAGE value="add travis.ci file" />
@@ -833,7 +847,9 @@
     <MESSAGE value="Update setup.py and __init__" />
     <MESSAGE value="Update Setup.py" />
     <MESSAGE value="Update mkdocs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update mkdocs" />
+    <MESSAGE value="Update mkdocs and add some md files for embedding" />
+    <MESSAGE value="Add build docs icon in readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add build docs icon in readme.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -878,21 +894,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="234">
-            <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
@@ -1085,14 +1086,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/embeddings/skipgram.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1125,10 +1118,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="15">
+            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mkdocs.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="60">
+            <caret line="4" column="17" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="17" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
