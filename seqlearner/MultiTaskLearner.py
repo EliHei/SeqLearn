@@ -362,7 +362,7 @@ class MultiTaskLearner:
         normalized_scores = [self.class_freq[c] * self.class_scores[c] for c in self.classes]
         self.overall_score = reduce(lambda x, y: x + y, normalized_scores)
 
-    def __classify(self, embedding_path="../data/uniprot/", embedding="Freq2Vec", method="SVM",
+    def classify(self, embedding_path="../data/uniprot/", embedding="Freq2Vec", method="SVM",
                  func="weighted_average"):
         def learn(x_data, label_name, classifier):
             y_data = self.__one_versus_all_maker_v2(label_name)

@@ -3,6 +3,7 @@ import os
 import numpy as np
 import pandas as pd
 
+from seqlearner.EmbeddingLoader import EmbeddingLoader
 from seqlearner.Freq2Vec import Freq2Vec
 from seqlearner.GensimWord2Vec import GensimWord2Vec
 from seqlearner.Sent2Vec import Sent2Vec
@@ -262,7 +263,7 @@ class Embedding:
             >>> embed = Embedding(sequences, word_length=5)
             >>> skipgram_embedding = embed.load_embedding(func="weighted_average", file="./embedding.csv")
         """
-        embed = Embedding(self.sequences, self.word_length, file)
+        embed = EmbeddingLoader(self.sequences, self.word_length, file)
         embed.embed()
         embed.__name__ = "LoadEmbedding"
         self.sentences = embed.sentences
