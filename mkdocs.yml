@@ -1,6 +1,11 @@
 site_name: SeqLearner Documentation
 nav:
     - Home: index.md
+    - Embeddings:
+      - Word2Vec: embeddings/word2vec.md
+      - Freq2Vec: embeddings/freq2vec.md
+      - SkipGram: embeddings/skipgram.md
+      - Sent2Vec: embeddings/sent2vec.md
     - About: about.md
 theme: readthedocs
 repo_url: http://github.com/EliHei/SeqLearner
