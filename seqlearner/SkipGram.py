@@ -5,6 +5,7 @@ from keras.models import Sequential
 from keras.utils import np_utils
 
 from .WordEmbedder import WordEmbedder
+import pandas as pd
 
 
 class SkipGram(WordEmbedder):
@@ -32,6 +33,11 @@ class SkipGram(WordEmbedder):
         SkipGram.skipgram_maker : build a model and train it!
 
     """
+
+    def __init__(self, sequences, word_length, window_size, emb_dim, loss, epochs):
+        self.embedding = "SkipGram"
+        super().__init__(sequences, word_length, window_size, emb_dim, loss, epochs)
+
     # def __word_indexer(self, idx, word_list):
     #     s = idx - self.window_size
     #     e = idx + self.window_size + 1
@@ -99,13 +105,13 @@ class SkipGram(WordEmbedder):
                                 self.adj_matrix,
                                 verbose=2,
                                 batch_size=100))
-
-        np.savetxt(''.join(['../data/skipgram_embedding', '_',
+        filename = ''.join(['../data/skipgram_embedding', '_',
                             str(self.emb_dim), '_',
                             str(self.window_size), '_',
-                            str(self.word_length), '.txt']),
-                   skipgram.layers[0].get_weights()[0])
+                            str(self.word_length), '.csv'])
+
         self.embedding_layer = skipgram.layers[0].get_weights()[0]
+        pd.DataFrame(self.embedding_layer, index=pd.DataFrame(list(self.vocab))).to_csv(filename)
         # skipgram.save(''.join(['../models/skipgram', '_',
         #                        str(self.emb_dim), '_',
         #                        str(self.window_size), '_',

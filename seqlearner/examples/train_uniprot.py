@@ -41,10 +41,10 @@ def train():
     np.seterr(divide='ignore', invalid='ignore')
     mtl = MultiTaskLearner(data_path + "labeled.csv", data_path + "unlabeled.csv")
 
-    freq2vec_embedding = mtl.embed(word_length=3, embedding="freq2vec", func="weighted_average", emb_dim=25, gamma=0.1,
-                                   epochs=1)
-    mtl.visualize(method="TNSE", family="ATCase/OTCase family", proportion=2.0)
-    mtl.visualize(method="UMAP", family="ATCase/OTCase family", proportion=2.0)
+    # freq2vec_embedding = mtl.embed(word_length=3, embedding="freq2vec", func="weighted_average", emb_dim=25, gamma=0.1,
+    #                                epochs=1)
+    # mtl.visualize(method="TNSE", family="ATCase/OTCase family", proportion=2.0)
+    # mtl.visualize(method="UMAP", family="ATCase/OTCase family", proportion=2.0)
     # class_scores, overall_score, class_freqs = mtl.learner(3, 5, "freq2vec", "label_spreading", func="sum", emb_dim=2,
     #                                                        gamma=0.1, epochs=1)
 
@@ -80,16 +80,16 @@ def train():
     #                         random_state=None, shrinking=True,
     #                         tol=0.001, verbose=False))
 
-    # mtl.learner(3, 5, "sent2vec", "pseudo_labeling", emb_dim=50,
-    #             file="../data/skipgram_embedding_50_10_3.txt",
-    #             func="weighted_average", sample_rate=0.0,
-    #             alg=svm.SVC(C=1.0, cache_size=200, class_weight=None,
-    #                         coef0=0.0,
-    #                         decision_function_shape='ovr', degree=3,
-    #                         gamma='auto', kernel='rbf',
-    #                         max_iter=-1, probability=False,
-    #                         random_state=None, shrinking=True,
-    #                         tol=0.001, verbose=False))
+    mtl.learner(3, 5, "sent2vec", "pseudo_labeling", emb_dim=50,
+                file="../data/skipgram_embedding_50_10_3.txt",
+                func="weighted_average", sample_rate=0.0,
+                alg=svm.SVC(C=1.0, cache_size=200, class_weight=None,
+                            coef0=0.0,
+                            decision_function_shape='ovr', degree=3,
+                            gamma='auto', kernel='rbf',
+                            max_iter=-1, probability=False,
+                            random_state=None, shrinking=True,
+                            tol=0.001, verbose=False))
     #
     # mtl.learner(3, 5, "load_embedding", "pseudo_labeling",
     #             file="../data/skipgram_embedding_50_10_3.txt",
@@ -256,7 +256,7 @@ def classify():
 
 
 if __name__ == '__main__':
-    preprocess()
+    # preprocess()
     # classify()
     train()
     # visualization(embedding_path="../data/uniprot/Skipgram_weighted_average_Encoding.csv", method="UMAP", func="weighted_average")

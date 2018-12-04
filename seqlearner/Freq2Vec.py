@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 from keras.callbacks import CSVLogger
 from keras.layers import Embedding, Reshape, Dense
 from keras.models import Sequential
@@ -31,6 +32,11 @@ class Freq2Vec(WordEmbedder):
         Freq2Vec.freq2vec_maker : build a model and train it!
 
     """
+
+    def __init__(self, sequences, word_length, window_size, emb_dim, loss, epochs):
+        self.embedding = "Freq2Vec"
+        super().__init__(sequences, word_length, window_size, emb_dim, loss, epochs)
+
     def freq2vec_maker(self):
         """
             Train Embedding layer on vocabulary in order to get embedding weights
@@ -70,8 +76,6 @@ class Freq2Vec(WordEmbedder):
 
         freq2vec.summary()
 
-        print(np.array([np.array(x) for x in range(len(self.vocab))]).shape)
-
         freq2vec.fit(x=np.array([[x] for x in range(len(self.vocab))]),
                      y=self.adj_matrix,
                      batch_size=100,
@@ -87,6 +91,11 @@ class Freq2Vec(WordEmbedder):
         #            freq2vec.layers[0].get_weights()[0])
         # print(np.array(freq2vec.layers[0].get_weights()).shape)
         self.embedding_layer = freq2vec.layers[0].get_weights()[0]
+        filename = ''.join(['../data/freq2vec_embedding', '_',
+                            str(self.emb_dim), '_',
+                            str(self.window_size), '_',
+                            str(self.word_length), '.csv'])
+        pd.DataFrame(self.embedding_layer, index=pd.DataFrame(list(self.vocab))).to_csv(filename)
 
         # freq2vec.save(''.join(['../models/freq2vec', '_',
         #                        str(self.emb_dim), '_',

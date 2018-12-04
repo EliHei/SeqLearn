@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pandas as pd
 from keras.optimizers import Adam
@@ -62,7 +63,8 @@ class WordEmbedder:
 
         self.frequency = dict.fromkeys(range(len(self.vocab)), 0)
         list(map(lambda sent: list(map(lambda word: adder(word), sent)), self.sentences))
-        with open('../aux/Freq2Vec_vocab_aux.txt', 'w') as out:
+        os.makedirs("../aux/", exist_ok=True)
+        with open('../aux/' + self.embedding + '_vocab.txt', 'w') as out:
             out.write(",".join(self.vocab))
         self.frequency = {k: v / total for total in (sum(self.frequency.values()),) for k, v in self.frequency.items()}
         self.frequency = self.frequency.values()
@@ -72,7 +74,7 @@ class WordEmbedder:
         self.input = self.sentences
         self.vocab = dict(list(enumerate(self.vocab)))
         self.vocab_aux = self.vocab
-        self.vocab_indices = list(v for k, v in self.vocab.items())
+        self.vocab_indices = list(k for k, v in self.vocab.items())
         self.vocab = dict((v, k) for k, v in self.vocab.items())
         self.corpus = list(map(lambda x: list(map(lambda y: self.vocab.get(y, -1), x)), self.corpus))
         self.sentences = list(map(lambda x: list(map(lambda y: self.vocab.get(y, -1), x)), self.sentences))

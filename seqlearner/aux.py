@@ -6,14 +6,12 @@
     Skype: mn7697np
 """
 
-import numpy as np
-import pandas as pd
 
 # myarray = np.fromfile('../data/skipgram_embedding_10_10_3.TXT', dtype=float)
-myarray = pd.read_excel('../data/dataverse_files/family_classification_metadata.xlsx')
+# myarray = pd.read_excel('../data/dataverse_files/family_classification_metadata.xlsx')
 
 # myarray.drop(["Entry"], axis=1, inplace=True)
 
 
-print(pd.DataFrame(myarray))
-print(myarray.shape)
+# print(pd.DataFrame(myarray))
+# print(myarray.shape)

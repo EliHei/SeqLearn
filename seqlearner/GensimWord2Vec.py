@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 from gensim.models import Word2Vec
 
 from .WordEmbedder import WordEmbedder
@@ -29,6 +30,11 @@ class GensimWord2Vec(WordEmbedder):
         Word2Vec.word2vec_maker : build a model and train it!
 
     """
+
+    def __init__(self, sequences, word_length, window_size, emb_dim, loss, epochs):
+        self.embedding = "Word2Vec"
+        super().__init__(sequences, word_length, window_size, emb_dim, loss, epochs)
+
     def word2vec_maker(self):
         """
             Train Embedding layer on vocabulary in order to get embedding weights
@@ -58,7 +64,11 @@ class GensimWord2Vec(WordEmbedder):
         word2vec.train(self.input, epochs=self.epochs, total_words=len(self.vocab_aux))
         # self.embedding_layer = skipgram.layers[0].get_weights()[0]
         word_vectors = word2vec.wv
-        word_vectors.save('../aux/Word2Vec_words_aux.txt')
+        # word_vectors.save('../aux/Word2Vec_words_aux.txt')
         arrays = list(map(lambda i: word2vec.wv[self.vocab_aux[i]], range(len(self.vocab_aux))))
         self.embedding_layer = np.stack(arrays, axis=0)
-        print(self.embedding_layer.shape)
+        filename = ''.join(['../data/word2vec_embedding', '_',
+                            str(self.emb_dim), '_',
+                            str(self.window_size), '_',
+                            str(self.word_length), '.csv'])
+        pd.DataFrame(self.embedding_layer, index=pd.DataFrame(list(self.vocab))).to_csv(filename)

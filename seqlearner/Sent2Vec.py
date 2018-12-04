@@ -1,3 +1,4 @@
+import os
 from subprocess import Popen, PIPE
 
 import numpy as np
@@ -90,32 +91,34 @@ class Sent2Vec:
             >>> s2v = Sent2Vec(sequences, word_length=3, emb_dim=25, epoch=100, lr=0.2, wordNgrams=5, loss="hs", neg=20, thread=10, t=0.0000005, dropoutK=2, bucket=4000000)
             >>> encoding = s2v.sent2vec()
         """
-        self.__corpus_maker()
-        embed = ('./fastText/./fasttext sent2vec'
-                 ' -input ../aux/Sent2Vec_sentences_aux.txt'
-                 ' -output ../models/sent2vec'
-                 ' -dim {}'
-                 ' -epoch {}'
-                 ' -lr {}'
-                 ' -wordNgrams {}'
-                 ' -loss {}'
-                 ' -neg {}'
-                 ' -thread {}'
-                 ' -t {}'
-                 ' -dropoutK {}'
-                 ' -bucket {}').format(self.emb_dim,
-                                       self.epoch, self.lr,
-                                       self.wordNgrams,
-                                       self.loss, self.neg,
-                                       self.thread, self.t,
-                                       self.dropoutK,
-                                       self.bucket)
-        self.__sh(embed)
-        print(embed)
-        print("dkjadksfjadlkfjasd")
+        if not os.path.exists("../models/sent2vec.bin"):
+
+            self.__corpus_maker()
+            embed = ('./fastText/./fasttext sent2vec'
+                     ' -input ../aux/Sent2Vec_sentences_aux.txt'
+                     ' -output ../models/sent2vec'
+                     ' -dim {}'
+                     ' -epoch {}'
+                     ' -lr {}'
+                     ' -wordNgrams {}'
+                     ' -loss {}'
+                     ' -neg {}'
+                     ' -thread {}'
+                     ' -t {}'
+                     ' -dropoutK {}'
+                     ' -bucket {}').format(self.emb_dim,
+                                           self.epoch, self.lr,
+                                           self.wordNgrams,
+                                           self.loss, self.neg,
+                                           self.thread, self.t,
+                                           self.dropoutK,
+                                           self.bucket)
+            print(embed)
+            self.__sh(embed)
         ret = ('cat ../aux/Sent2Vec_sentences_aux.txt |'
                ' ../fastText/./fasttext print-sentence-vectors ../models/sent2vec.bin'
                ' > ../data/sent2vec_embedding.txt')
+        print(ret)
         self.__sh(ret)
         self.vec_df = pd.read_csv('../data/sent2vec_embedding.txt', sep=" ", header=None)
         self.vec_df = self.vec_df.values
