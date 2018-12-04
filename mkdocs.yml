@@ -1,5 +1,9 @@
-site_name: SeqLearner
+site_name: SeqLearner Documentation
 nav:
     - Home: index.md
     - About: about.md
 theme: readthedocs
+docs_dir: sources
+repo_url: http://github.com/EliHei/SeqLearner
+site_url: http://github.com/EliHei/SeqLearner
+site_description: 'Documentation for SeqLearner, the multitask learning package for semi-supervised learning on biological sequences'
