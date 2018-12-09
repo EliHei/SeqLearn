@@ -1,10 +1,11 @@
 # SeqLearner [![PyPI version](https://badge.fury.io/py/seqlearner.svg)](https://badge.fury.io/py/seqlearner) [![Build Status](https://travis-ci.org/EliHei/SeqLearn.svg?branch=master)](https://travis-ci.org/EliHei/SeqLearn) [![Documentation Status](https://readthedocs.org/projects/seqlearner/badge/?version=latest)](https://seqlearner.readthedocs.io/en/latest/?badge=latest)
 
 
-The multitask learning package for semi-supervised learning on biological sequences
 <div float="left">
-    <img src="https://www.github.com/EliHei/SeqLearn/logo.png" height="120">
+    <img src="https://github.com/EliHei/SeqLearn/blob/master/logo.png" height="120">
 </div>
+The multitask learning package for semi-supervised learning on biological sequences
+
 <div float="left">
   <img src="https://www.tensorflow.org/images/tf_logo_transp.png" height="120" >
   <img src="https://s3.amazonaws.com/keras.io/img/keras-logo-2018-large-1200.png" height="120">
