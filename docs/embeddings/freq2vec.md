@@ -25,6 +25,6 @@ freq2vec = Freq2Vec(sequences, word_length=3, window_size=5, emb_dim=25, loss="m
 freq2vec.freq2vec_maker()
 ```
 
-
-
+### See Also
+- [Freq2Vec code implementation on Github](https://github.com/EliHei/seqlearn/blob/master/seqlearner/Freq2Vec.py)
 

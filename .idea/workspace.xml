@@ -4,7 +4,6 @@
     <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/embeddings/freq2vec.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/embeddings/freq2vec.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seqlearner/Freq2Vec.py" beforeDir="false" afterPath="$PROJECT_DIR$/seqlearner/Freq2Vec.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +26,8 @@
         <entry file="file://$PROJECT_DIR$/docs/embeddings/freq2vec.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SECOND">
-              <first_editor relative-caret-position="150">
-                <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <first_editor relative-caret-position="135">
+                <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               </first_editor>
               <second_editor />
             </state>
@@ -38,8 +37,8 @@
       <file leaf-file-name="Freq2Vec.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/seqlearner/Freq2Vec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="438">
+              <caret line="54" column="35" lean-forward="true" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -366,20 +365,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528704254029</updated>
-    </task>
-    <task id="LOCAL-00008" summary="delete unnecessary files">
-      <created>1543173847276</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1543173847276</updated>
-    </task>
-    <task id="LOCAL-00009" summary="version 0.0.2 release">
-      <created>1543174701454</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1543174701454</updated>
     </task>
     <task id="LOCAL-00010" summary="update embedding hyper-parameters for each embedding algorithm">
       <created>1543182974777</created>
@@ -710,7 +695,21 @@
       <option name="project" value="LOCAL" />
       <updated>1544384244759</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="update freq2vec doc">
+      <created>1544384847002</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1544384847002</updated>
+    </task>
+    <task id="LOCAL-00058" summary="update freq2vec doc">
+      <created>1544385060532</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1544385060532</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TodoView">
@@ -788,7 +787,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/semisup" />
     </ignored-roots>
-    <MESSAGE value="reformat Embedding class code" />
     <MESSAGE value="Update Comments for Embedding, Add comments for EmbeddingLoader" />
     <MESSAGE value="Add Comments for WordEmbedder" />
     <MESSAGE value="Add Comments for Freq2Vec" />
@@ -813,7 +811,8 @@
     <MESSAGE value="version 0.0.5 release" />
     <MESSAGE value="add feature to sent2vec" />
     <MESSAGE value="Add freq2vec doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add freq2vec doc" />
+    <MESSAGE value="update freq2vec doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="update freq2vec doc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -863,8 +862,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seqlearner/Freq2Vec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="438">
+          <caret line="54" column="35" lean-forward="true" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -874,8 +873,8 @@
     <entry file="file://$PROJECT_DIR$/docs/embeddings/freq2vec.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SECOND">
-          <first_editor relative-caret-position="150">
-            <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <first_editor relative-caret-position="135">
+            <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           </first_editor>
           <second_editor />
         </state>
