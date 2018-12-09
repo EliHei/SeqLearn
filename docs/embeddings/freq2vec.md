@@ -5,7 +5,7 @@ seqlearner.Freq2Vec(sequences, word_length, window_size, emb_dim, loss, epochs)
 
 Freq2Vec is an Embedding Method. This class is wrapper for Freq2Vec Embedding method to apply on a set of sequences. Child class of WordEmbedder.
 You can train Embedding layer on vocabulary in order to get embedding weights for each word in vocabulary. compress each in `emb_dim` vectors with `freq2vec_maker` method.
-You can make an instance of it with the following parameters:
+The `freq2vec_maker` method returns the embedding weights of the vocabulary. You can access to the vocabulary via `vocab` attribute.
 
 ### Arguments
 - __sequences__: Numpy ndarray, list, or DataFrame, sequences of data like protein sequences
@@ -14,6 +14,7 @@ You can make an instance of it with the following parameters:
 - __emb_dim__: Positive Integer, number of embedding vector dimensions.
 - __loss__: String, the loss function is going to be used on training phase.
 - __epochs__: Positive integer, number of epochs for training the embedding.
+
 
 ### Example: make the embedding of protein sequences
 
