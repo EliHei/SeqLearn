@@ -1,6 +1,5 @@
 # Freq2Vec
 ```python
-import seqlearner
 seqlearner.Freq2Vec(sequences, word_length, window_size, emb_dim, loss, epochs)
 ```
 
@@ -9,18 +8,12 @@ You can train Embedding layer on vocabulary in order to get embedding weights fo
 You can make an instance of it with the following parameters:
 
 ### Arguments
-- __sequences__: numpy ndarray, list, or DataFrame
-   sequences of data like protein sequences
-- __word_length__: integer
-    The length of each word in sequences to be separated from each other.
-- __window_size__: integer
-    Size of window for counting the number of neighbors.
-- __emb_dim__:: integer
-    Number of embedding vector dimensions.
-- __loss__: basestring
-    The loss function is going to be used on training phase.
-- __epochs__: integer
-    Number of epochs for training the embedding.
+- __sequences__: Numpy ndarray, list, or DataFrame, sequences of data like protein sequences
+- __word_length__: Positive integer, the length of each word in sequences to be separated from each other.
+- __window_size__: Positive integer, size of window for counting the number of neighbors.
+- __emb_dim__: Positive Integer, number of embedding vector dimensions.
+- __loss__: String, the loss function is going to be used on training phase.
+- __epochs__: Positive integer, number of epochs for training the embedding.
 
 ### Example: make the embedding of protein sequences
 
