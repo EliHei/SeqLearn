@@ -6,16 +6,14 @@
 </div>
 The multitask learning package for semi-supervised learning on biological sequences
 
+## Introduction
+A tensorflow(keras) implementation of multitask learning package for semi-supervised learning on biological sequences
 <div float="left">
-  <img src="https://www.tensorflow.org/images/tf_logo_transp.png" height="120" >
-  <img src="https://s3.amazonaws.com/keras.io/img/keras-logo-2018-large-1200.png" height="120">
+  <img src="https://www.tensorflow.org/images/tf_logo_transp.png" height="80" >
+  <img src="https://s3.amazonaws.com/keras.io/img/keras-logo-2018-large-1200.png" height="80">
 </div>
 <div float="right">
 </div>
-
-## Introduction
-A tensorflow implementation of multitask learning package for semi-supervised learning on biological sequences
-
 
 ## Getting Started
 
