@@ -115,11 +115,12 @@ class Sent2Vec:
                                            self.bucket)
             print(embed)
             self.__sh(embed)
-        ret = ('cat ../aux/Sent2Vec_sentences_aux.txt |'
-               ' ../fastText/./fasttext print-sentence-vectors ../models/sent2vec.bin'
-               ' > ../data/sent2vec_embedding.txt')
-        print(ret)
-        self.__sh(ret)
+        if not os.path.exists("../aux/sent2vec_embedding.txt"):
+            ret = ('cat ../aux/Sent2Vec_sentences_aux.txt |'
+                   ' ../fastText/./fasttext print-sentence-vectors ../models/sent2vec.bin'
+                   ' > ../data/sent2vec_embedding.txt')
+            print(ret)
+            self.__sh(ret)
         self.vec_df = pd.read_csv('../data/sent2vec_embedding.txt', sep=" ", header=None)
         self.vec_df = self.vec_df.values
         return list(map(lambda idx: self.__add_rows(idx), range((self.vec_df.shape[0] - self.word_length + 1))))
