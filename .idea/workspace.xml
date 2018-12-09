@@ -37,8 +37,8 @@
         <entry file="file://$PROJECT_DIR$/docs/index.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="135">
-                <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+              <first_editor relative-caret-position="60">
+                <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
               </first_editor>
               <second_editor />
             </state>
@@ -226,13 +226,13 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/seqlearner/fastText" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/seqlearner" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/seqlearner/fastText" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -385,21 +385,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528704254029</updated>
-      <workItem from="1544385341523" duration="1889000" />
-    </task>
-    <task id="LOCAL-00015" summary="Update README">
-      <created>1543236548042</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1543236548042</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Add results for Freq2vec weighted average">
-      <created>1543236675900</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1543236675900</updated>
+      <workItem from="1544385341523" duration="2286000" />
     </task>
     <task id="LOCAL-00017" summary="Fix minor bug in readme.md">
       <created>1543237354726</created>
@@ -730,11 +716,25 @@
       <option name="project" value="LOCAL" />
       <updated>1544388418105</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="update home doc">
+      <created>1544388583772</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1544388583772</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Add logo">
+      <created>1544390054476</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1544390054477</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1889000" />
+    <option name="totallyTimeSpent" value="2286000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -822,7 +822,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/semisup" />
     </ignored-roots>
-    <MESSAGE value="Add Comments for WordEmbedder" />
     <MESSAGE value="Add Comments for Freq2Vec" />
     <MESSAGE value="Add Comments for GensimWord2Vec" />
     <MESSAGE value="Add Comments for SkipGram" />
@@ -847,7 +846,8 @@
     <MESSAGE value="Add freq2vec doc" />
     <MESSAGE value="update freq2vec doc" />
     <MESSAGE value="update home doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="update home doc" />
+    <MESSAGE value="Add logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add logo" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/seqlearner/MultiTaskLearner.py">
@@ -913,8 +913,8 @@
     <entry file="file://$PROJECT_DIR$/docs/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="135">
-            <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+          <first_editor relative-caret-position="60">
+            <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
           </first_editor>
           <second_editor />
         </state>
