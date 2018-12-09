@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="Update Readme">
+    <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="Update Readme and home doc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,24 +33,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/index.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="15">
-                <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
+              <first_editor relative-caret-position="45">
+                <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="105">
-                <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <first_editor relative-caret-position="75">
+                <caret line="5" column="6" lean-forward="true" selection-start-line="3" selection-end-line="5" selection-end-column="6" />
               </first_editor>
               <second_editor />
             </state>
@@ -159,8 +158,8 @@
         <option value="$PROJECT_DIR$/seqlearner/Sent2Vec.py" />
         <option value="$PROJECT_DIR$/seqlearner/Freq2Vec.py" />
         <option value="$PROJECT_DIR$/docs/embeddings/freq2vec.md" />
-        <option value="$PROJECT_DIR$/docs/index.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/docs/index.md" />
       </list>
     </option>
   </component>
@@ -398,21 +397,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528704254029</updated>
-      <workItem from="1544385341523" duration="2499000" />
-    </task>
-    <task id="LOCAL-00019" summary="Fix minor bug in readme.md">
-      <created>1543237645330</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1543237645330</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Fix minor bug in readme.md">
-      <created>1543237725989</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1543237725989</updated>
+      <workItem from="1544385341523" duration="2586000" />
     </task>
     <task id="LOCAL-00021" summary="Add new results">
       <created>1543237761920</created>
@@ -743,11 +728,25 @@
       <option name="project" value="LOCAL" />
       <updated>1544390170767</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Update Readme and home doc">
+      <created>1544390287607</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1544390287607</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Update Readme and home doc">
+      <created>1544390340235</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1544390340236</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2499000" />
+    <option name="totallyTimeSpent" value="2586000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -835,7 +834,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/semisup" />
     </ignored-roots>
-    <MESSAGE value="Add Comments for GensimWord2Vec" />
     <MESSAGE value="Add Comments for SkipGram" />
     <MESSAGE value="Add Comments for PseudoLabeler" />
     <MESSAGE value="Update Comments for Embedding" />
@@ -860,7 +858,8 @@
     <MESSAGE value="Add logo" />
     <MESSAGE value="update home doc" />
     <MESSAGE value="Update Readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Readme" />
+    <MESSAGE value="Update Readme and home doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Readme and home doc" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/seqlearner/MultiTaskLearner.py">
@@ -913,21 +912,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.md">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="6" lean-forward="true" selection-start-line="3" selection-end-line="5" selection-end-column="6" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/docs/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="105">
-            <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
           </first_editor>
           <second_editor />
         </state>
