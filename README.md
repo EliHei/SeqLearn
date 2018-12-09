@@ -2,7 +2,7 @@
 
 
 <div float="left">
-    <img src="https://github.com/EliHei/SeqLearn/blob/master/logo.png" height="120">
+    <img src="https://github.com/EliHei/SeqLearn/blob/master/logo.png" height="250" width="250">
 </div>
 The multitask learning package for semi-supervised learning on biological sequences
 
