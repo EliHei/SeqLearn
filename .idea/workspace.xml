@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/seqlearner/Sent2Vec.py" beforeDir="false" afterPath="$PROJECT_DIR$/seqlearner/Sent2Vec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/embeddings/freq2vec.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/embeddings/freq2vec.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seqlearner/Freq2Vec.py" beforeDir="false" afterPath="$PROJECT_DIR$/seqlearner/Freq2Vec.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,6 +20,34 @@
     <SUITE FILE_PATH="coverage/SeqLearner$aux.coverage" NAME="aux Coverage Results" MODIFIED="1543948364226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner" />
     <SUITE FILE_PATH="coverage/SeqLearner$train_uniprot.coverage" NAME="train_uniprot Coverage Results" MODIFIED="1543952870967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner/examples" />
     <SUITE FILE_PATH="coverage/SeqLearn$Embedding__1_.coverage" NAME="Embedding (1) Coverage Results" MODIFIED="1543230833653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="freq2vec.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/embeddings/freq2vec.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SECOND">
+              <first_editor relative-caret-position="150">
+                <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Freq2Vec.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/seqlearner/Freq2Vec.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -57,7 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../skipgram/codes/skipgram-pep2vec.py" />
         <option value="$PROJECT_DIR$/data_preprocess.py" />
         <option value="$PROJECT_DIR$/Learner.py" />
         <option value="$PROJECT_DIR$/data/PseudoLabeler.py" />
@@ -103,11 +132,12 @@
         <option value="$PROJECT_DIR$/seqlearner/WordEmbedder.py" />
         <option value="$PROJECT_DIR$/seqlearner/SkipGram.py" />
         <option value="$PROJECT_DIR$/seqlearner/GensimWord2Vec.py" />
-        <option value="$PROJECT_DIR$/seqlearner/Freq2Vec.py" />
         <option value="$PROJECT_DIR$/seqlearner/MultiTaskLearner.py" />
         <option value="$PROJECT_DIR$/seqlearner/examples/train_uniprot.py" />
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/seqlearner/Sent2Vec.py" />
+        <option value="$PROJECT_DIR$/docs/embeddings/freq2vec.md" />
+        <option value="$PROJECT_DIR$/seqlearner/Freq2Vec.py" />
       </list>
     </option>
   </component>
@@ -164,6 +194,22 @@
               <item name="SeqLearner" type="b2602c69:ProjectViewProjectNode" />
               <item name="SeqLearner" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SeqLearner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeqLearner" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SeqLearner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeqLearner" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="embeddings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SeqLearner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeqLearner" type="462c0819:PsiDirectoryNode" />
+              <item name="seqlearner" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -173,7 +219,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -320,20 +366,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528704254029</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Delete unnecessary files">
-      <created>1543173568490</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1543173568490</updated>
-    </task>
-    <task id="LOCAL-00007" summary="delete unnecessary files">
-      <created>1543173710299</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1543173710299</updated>
     </task>
     <task id="LOCAL-00008" summary="delete unnecessary files">
       <created>1543173847276</created>
@@ -664,7 +696,21 @@
       <option name="project" value="LOCAL" />
       <updated>1543952940449</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="add feature to sent2vec">
+      <created>1544383735919</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1544383735920</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Add freq2vec doc">
+      <created>1544384244758</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1544384244759</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TodoView">
@@ -678,31 +724,32 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" weight="0.43878788" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14306152" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32969698" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32969698" />
-      <window_info anchor="right" id="R Packages" order="4" />
-      <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="bottom" id="Messages" order="7" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50208336" side_tool="true" weight="0.32900944" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.3297568" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32848486" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32969698" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" weight="0.43878788" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.32969698" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32969698" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14520743" />
+      <window_info anchor="right" id="R Packages" order="4" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.3297568" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32848486" />
+      <window_info anchor="bottom" id="Messages" order="7" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -741,8 +788,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/semisup" />
     </ignored-roots>
-    <MESSAGE value="Update travis" />
-    <MESSAGE value="Add comments for Embedding class" />
     <MESSAGE value="reformat Embedding class code" />
     <MESSAGE value="Update Comments for Embedding, Add comments for EmbeddingLoader" />
     <MESSAGE value="Add Comments for WordEmbedder" />
@@ -766,7 +811,9 @@
     <MESSAGE value="add fasttext package completely" />
     <MESSAGE value="refactoring in embedding algorithms" />
     <MESSAGE value="version 0.0.5 release" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 0.0.5 release" />
+    <MESSAGE value="add feature to sent2vec" />
+    <MESSAGE value="Add freq2vec doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add freq2vec doc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -809,6 +856,26 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="120">
             <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/Freq2Vec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/embeddings/freq2vec.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="150">
+            <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           </first_editor>
           <second_editor />
         </state>
