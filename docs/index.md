@@ -7,7 +7,7 @@ SeqLearner is compatible with: Python 3.6-3.7.
 
 ## Main Principles
 SeqLearner has some main principles:
-
+  
 - __User Friendly__: SeqLearner is an API designed for human beings, not machines. SeqLearner offers consistent & simple APIs, it minimizes the number of user actions required for a common use case, and it provides clear feedback upon user error.
 
 - __Modularity__: A model is understood as a sequence or a graph of standalone modules that can be plugged together with as few restrictions as possible. In particular, embedding methods, semi-supervised algorithms schemes are all standalone modules that you can combine to create your own new model.
