@@ -1,12 +1,17 @@
 site_name: SeqLearner Documentation
 nav:
     - Home: index.md
+    - Installation: installation.md
     - Embeddings:
       - Word2Vec: embeddings/word2vec.md
       - Freq2Vec: embeddings/freq2vec.md
       - SkipGram: embeddings/skipgram.md
       - Sent2Vec: embeddings/sent2vec.md
-    - About: about.md
-theme: cinder
+    - SemiSupervisedLearning:
+      - LabelSpreading: SemiSupervisedLearning/label_spreading.md
+      - LabelPropagation: SemiSupervisedLearning/label_propagation.md
+      - NaiveBayes: SemiSupervisedLearning/naive_bayes.md
+      - PseudoLabeling: SemiSupervisedLearning/pseudo_labeling.md
+theme: readthedocs
 repo_url: http://github.com/EliHei/SeqLearn
 site_description: 'Documentation for SeqLearner, the multitask learning package for semi-supervised learning on biological sequences'
