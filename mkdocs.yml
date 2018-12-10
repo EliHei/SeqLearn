@@ -7,6 +7,6 @@ nav:
       - SkipGram: embeddings/skipgram.md
       - Sent2Vec: embeddings/sent2vec.md
     - About: about.md
-theme: readthedocs
+theme: cinder
 repo_url: http://github.com/EliHei/SeqLearner
 site_description: 'Documentation for SeqLearner, the multitask learning package for semi-supervised learning on biological sequences'
