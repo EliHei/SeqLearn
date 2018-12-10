@@ -5,3 +5,4 @@ keras
 gensim
 pomegranate
 matplotlib
+cinder
