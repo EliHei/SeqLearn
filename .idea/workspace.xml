@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="change theme">
+      <change afterPath="$PROJECT_DIR$/docs/SemiSupervisedLearning/label_spreading.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/SemiSupervisedLearning/naive_bayes.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/SemiSupervisedLearning/pseudo_labeling.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/installation.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/SemiSupervisedLearning/label_propagation.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,40 +30,79 @@
         <entry file="file://$PROJECT_DIR$/docs/embeddings/freq2vec.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="375">
-                <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+              <first_editor relative-caret-position="345">
+                <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/index.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="30">
-                <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mkdocs.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="55" lean-forward="true" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/index.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="495">
+                <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seqlearner/SemiSupervisedLearner.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="36" column="47" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/installation.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="315">
+                <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+            <state relative-caret-position="105">
+              <caret line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seqlearner/MultiTaskLearner.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="129" column="69" selection-start-line="129" selection-start-column="15" selection-end-line="129" selection-end-column="69" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seqlearner/examples/train_uniprot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="91" column="54" selection-start-line="82" selection-start-column="4" selection-end-line="91" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,22 +111,10 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="60">
-                <caret line="4" column="94" selection-start-line="4" selection-start-column="94" selection-end-line="4" selection-end-column="94" />
+              <first_editor>
+                <caret column="374" selection-start-column="13" selection-end-column="374" />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seqlearner/Freq2Vec.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -128,7 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/data_preprocess.py" />
         <option value="$PROJECT_DIR$/Learner.py" />
         <option value="$PROJECT_DIR$/data/PseudoLabeler.py" />
         <option value="$PROJECT_DIR$/SeqLearner.py" />
@@ -175,10 +205,11 @@
         <option value="$PROJECT_DIR$/seqlearner/Sent2Vec.py" />
         <option value="$PROJECT_DIR$/seqlearner/Freq2Vec.py" />
         <option value="$PROJECT_DIR$/docs/embeddings/freq2vec.md" />
-        <option value="$PROJECT_DIR$/docs/index.md" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/mkdocs.yml" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/docs/installation.md" />
+        <option value="$PROJECT_DIR$/docs/index.md" />
+        <option value="$PROJECT_DIR$/mkdocs.yml" />
       </list>
     </option>
   </component>
@@ -206,6 +237,17 @@
               <item name="SeqLearner" type="b2602c69:ProjectViewProjectNode" />
               <item name="SeqLearner" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SeqLearner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeqLearner" type="462c0819:PsiDirectoryNode" />
+              <item name="seqlearner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SeqLearner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeqLearner" type="462c0819:PsiDirectoryNode" />
+              <item name="seqlearner" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -406,28 +448,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528704254029</updated>
-      <workItem from="1544385341523" duration="4963000" />
-    </task>
-    <task id="LOCAL-00029" summary="Update travis">
-      <created>1543311962058</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1543311962058</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Add comments for Embedding class">
-      <created>1543583046576</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1543583046577</updated>
-    </task>
-    <task id="LOCAL-00031" summary="reformat Embedding class code">
-      <created>1543583099588</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1543583099588</updated>
+      <workItem from="1544385341523" duration="9154000" />
     </task>
     <task id="LOCAL-00032" summary="Update Comments for Embedding, Add comments for EmbeddingLoader">
       <created>1543583337894</created>
@@ -751,11 +772,32 @@
       <option name="project" value="LOCAL" />
       <updated>1544479231665</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="change theme">
+      <created>1544479503103</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1544479503103</updated>
+    </task>
+    <task id="LOCAL-00079" summary="change theme">
+      <created>1544479556757</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1544479556757</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Fix minor bug in mkdocs and requirements">
+      <created>1544483763974</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1544483763974</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4963000" />
+    <option name="totallyTimeSpent" value="9154000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -843,7 +885,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/semisup" />
     </ignored-roots>
-    <MESSAGE value="Add Comments for SemiSupervisedLearner" />
     <MESSAGE value="Update examples in MultiTaskLearner" />
     <MESSAGE value="Update setup.py and __init__" />
     <MESSAGE value="Update Setup.py" />
@@ -868,19 +909,10 @@
     <MESSAGE value="Update home and add new logo" />
     <MESSAGE value="Update README" />
     <MESSAGE value="change theme" />
-    <option name="LAST_COMMIT_MESSAGE" value="change theme" />
+    <MESSAGE value="Fix minor bug in mkdocs and requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix minor bug in mkdocs and requirements" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/seqlearner/MultiTaskLearner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2430">
-          <caret line="180" column="38" selection-start-line="180" selection-start-column="38" selection-end-line="180" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seqlearner/Embedding.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3420">
@@ -911,11 +943,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/examples/train_uniprot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="91" column="54" selection-start-line="82" selection-start-column="4" selection-end-line="91" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/MultiTaskLearner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="129" column="69" selection-start-line="129" selection-start-column="15" selection-end-line="129" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/embeddings/freq2vec.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="375">
-            <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <first_editor relative-caret-position="345">
+            <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
           </first_editor>
           <second_editor />
         </state>
@@ -924,8 +983,75 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="4" column="94" selection-start-line="4" selection-start-column="94" selection-end-line="4" selection-end-column="94" />
+          <first_editor>
+            <caret column="374" selection-start-column="13" selection-end-column="374" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/about.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/SemiSupervisedLearner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="36" column="47" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/SemiSupervisedLearning/label_spreading.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/SemiSupervisedLearning/label_propagation.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/SemiSupervisedLearning/naive_bayes.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/SemiSupervisedLearning/pseudo_labeling.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/installation.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="315">
+            <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           </first_editor>
           <second_editor />
         </state>
@@ -934,24 +1060,10 @@
     <entry file="file://$PROJECT_DIR$/docs/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <first_editor relative-caret-position="495">
+            <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="55" lean-forward="true" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
         </state>
       </provider>
     </entry>

@@ -1,4 +1,6 @@
 # SeqLearner
+[![PyPI version](https://badge.fury.io/py/seqlearner.svg)](https://badge.fury.io/py/seqlearner) [![Build Status](https://travis-ci.org/EliHei/SeqLearn.svg?branch=master)](https://travis-ci.org/EliHei/SeqLearn) [![Documentation Status](https://readthedocs.org/projects/seqlearner/badge/?version=latest)](https://seqlearner.readthedocs.io/en/latest/?badge=latest)
+
 ![](logo_small.png)
 
 ## SeqLearner is the Sequence Learner!
@@ -19,4 +21,23 @@ SeqLearner has some main principles:
 
 - __Python Implementation__: All models are described in Python code, which is compact, easier to debug, and allows for ease of extensibility.
 
-## Getting Started
+## Getting Started: A Simple Example
+Here is a simple example to make a Freq2Vec embedding and use it for labeling the unlabeled data using semi-supervised task.
+
+```python
+from seqlearner import MultiTaskLearner
+from sklearn import svm
+mtl = MultiTaskLearner("labeled.csv", "unlabeled.csv")
+results = mtl.learner(3, 5, "freq2vec", "pseudo_labeling", emb_dim=50, epochs=250,
+                alg=svm.SVC(C=1.0, kernel='rbf', max_iter=50))                            
+```
+
+## Support
+Please feel free to ask questions:
+
+- [Elyas Heidari](mailto:almasmadani@gmail.com)
+
+- [Mohsen Naghipourfar](mailto:mn7697np@gmail.com)
+
+You can also post bug reports and feature requests in [GitHub issues](https://github.com/EliHei/SeqLearn/issues). Please Make sure to read our guidelines first.
+
