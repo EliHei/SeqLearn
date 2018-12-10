@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="Update readme">
-      <change afterPath="$PROJECT_DIR$/docs/logo.png" afterDir="false" />
+    <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="Update home">
+      <change afterPath="$PROJECT_DIR$/docs/logo_small.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
     </list>
@@ -38,8 +38,8 @@
         <entry file="file://$PROJECT_DIR$/docs/index.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="15">
-                <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+              <first_editor relative-caret-position="45">
+                <caret line="3" selection-start-line="3" selection-end-line="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -393,21 +393,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528704254029</updated>
-      <workItem from="1544385341523" duration="3028000" />
-    </task>
-    <task id="LOCAL-00023" summary="Show PDF in readme">
-      <created>1543237998043</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1543237998043</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Show PDF in readme">
-      <created>1543238459426</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1543238459426</updated>
+      <workItem from="1544385341523" duration="4221000" />
     </task>
     <task id="LOCAL-00025" summary="README.md will never show PDF!! :(">
       <created>1543238775775</created>
@@ -738,11 +724,25 @@
       <option name="project" value="LOCAL" />
       <updated>1544390446315</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Update home">
+      <created>1544390866706</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1544390866706</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Update home">
+      <created>1544390957075</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1544390957075</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3028000" />
+    <option name="totallyTimeSpent" value="4221000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -830,7 +830,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/semisup" />
     </ignored-roots>
-    <MESSAGE value="Update Comments for Embedding" />
     <MESSAGE value="Fix minor bugs in semisup package" />
     <MESSAGE value="Add Comments for Sent2Vec" />
     <MESSAGE value="Add Comments for MultiTaskLearner" />
@@ -855,7 +854,8 @@
     <MESSAGE value="Update Readme and home doc" />
     <MESSAGE value="Update home doc" />
     <MESSAGE value="Update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update readme" />
+    <MESSAGE value="Update home" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update home" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/seqlearner/MultiTaskLearner.py">
@@ -921,8 +921,8 @@
     <entry file="file://$PROJECT_DIR$/docs/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+          <first_editor relative-caret-position="45">
+            <caret line="3" selection-start-line="3" selection-end-line="3" />
           </first_editor>
           <second_editor />
         </state>

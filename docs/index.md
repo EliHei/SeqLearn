@@ -1,5 +1,5 @@
 # SeqLearner
-![alt text](logo.png)
+![](logo_small.png)
 
 ## SeqLearner is the Sequence Learner!
 SeqLearner is a multitask learning package for semi-supervised learning on biological sequences
