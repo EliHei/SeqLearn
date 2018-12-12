@@ -1,7 +1,7 @@
 # SeqLearner
 [![PyPI version](https://badge.fury.io/py/seqlearner.svg)](https://badge.fury.io/py/seqlearner) [![Build Status](https://travis-ci.org/EliHei/SeqLearn.svg?branch=master)](https://travis-ci.org/EliHei/SeqLearn) [![Documentation Status](https://readthedocs.org/projects/seqlearner/badge/?version=latest)](https://seqlearner.readthedocs.io/en/latest/?badge=latest)
 
-![](logo_small.png)
+![](logo.png)
 
 ## SeqLearner is the Sequence Learner!
 SeqLearner is a multitask learning package for semi-supervised learning on biological sequences

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="Version 0.0.6 release">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="Add new logo">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +32,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seqlearner/SemiSupervisedLearner.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="291">
@@ -65,12 +65,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor>
-                <caret column="374" selection-start-column="13" selection-end-column="374" />
+              <first_editor relative-caret-position="60">
+                <caret line="4" column="94" selection-start-line="4" selection-start-column="94" selection-end-line="4" selection-end-column="94" />
               </first_editor>
               <second_editor />
             </state>
@@ -153,7 +153,6 @@
         <option value="$PROJECT_DIR$/seqlearner/GensimWord2Vec.py" />
         <option value="$PROJECT_DIR$/seqlearner/MultiTaskLearner.py" />
         <option value="$PROJECT_DIR$/seqlearner/examples/train_uniprot.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/docs/installation.md" />
         <option value="$PROJECT_DIR$/docs/index.md" />
@@ -172,6 +171,7 @@
         <option value="$PROJECT_DIR$/mkdocs.yml" />
         <option value="$PROJECT_DIR$/docs/SemiSupervisedLearning/general.md" />
         <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -399,14 +399,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528704254029</updated>
-      <workItem from="1544385341523" duration="16448000" />
-    </task>
-    <task id="LOCAL-00049" summary="Add build docs icon in readme.md">
-      <created>1543941171280</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1543941171280</updated>
+      <workItem from="1544385341523" duration="16610000" />
     </task>
     <task id="LOCAL-00050" summary="Update index file">
       <created>1543941453105</created>
@@ -744,11 +737,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544620643730</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="Add new logo">
+      <created>1544630730661</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1544630730661</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16448000" />
+    <option name="totallyTimeSpent" value="16610000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -761,6 +761,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14735337" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -835,7 +836,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/semisup" />
     </ignored-roots>
-    <MESSAGE value="Update Readme and home doc" />
     <MESSAGE value="Update home doc" />
     <MESSAGE value="Update readme" />
     <MESSAGE value="Update home" />
@@ -860,7 +860,8 @@
     <MESSAGE value="Add PseudoLabeling doc" />
     <MESSAGE value="Add General Info about SemiSupervised Doc" />
     <MESSAGE value="Version 0.0.6 release" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.0.6 release" />
+    <MESSAGE value="Add new logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new logo" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/seqlearner/Embedding.py">
@@ -998,16 +999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="374" selection-start-column="13" selection-end-column="374" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/SemiSupervisedLearning/label_propagation.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1096,6 +1087,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/seqlearner/SemiSupervisedLearner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
@@ -1103,6 +1097,16 @@
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="60">
+            <caret line="4" column="94" selection-start-line="4" selection-start-column="94" selection-end-line="4" selection-end-column="94" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
