@@ -3,7 +3,7 @@ nav:
     - Home: index.md
     - Installation: installation.md
     - Embeddings:
-      - Word2Vec: embeddings/word2vec.md
+      - GensimWord2Vec: embeddings/gensimword2vec.md
       - Freq2Vec: embeddings/freq2vec.md
       - SkipGram: embeddings/skipgram.md
       - Sent2Vec: embeddings/sent2vec.md
