@@ -230,12 +230,12 @@ class Embedding:
             >>> import pandas as pd
             >>> sequences = pd.read_csv("./sequences.csv", header=None)
             >>> embed = Embedding(sequences, word_length=5)
-            >>> skipgram_embedding = embed.sent2vec(emb_dim=50, epochs=1000, lr=0.5, wordNgrams=5, loss="ns", neg=10, thread=10, t=0.000005, dropoutK=4, bucket=4000000)
+            >>> skipgram_embedding = embed.sent2vec_maker(emb_dim=50, epochs=1000, lr=0.5, wordNgrams=5, loss="ns", neg=10, thread=10, t=0.000005, dropoutK=4, bucket=4000000)
         """
         s2v = Sent2Vec(self.sequences, self.word_length, emb_dim, epochs, lr, wordNgrams, loss, neg, thread, t,
                        dropoutK,
                        bucket)
-        self.encoding = s2v.sent2vec()
+        self.encoding = s2v.sent2vec_maker()
         s2v.__name__ = "Sent2Vec"
         self.__save_embedding(s2v, file_path="../results/embeddings/")
         return self.encoding

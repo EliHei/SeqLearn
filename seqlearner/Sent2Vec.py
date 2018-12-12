@@ -71,7 +71,7 @@ class Sent2Vec:
         with open('../aux/Sent2Vec_sentences_aux.txt', 'w') as out:
             out.write("\n".join(self.corpus))
 
-    def sent2vec(self):
+    def sent2vec_maker(self):
         """
             Train Embedding layer on vocabulary in order to get embedding weights
             for each word in vocabulary. compress each in `emb_dim` vectors.
@@ -89,7 +89,7 @@ class Sent2Vec:
             >>> import pandas as pd
             >>> sequences = pd.read_csv("./sequences.csv", header=None)
             >>> s2v = Sent2Vec(sequences, word_length=3, emb_dim=25, epoch=100, lr=0.2, wordNgrams=5, loss="hs", neg=20, thread=10, t=0.0000005, dropoutK=2, bucket=4000000)
-            >>> encoding = s2v.sent2vec()
+            >>> encoding = s2v.sent2vec_maker()
         """
         if not os.path.exists("../models/sent2vec.bin"):
 
