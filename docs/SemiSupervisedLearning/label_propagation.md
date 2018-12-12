@@ -17,16 +17,19 @@ These labels are propagated to the unlabeled points throughout the course of the
 - __n_jobs__: Positive integer, The number of parallel jobs to run
 
 
-### Example: make the embedding of protein sequences
+### Example: predict the unlabeled sequences
 
 ```python
-import pandas as pd
-from seqlearner import Freq2Vec
-sequences = pd.read_csv("./protein_sequences.csv", header=None)
-freq2vec = Freq2Vec(sequences, word_length=3, window_size=5, emb_dim=25, loss="mean_squared_error", epochs=250)
-freq2vec.freq2vec_maker()
+from sklearn.model_selection import train_test_split
+from seqlearner import MultiTaskLearner
+labeled_path = "../data/labeled.csv"
+unlabeled_path = "../data/unlabeled.csv"
+mtl = MultiTaskLearner(labeled_path, unlabeled_path)
+encoding = mtl.embed(word_length=5)
+X, y, X_t, y_t = train_test_split(mtl.sequences, mtl.labels, test_size=0.33)
+score = mtl.semi_supervised_learner(X, y, X_t, y_t, ssl="label_propagation")
 ```
 
 ### See Also
-- [Freq2Vec code implementation on Github](https://github.com/EliHei/seqlearn/blob/master/seqlearner/Freq2Vec.py)
+- [LabelPropagation code implementation on Github](https://github.com/EliHei/seqlearn/blob/master/seqlearner/SemiSupervisedLearner.py)
 
