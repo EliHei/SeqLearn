@@ -9,7 +9,7 @@ from .WordEmbedder import WordEmbedder
 
 class Freq2Vec(WordEmbedder):
     """
-        Freq2Vec Embedding Method. This class is wrapper for Freq2Vec Embedding
+        Freq2Vec Embedding Method. This class contains the implementation for Freq2Vec Embedding
         method to apply on a set of sequences. Child class of WordEmbedder.
 
         Parameters

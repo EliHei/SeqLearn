@@ -3,7 +3,7 @@
 seqlearner.Freq2Vec(sequences, word_length, window_size, emb_dim, loss, epochs)
 ```
 
-Freq2Vec is an Embedding Method. This class is wrapper for Freq2Vec Embedding method to apply on a set of sequences. Child class of WordEmbedder.
+Freq2Vec is an Embedding Method. This class contains the implementation for Freq2Vec Embedding method to apply on a set of sequences. Child class of WordEmbedder.
 You can train Embedding layer on vocabulary in order to get embedding weights for each word in vocabulary. compress each in `emb_dim` vectors with `freq2vec_maker` method.
 The `freq2vec_maker` method returns the embedding weights of the vocabulary. You can access to the vocabulary via `vocab` attribute.
 
