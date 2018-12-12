@@ -175,9 +175,14 @@ class SemiSupervisedLearner:
             stop_threshold: float, 0.1
                 threshold for stop.
             pseudocount: integer, default 0
-                //TODO : ?
-            weights: ?
-                ?
+                A pseudocount to add to the emission of each distribution. This
+                effectively smoothes the states to prevent 0. probability symbols
+                if they don't happen to occur in the data. Only effects mixture
+                models defined over discrete distributions. Default is 0.
+            weights: Array-Like
+                The initial weights of each sample in the matrix. If nothing is
+                passed in then each sample is assumed to be the same weight.
+                Default is None.
         """
         model = NaiveBayes.from_samples(distributions=distributions, X=self.X, y=self.y, verbose=verbose,
                                         max_iterations=max_iter, stop_threshold=stop_threshold, pseudocount=pseudocount,
