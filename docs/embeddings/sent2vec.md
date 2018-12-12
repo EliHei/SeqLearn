@@ -21,6 +21,11 @@ The `sent2vec_maker` method returns the embedding weights of the vocabulary. You
 - __dropoutK__: Positive integer, number of n-grams dropped when training a sent2vec model
 - __bucket__: Positive integer, number of hash buckets for vocabulary
 
+### sent2vec_maker
+ 
+This is a function of Sent2Vec class which you can use to embed your vocabulary.
+you can train Embedding layer on vocabulary in order to get embedding weights for each word in vocabulary. compress each in `emb_dim` vectors.
+This function accepts no arguments.
 
 ### Example: make the embedding of protein sequences
 
