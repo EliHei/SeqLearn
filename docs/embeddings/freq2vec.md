@@ -15,6 +15,11 @@ The `freq2vec_maker` method returns the embedding weights of the vocabulary. You
 - __loss__: String, the loss function is going to be used on training phase.
 - __epochs__: Positive integer, number of epochs for training the embedding.
 
+### freq2vec_maker
+ 
+This is a function of Freq2Vec class which you can use to embed your vocabulary.
+you can train Embedding layer on vocabulary in order to get embedding weights for each word in vocabulary. compress each in `emb_dim` vectors.
+This function accepts no arguments.
 
 ### Example: make the embedding of protein sequences
 

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="Update Freq2Vec method">
+    <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="Update Sent2Vec method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/embeddings/sent2vec.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/embeddings/sent2vec.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seqlearner/Embedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/seqlearner/Embedding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seqlearner/Sent2Vec.py" beforeDir="false" afterPath="$PROJECT_DIR$/seqlearner/Sent2Vec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/embeddings/freq2vec.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/embeddings/freq2vec.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,24 +21,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/embeddings/freq2vec.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="225">
-                <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+              <first_editor relative-caret-position="285">
+                <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/embeddings/sent2vec.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="30">
-                <caret line="2" column="99" selection-start-line="2" selection-start-column="99" selection-end-line="2" selection-end-column="99" />
+              <first_editor relative-caret-position="345">
+                <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
               </first_editor>
               <second_editor />
             </state>
@@ -50,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seqlearner/Sent2Vec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" column="34" lean-forward="true" selection-start-line="45" selection-start-column="23" selection-end-line="46" selection-end-column="34" />
+            <state relative-caret-position="-5">
+              <caret line="70" column="15" lean-forward="true" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="15" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -66,30 +64,6 @@
               <caret line="36" column="47" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="47" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seqlearner/MultiTaskLearner.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="129" column="69" selection-start-line="129" selection-start-column="15" selection-end-line="129" selection-end-column="69" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seqlearner/examples/train_uniprot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="91" column="54" selection-start-line="82" selection-start-column="4" selection-end-line="91" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -195,9 +169,9 @@
         <option value="$PROJECT_DIR$/docs/index.md" />
         <option value="$PROJECT_DIR$/mkdocs.yml" />
         <option value="$PROJECT_DIR$/seqlearner/Freq2Vec.py" />
-        <option value="$PROJECT_DIR$/docs/embeddings/freq2vec.md" />
         <option value="$PROJECT_DIR$/seqlearner/Sent2Vec.py" />
         <option value="$PROJECT_DIR$/docs/embeddings/sent2vec.md" />
+        <option value="$PROJECT_DIR$/docs/embeddings/freq2vec.md" />
       </list>
     </option>
   </component>
@@ -442,21 +416,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528704254029</updated>
-      <workItem from="1544385341523" duration="10695000" />
-    </task>
-    <task id="LOCAL-00034" summary="Add Comments for Freq2Vec">
-      <created>1543588202993</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1543588202993</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Update Comments for Embedding">
-      <created>1543588226117</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1543588226117</updated>
+      <workItem from="1544385341523" duration="11209000" />
     </task>
     <task id="LOCAL-00036" summary="Add Comments for GensimWord2Vec">
       <created>1543588415957</created>
@@ -787,11 +747,25 @@
       <option name="project" value="LOCAL" />
       <updated>1544615592706</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="Update Sent2Vec method">
+      <created>1544616318360</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1544616318360</updated>
+    </task>
+    <task id="LOCAL-00084" summary="Update Sent2Vec doc">
+      <created>1544616598372</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1544616598372</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10695000" />
+    <option name="totallyTimeSpent" value="11209000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -879,8 +853,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/semisup" />
     </ignored-roots>
-    <MESSAGE value="Update Setup.py" />
-    <MESSAGE value="Update mkdocs" />
     <MESSAGE value="Update mkdocs and add some md files for embedding" />
     <MESSAGE value="Add build docs icon in readme.md" />
     <MESSAGE value="Update index file" />
@@ -904,7 +876,9 @@
     <MESSAGE value="Fix minor bug in mkdocs and requirements" />
     <MESSAGE value="Add All necessary pages" />
     <MESSAGE value="Update Freq2Vec method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Freq2Vec method" />
+    <MESSAGE value="Update Sent2Vec method" />
+    <MESSAGE value="Update Sent2Vec doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Sent2Vec doc" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/seqlearner/Embedding.py">
@@ -1041,20 +1015,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/embeddings/freq2vec.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="225">
-            <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seqlearner/Sent2Vec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="34" lean-forward="true" selection-start-line="45" selection-start-column="23" selection-end-line="46" selection-end-column="34" />
+        <state relative-caret-position="-5">
+          <caret line="70" column="15" lean-forward="true" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="15" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -1064,8 +1028,18 @@
     <entry file="file://$PROJECT_DIR$/docs/embeddings/sent2vec.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="99" selection-start-line="2" selection-start-column="99" selection-end-line="2" selection-end-column="99" />
+          <first_editor relative-caret-position="345">
+            <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/embeddings/freq2vec.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="285">
+            <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           </first_editor>
           <second_editor />
         </state>
