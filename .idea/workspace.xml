@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="Add Word2Vec doc">
+    <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="Update LabelPropagation example">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/SemiSupervisedLearning/label_propagation.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/SemiSupervisedLearning/label_propagation.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SemiSupervisedLearning/label_spreading.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/SemiSupervisedLearning/label_spreading.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,12 +21,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/SemiSupervisedLearning/label_propagation.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="120">
-                <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <first_editor relative-caret-position="60">
+                <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/SemiSupervisedLearning/label_spreading.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="405">
+                <caret line="27" column="72" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
               </first_editor>
               <second_editor />
             </state>
@@ -36,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seqlearner/SemiSupervisedLearner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="141" column="33" lean-forward="true" selection-start-line="141" selection-start-column="33" selection-end-line="141" selection-end-column="33" />
+            <state relative-caret-position="217">
+              <caret line="53" column="48" lean-forward="true" selection-start-line="50" selection-start-column="12" selection-end-line="53" selection-end-column="48" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -101,7 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../skipgram/codes/skipgram_V2.py" />
         <option value="$PROJECT_DIR$/code/skipgram_V2.py" />
         <option value="$PROJECT_DIR$/code/SeqLearner.py" />
         <option value="$PROJECT_DIR$/code/Main.py" />
@@ -152,6 +163,7 @@
         <option value="$PROJECT_DIR$/docs/embeddings/gensimword2vec.md" />
         <option value="$PROJECT_DIR$/seqlearner/SemiSupervisedLearner.py" />
         <option value="$PROJECT_DIR$/docs/SemiSupervisedLearning/label_propagation.md" />
+        <option value="$PROJECT_DIR$/docs/SemiSupervisedLearning/label_spreading.md" />
       </list>
     </option>
   </component>
@@ -396,21 +408,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528704254029</updated>
-      <workItem from="1544385341523" duration="12882000" />
-    </task>
-    <task id="LOCAL-00042" summary="Add Comments for MultiTaskLearner">
-      <created>1543592525471</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1543592525471</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Add Comments for SemiSupervisedLearner">
-      <created>1543593318422</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1543593318422</updated>
+      <workItem from="1544385341523" duration="13332000" />
     </task>
     <task id="LOCAL-00044" summary="Update examples in MultiTaskLearner">
       <created>1543593329999</created>
@@ -741,11 +739,25 @@
       <option name="project" value="LOCAL" />
       <updated>1544618369738</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Add LabelPropagation Doc">
+      <created>1544618602475</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1544618602475</updated>
+    </task>
+    <task id="LOCAL-00092" summary="Update LabelPropagation example">
+      <created>1544619141984</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1544619141985</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12882000" />
+    <option name="totallyTimeSpent" value="13332000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -833,8 +845,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/semisup" />
     </ignored-roots>
-    <MESSAGE value="version 0.0.5 release" />
-    <MESSAGE value="add feature to sent2vec" />
     <MESSAGE value="Add freq2vec doc" />
     <MESSAGE value="update freq2vec doc" />
     <MESSAGE value="Add logo" />
@@ -858,7 +868,9 @@
     <MESSAGE value="Update mkdocs" />
     <MESSAGE value="Add Word2Vec doc" />
     <MESSAGE value="Fix minor bug in label_propagation function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix minor bug in label_propagation function" />
+    <MESSAGE value="Add LabelPropagation Doc" />
+    <MESSAGE value="Update LabelPropagation example" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update LabelPropagation example" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/seqlearner/Embedding.py">
@@ -899,14 +911,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/about.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/SemiSupervisedLearning/label_spreading.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
@@ -1047,21 +1051,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/SemiSupervisedLearning/label_propagation.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="60">
+            <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/seqlearner/SemiSupervisedLearner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="141" column="33" lean-forward="true" selection-start-line="141" selection-start-column="33" selection-end-line="141" selection-end-column="33" />
+        <state relative-caret-position="217">
+          <caret line="53" column="48" lean-forward="true" selection-start-line="50" selection-start-column="12" selection-end-line="53" selection-end-column="48" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/SemiSupervisedLearning/label_propagation.md">
+    <entry file="file://$PROJECT_DIR$/docs/SemiSupervisedLearning/label_spreading.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="120">
-            <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <first_editor relative-caret-position="405">
+            <caret line="27" column="72" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
           </first_editor>
           <second_editor />
         </state>
