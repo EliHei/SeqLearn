@@ -2,7 +2,7 @@
 ```python
 seqlearner.Sent2Vec(sequences, word_length, emb_dim, epochs, lr, wordNgrams, loss, neg, thread, t, dropoutK, bucket)
 ```
-Sent2Vec Embedding Method. This class is wrapper for Sent2Vec Embedding method to apply on a set of sequences. This is child class of WordEmbedder.
+Sent2Vec Embedding Method. This class is wrapper for Sent2Vec Embedding method to apply on a set of sequences. 
 You can train Embedding layer on vocabulary in order to get embedding weights for each word in vocabulary. compress each in `emb_dim` vectors with `sent2vec_maker` method.
 The `sent2vec_maker` method returns the embedding weights of the vocabulary. You can access to the vocabulary via `vocab` attribute.
 
