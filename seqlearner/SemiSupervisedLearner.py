@@ -112,7 +112,7 @@ class SemiSupervisedLearner:
 
             Parameters
             ----------
-            kernel : {'knn', 'rbf', callable}
+            kernel : {'knn', 'rbf'}
                 String identifier for kernel function to use or the kernel function
                 itself. Only 'rbf' and 'knn' strings are valid inputs. The function
                 passed should take two inputs, each of shape [n_samples, n_features],
@@ -127,9 +127,6 @@ class SemiSupervisedLearner:
             alpha : float
                 Clamping factor.
 
-                .. deprecated:: 0.19
-                    This parameter will be removed in 0.21.
-                    'alpha' is fixed to zero in 'LabelPropagation'.
 
             max_iter : integer
                 Change maximum number of iterations allowed
