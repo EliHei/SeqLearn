@@ -8,6 +8,7 @@ nav:
       - SkipGram: embeddings/skipgram.md
       - Sent2Vec: embeddings/sent2vec.md
     - SemiSupervisedLearning:
+      - General Information: SemiSupervisedLearning/general.md
       - LabelSpreading: SemiSupervisedLearning/label_spreading.md
       - LabelPropagation: SemiSupervisedLearning/label_propagation.md
       - NaiveBayes: SemiSupervisedLearning/naive_bayes.md
