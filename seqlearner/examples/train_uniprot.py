@@ -175,7 +175,7 @@ def make_table(table):
     print(end="\n\n\n\n")
 
 
-def visualization(embedding_path="../data/uniprot/LoadEmbedding_Encoding.csv", func="sum", method="TSNE"):
+def visualization(embedding_path="../data/uniprot/LoadEmbedding_Encoding.csv", func="sum", method="TSNE.md"):
     data = pd.read_csv(data_path + "uniprot.tab", delimiter="\t")
     data.drop(["Entry", "Protein names", "Cross-reference (Pfam)"], axis=1, inplace=True)
     data.dropna(axis=0, how='any', inplace=True)
@@ -195,7 +195,7 @@ def visualization(embedding_path="../data/uniprot/LoadEmbedding_Encoding.csv", f
                                       axis=0)
         protein_families = pd.concat([protein_families.iloc[random_samples], protein_families.iloc[p_samples]], axis=0)
         protein_families = pd.DataFrame(protein_families).reset_index()
-        if method == "TSNE":
+        if method == "TSNE.md":
             tsne = TSNE(n_components=2)
             embedding = tsne.fit_transform(embedding_weights)
         else:

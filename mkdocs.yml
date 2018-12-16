@@ -13,6 +13,9 @@ nav:
       - LabelPropagation: SemiSupervisedLearning/label_propagation.md
       - NaiveBayes: SemiSupervisedLearning/naive_bayes.md
       - PseudoLabeling: SemiSupervisedLearning/pseudo_labeling.md
+    - Visualization:
+      - TSNE: Visualization/TSNE.md
+      - UMAP: Visualization/UMAP.md
 theme: readthedocs
 repo_url: http://github.com/EliHei/SeqLearn
 site_description: 'Documentation for SeqLearner, the multitask learning package for semi-supervised learning on biological sequences'

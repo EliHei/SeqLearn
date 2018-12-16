@@ -429,13 +429,13 @@ class MultiTaskLearner:
     def __tsne(self, embedding_weights, **options):
         return TSNE(n_components=options.get("n_components", 2)).fit_transform(embedding_weights)
 
-    def __get_components_from_visualization_method(self, method="TSNE"):
-        if method is "TSNE":
+    def __get_components_from_visualization_method(self, method="TSNE.md"):
+        if method is "TSNE.md":
             return self.__tsne()
         elif method is "UMAP":
             return self.__umap()
 
-    def visualize(self, method="TSNE", family=None, proportion=1.5):
+    def visualize(self, method="TSNE.md", family=None, proportion=1.5):
         if family is None:
             protein_family = str(pd.Series(self.labels).value_counts().index[0])
             protein_family_freq = pd.Series(self.labels).value_counts().iloc[0]
@@ -452,7 +452,7 @@ class MultiTaskLearner:
         protein_families = pd.concat([protein_families.iloc[random_samples], protein_families.iloc[p_samples]],
                                      axis=0)
         protein_families = pd.DataFrame(protein_families).reset_index()
-        if method == "TSNE":
+        if method == "TSNE.md":
             tsne = TSNE(n_components=2)
             embedding = tsne.fit_transform(embedding_weights)
         else:
