@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.readlines()[1]
 
 setup(name='seqlearner',
-      version='0.0.6',
+      version='0.0.7',
       description='The multitask learning package for semi-supervised learning on biological sequences',
       long_description=long_description,
       long_description_content_type="text/markdown",
