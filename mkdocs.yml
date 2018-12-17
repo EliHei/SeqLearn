@@ -16,6 +16,8 @@ nav:
     - Visualization:
       - TSNE: Visualization/TSNE.md
       - UMAP: Visualization/UMAP.md
+    - HyperparameterOptimization:
+      - General: HyperparameterOptimization/hyperopt.md
 theme: readthedocs
 repo_url: http://github.com/EliHei/SeqLearn
 site_description: 'Documentation for SeqLearner, the multitask learning package for semi-supervised learning on biological sequences'
