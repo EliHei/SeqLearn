@@ -4,7 +4,7 @@ seqlearner.EmbeddingHyperOptimization.optmize(embedding, sequence_datapath)
 ```
 
 Hyper-parameter optimization for an embedding method implementation method. 
-You can specify the embedding method to function `optmize` and the best choice for parameters.
+You can specify the embedding method to function `optimize` and the best choice for parameters.
 The `optimize` function takes the following arguments:
   
 ### Arguments
