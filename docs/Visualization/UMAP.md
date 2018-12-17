@@ -18,7 +18,7 @@ The `visualize` method has the following arguments:
 - __family__: String, Name of protein family to be visualized
 - __proportion__: Positive float, population proportion of number of other classes by number of 
 
-## Apply T-SNE visualization on  CRISP Protein family
+## Apply UMAP visualization on  CRISP Protein family
 ```python
 from seqlearner import MultiTaskLearner as mtl
 import pandas as pd
