@@ -31,4 +31,4 @@ mtl.visualize(method="UMAP", family="CRISP_family", proportion=2.0)
 ```
 The visualization plot is in the following:
 
-![](CRISP_family_WA_UMAP.png.png)
+![](docs/CRISP_family_WA_UMAP.png)

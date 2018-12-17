@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="Update TSNE docs">
+    <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="fix minor bug in UMAP &amp; T-SNE doc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/CRISP family_WA_UMAP.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CRISP_family_WA_UMAP.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Visualization/UMAP.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Visualization/UMAP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Visualization/TSNE.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Visualization/TSNE.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,24 +45,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/Visualization/UMAP.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="300">
-                <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+              <first_editor relative-caret-position="480">
+                <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/Visualization/TSNE.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="75">
-                <caret line="5" column="34" selection-end-line="33" />
+              <first_editor relative-caret-position="480">
+                <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
               </first_editor>
               <second_editor />
             </state>
@@ -187,8 +186,8 @@
         <option value="$PROJECT_DIR$/mkdocs.yml" />
         <option value="$PROJECT_DIR$/seqlearner/MultiTaskLearner.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/docs/Visualization/TSNE.md" />
         <option value="$PROJECT_DIR$/docs/Visualization/UMAP.md" />
+        <option value="$PROJECT_DIR$/docs/Visualization/TSNE.md" />
       </list>
     </option>
   </component>
@@ -443,28 +442,7 @@
       <updated>1528704254029</updated>
       <workItem from="1544385341523" duration="18119000" />
       <workItem from="1544957472431" duration="613000" />
-      <workItem from="1545037013895" duration="2222000" />
-    </task>
-    <task id="LOCAL-00056" summary="Add freq2vec doc">
-      <created>1544384244758</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1544384244759</updated>
-    </task>
-    <task id="LOCAL-00057" summary="update freq2vec doc">
-      <created>1544384847002</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1544384847002</updated>
-    </task>
-    <task id="LOCAL-00058" summary="update freq2vec doc">
-      <created>1544385060532</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1544385060532</updated>
+      <workItem from="1545037013895" duration="2519000" />
     </task>
     <task id="LOCAL-00059" summary="update freq2vec doc">
       <created>1544385259058</created>
@@ -788,11 +766,32 @@
       <option name="project" value="LOCAL" />
       <updated>1545038925159</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="Add UMAP doc">
+      <created>1545039342831</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1545039342831</updated>
+    </task>
+    <task id="LOCAL-00106" summary="fix minor bug in UMAP doc">
+      <created>1545039398849</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1545039398849</updated>
+    </task>
+    <task id="LOCAL-00107" summary="fix minor bug in UMAP &amp; T-SNE doc">
+      <created>1545039415389</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1545039415389</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20954000" />
+    <option name="totallyTimeSpent" value="21251000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -880,9 +879,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/semisup" />
     </ignored-roots>
-    <MESSAGE value="change theme" />
-    <MESSAGE value="Fix minor bug in mkdocs and requirements" />
-    <MESSAGE value="Add All necessary pages" />
     <MESSAGE value="Update Freq2Vec method" />
     <MESSAGE value="Update Sent2Vec method" />
     <MESSAGE value="Update Sent2Vec doc" />
@@ -905,7 +901,10 @@
     <MESSAGE value="Add visualization initial docs" />
     <MESSAGE value="Add TSNE docs" />
     <MESSAGE value="Update TSNE docs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update TSNE docs" />
+    <MESSAGE value="Add UMAP doc" />
+    <MESSAGE value="fix minor bug in UMAP doc" />
+    <MESSAGE value="fix minor bug in UMAP &amp; T-SNE doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix minor bug in UMAP &amp; T-SNE doc" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/seqlearner/Embedding.py">
@@ -1097,16 +1096,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="45">
-            <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-end-line="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/CRISP_family_WA_UMAP.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1157,21 +1146,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/Visualization/TSNE.md">
+    <entry file="file://$PROJECT_DIR$/docs/Visualization/UMAP.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="75">
-            <caret line="5" column="34" selection-end-line="33" />
+          <first_editor relative-caret-position="480">
+            <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/Visualization/UMAP.md">
+    <entry file="file://$PROJECT_DIR$/docs/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="300">
-            <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+          <first_editor relative-caret-position="60">
+            <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/Visualization/TSNE.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="480">
+            <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           </first_editor>
           <second_editor />
         </state>
