@@ -32,3 +32,7 @@ mtl.visualize(method="UMAP", family="CRISP_family", proportion=2.0)
 The visualization plot is in the following:
 
 ![](../CRISP_family_WA_UMAP.png)
+
+
+### See Also
+- [UMAP code implementation on Github](https://github.com/EliHei/seqlearn/blob/master/seqlearner/SemiSupervisedLearner.py)

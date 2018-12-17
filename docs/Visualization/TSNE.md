@@ -32,3 +32,8 @@ mtl.visualize(method="TSNE", family="MscL_family", proportion=2.0)
 The visualization plot is in the following:
 
 ![](../MscL_family_TSNE.png)
+
+
+### See Also
+- [T-SNE code implementation on Github](https://github.com/EliHei/seqlearn/blob/master/seqlearner/SemiSupervisedLearner.py)
+
