@@ -14,7 +14,7 @@ from seqlearner.MultiTaskLearner import MultiTaskLearner
     Github: https://github.com/naghipourfar
     Skype: mn7697np
 """
-
+embedding_method = None
 
 def load_data():
     dataset_name = "uniprot/"
@@ -25,7 +25,10 @@ def load_data():
 
 
 def embed(labeled_data, unlabeled_data):
-    embedding = "freq2vec"
+    global embedding_method
+    embedding = embedding_method
+    if embedding is None:
+        raise Exception("Embedding method must be specified.")
     emb_dim = {{choice([5 * i for i in range(1, 21)])}}
     word_length = {{choice([i for i in range(3, 11)])}}
     k = {{choice([2, 3, 4, 5, 6, 7, 8, 9, 10])}}
@@ -51,7 +54,9 @@ def embed(labeled_data, unlabeled_data):
     return {'status': STATUS_OK}
 
 
-def optmize():
+def optimize(embedding="freq2vec"):
+    global embedding_method
+    embedding_method = embedding
     best_run, best_model = optim.minimize(model=embed,
                                           data=load_data,
                                           algo=tpe.suggest,
