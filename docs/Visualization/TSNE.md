@@ -31,4 +31,4 @@ mtl.visualize(method="TSNE", family="MscL_family", proportion=2.0)
 ```
 The visualization plot is in the following:
 
-![](docs/MscL_family_TSNE.png)
+![](../MscL_family_TSNE.png)
