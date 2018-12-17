@@ -1,33 +1,30 @@
 # HyperParameter Optimization
 ```python
-seqlearner.EmbeddingHyperOptimization.naive_bayes(distributions, verbose, max_iter, stop_threshold, pseudocount, weights)
+seqlearner.EmbeddingHyperOptimization.optmize(embedding, sequence_datapath)
 ```
 
-Naive Bayesian algorithm for semi-supervised learning. 
-Naive Bayes classifiers are a family of simple probabilistic classifiers based on applying Bayes' theorem with strong (naive) independence assumptions between the features.
-
+Hyper-parameter optimization for an embedding method implementation method. 
+You can specify the embedding method to function `optmize` and the best choice for parameters.
+The `optimize` function takes the following arguments:
+  
 ### Arguments
-- __distributions__: Pomegranate Object, Distribution object from pomegranate package
-- __verbose__: Boolean, For showing debug messages
-- __max_iter__: Positive integer, The number of maximum iterations
-- __stop_threshold__: Float, threshold for stop
-- __pseudocount__: Float, A pseudocount to add to the emission of each distribution. This effectively smoothes the states to prevent 0. probability symbols if they don't happen to occur in the data. Only effects mixture models defined over discrete distributions
-- __weights__: Array-like, The initial weights of each sample in the matrix. If nothing is passed in then each sample is assumed to be the same weight. Default is None.
+- __embedding__: String, Embedding method which its hyper-parameters are going to be optimized
+- __sequence_datapath__: String, sequences file path
 
+The `optmize` function returns a dictionary of hyperparamters and their best value for the corresponding hyperparameters.
 
-### Example: predict the unlabeled sequences
+### Example: Hyperparameter optimization for Freq2Vec
 
 ```python
-from sklearn.model_selection import train_test_split
-from seqlearner import MultiTaskLearner
+from seqlearner import EmbeddingHyperOptimization as eho
 labeled_path = "../data/labeled.csv"
 unlabeled_path = "../data/unlabeled.csv"
-mtl = MultiTaskLearner(labeled_path, unlabeled_path)
-encoding = mtl.embed(word_length=5)
-X, y, X_t, y_t = train_test_split(mtl.sequences, mtl.labels, test_size=0.33)
-score = mtl.semi_supervised_learner(X, y, X_t, y_t, ssl="naive_bayes", max_iter=1e8)
+best_parameters = eho.optimize(embedding="freq2vec")
+print(best_parameters)
 ```
 
+This will print the dictionary of best values for each hyper-parameter attending in Freq2Vec embedding method.
+
 ### See Also
-- [NaiveBayes code implementation on Github](https://github.com/EliHei/seqlearn/blob/master/seqlearner/SemiSupervisedLearner.py)
+- [EmbeddingHyperparameterOptmization code implementation on Github](https://github.com/EliHei/seqlearn/blob/master/seqlearner/EmbeddingHyperOptimization.py)
 
