@@ -30,4 +30,5 @@ freq2vec_embedding = mtl.embed(word_length=3, embedding="freq2vec", func="sum", 
 mtl.visualize(method="TSNE", family="MscL_family", proportion=2.0)
 ```
 The visualization plot is in the following:
+
 ![](MscL_family_TSNE.png)

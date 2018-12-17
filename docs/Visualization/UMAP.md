@@ -30,4 +30,5 @@ freq2vec_embedding = mtl.embed(word_length=3, embedding="freq2vec", func="sum", 
 mtl.visualize(method="UMAP", family="CRISP_family", proportion=2.0)
 ```
 The visualization plot is in the following:
+
 ![](CRISP_family_WA_UMAP.png.png)
