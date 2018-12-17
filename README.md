@@ -41,7 +41,7 @@ freq2vec_embedding = mtl.embed(word_length=3, embedding="freq2vec", func="sum", 
 ```
 after calculating the freq2vec embedding with 25 dimensions, we would like to visualize it via `TSNE` method.
 ```python
-visualize(method=TSNE.md, proportion=2.0)
+visualize(method="TSNE", proportion=2.0)
 ```
 This will save a plot for you in `seqlearner/results/` folder which the points are samples from 2 protein families which has the most samples in the dataset. Here is a sample plot.
 
