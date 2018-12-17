@@ -51,7 +51,7 @@ def embed(labeled_data, unlabeled_data):
     return {'status': STATUS_OK}
 
 
-if __name__ == '__main__':
+def optmize():
     best_run, best_model = optim.minimize(model=embed,
                                           data=load_data,
                                           algo=tpe.suggest,
