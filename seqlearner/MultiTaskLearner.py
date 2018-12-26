@@ -103,22 +103,17 @@ class MultiTaskLearner:
             >>> mtl = MultiTaskLearner(labeled_path, unlabeled_path)
             >>> scores, overall_scores, class_freqs = mtl.learner(word_length=5, k=10, embedding="freq2vec", ssl="label_spreading")
         """
+        if ssl is None:
+            raise Exception("ssl has invalid value")
         self.embedding_method = embedding
         self.ssl = ssl
         self.func = options.get("func", None)
         print("Start embedding with " + embedding + " ...")
         self.embedding = self.embed(word_length, **options)
         print("Embedding has been finished!")
-        if ssl is None:
-            return
         print("Start Running Semi-Supervised task...")
         labelings = list(map(lambda x: self.__one_versus_all_maker(x), self.classes))
         idx = self.__cv(k)
-        # print(np.array(idx))
-        # print(np.stack(emb, axis=0).shape)
-        # print(np.delete(np.stack(emb, axis=0), idx[0], 0).shape)
-        # print(np.delete(np.array(labelings[0]), idx[0], 0).shape)
-        # print(np.array(emb)[idx].shape, np.array(labelings[0])[idx].shape)
         scores = list(map(lambda labels: np.mean(list(map(
             lambda i: self.semi_supervised_learner(np.delete(np.stack(self.embedding, axis=0), i, 0),
                                                    np.delete(np.array(labels), i, 0),
@@ -157,7 +152,7 @@ class MultiTaskLearner:
                 raise Exception("The embedding must have specified")
             self.embedding_method = options.get("embedding", None)
         embed = Embedding(self.sequences, word_length)
-        if self.embedding_method is "skipgram":
+        if self.embedding_method.lower() == "skipgram":
             self.embedding = embed.skipgram(
                 func=options.get("func", "sum"),
                 window_size=options.get("window_size", 10),
@@ -167,7 +162,7 @@ class MultiTaskLearner:
             )
             return self.embedding
 
-        elif self.embedding_method is "freq2vec":
+        elif self.embedding_method.lower() == "freq2vec":
             self.embedding = embed.freq2vec(
                 func=options.get("func", "sum"),
                 window_size=options.get("window_size", 10),
@@ -177,7 +172,7 @@ class MultiTaskLearner:
             )
             return self.embedding
 
-        elif self.embedding_method is "sent2vec":
+        elif self.embedding_method.lower() == "sent2vec":
             self.embedding = embed.sent2vec(
                 emb_dim=options.get("emb_dim", 10),
                 epochs=options.get("epoch", 1000),
@@ -192,14 +187,14 @@ class MultiTaskLearner:
             )
             return self.embedding
 
-        elif self.embedding_method is "load_embedding":
+        elif self.embedding_method.lower() == "load_embedding":
             self.embedding = embed.load_embedding(
                 func=options.get("func", "sum"),
                 file=options.get("file")
             )
             return self.embedding
 
-        elif self.embedding_method is "word2vec":
+        elif self.embedding_method.lower() == "word2vec":
             self.embedding = embed.word2vec(
                 func=options.get("func", "sum"),
                 window_size=options.get("window_size", 10),

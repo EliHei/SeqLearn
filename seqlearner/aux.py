@@ -8,7 +8,7 @@
 
 
 # myarray = np.fromfile('../data/skipgram_embedding_10_10_3.TXT', dtype=float)
-# myarray = pd.read_excel('../data/dataverse_files/family_classification_metadata.xlsx')
+# myarray = pd.read_excel('../data/prot2vec/family_classification_metadata.xlsx')
 
 # myarray.drop(["Entry"], axis=1, inplace=True)
 
