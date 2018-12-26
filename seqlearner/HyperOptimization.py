@@ -31,21 +31,21 @@ def hyper_optimize(space):
     ssl = space["ssl"]
 
     options = {}
-    if embedding_method.lower() is "freq2vec":
+    if embedding_method.lower() == "freq2vec":
         options = {"func": func,
                    "emb_dim": emb_dim,
                    "gamma": gamma,
                    "epochs": epochs}
-    elif embedding_method.lower() is "sent2vec":
+    elif embedding_method.lower() == "sent2vec":
         options = {"func": func,
                    "emb_dim": emb_dim,
                    "lr": lr,
                    "wordNgrams": wordNgrams}
-    elif embedding_method.lower() is "skipgram":
+    elif embedding_method.lower() == "skipgram":
         options = {"func": func,
                    "emb_dim": emb_dim,
                    "window_size": window_size}
-    elif options is "word2vec":
+    elif embedding_method.lower() == "word2vec":
         options = {"func": func,
                    "emb_dim": emb_dim,
                    "window_size": window_size}
@@ -68,7 +68,7 @@ def optimize(embedding_method=None, labeled_sequence=None, unlabeled_sequence=No
         "ssl": choice("ssl",
                       ["label_spreading", "label_propagation", "naive_bayes", "bayes_classifier", "pseudo_labeling"]),
         "emb_dim": choice("emb_dim", [5 * i for i in range(1, 21)]),
-        "word_length": choice("word_length", [i for i in range(3, 11)]),
+        "word_length": choice("word_length", [i for i in range(2, 11)]),
         "k": choice("k", [2, 3, 4, 5, 6, 7, 8, 9, 10]),
         "n_epochs": choice("n_epochs", [50, 100, 150, 200]),
         "func": choice("func", ["sum", "weighted_sum", "average", "weighted_average"]),
