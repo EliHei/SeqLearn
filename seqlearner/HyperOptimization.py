@@ -68,7 +68,7 @@ def optimize(embedding_method=None, labeled_sequence=None, unlabeled_sequence=No
         "ssl": choice("ssl",
                       ["label_spreading", "label_propagation", "naive_bayes", "bayes_classifier", "pseudo_labeling"]),
         "emb_dim": choice("emb_dim", [5 * i for i in range(1, 21)]),
-        "word_length": choice("word_length", [i for i in range(2, 11)]),
+        "word_length": choice("word_length", [i for i in range(3, 11)]),
         "k": choice("k", [2, 3, 4, 5, 6, 7, 8, 9, 10]),
         "n_epochs": choice("n_epochs", [50, 100, 150, 200]),
         "func": choice("func", ["sum", "weighted_sum", "average", "weighted_average"]),

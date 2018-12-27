@@ -63,16 +63,15 @@ class WordEmbedder:
 
         self.frequency = dict.fromkeys(range(len(self.vocab)), 0)
         list(map(lambda sent: list(map(lambda word: adder(word), sent)), self.sentences))
-        # os.makedirs("../aux/", exist_ok=True)
-        # with open('../aux/' + self.embedding + '_vocab.txt', 'w') as out:
-        #     out.write(",".join(self.vocab))
+        os.makedirs("./aux/", exist_ok=True)
+        with open('./aux/' + self.embedding + "_" + str(self.word_length) + '_vocab.txt', 'w') as out:
+            out.write(",".join(self.vocab))
         self.frequency = {k: v / total for total in (sum(self.frequency.values()),) for k, v in self.frequency.items()}
         self.frequency = self.frequency.values()
 
     def __corpus_maker(self):
         list(map(lambda seq: self.__seq_splitter(seq), self.sequences))
         self.input = self.sentences
-        print(len(self.vocab))
         self.vocab = dict(list(enumerate(self.vocab)))
         self.vocab_aux = self.vocab
         self.vocab_indices = list(k for k, v in self.vocab.items())
@@ -92,7 +91,6 @@ class WordEmbedder:
         list(map(lambda i: __adder(word, word_list[i]), rng))
 
     def __adj_matrix_maker(self):
-        print(len(self.vocab))
         self.adj_matrix = np.zeros(((len(self.vocab)), (len(self.vocab))))
         list(map(lambda words: list(map(lambda idx: self.__neighbor_counter(idx, words), range(len(words)))),
                  self.corpus))
