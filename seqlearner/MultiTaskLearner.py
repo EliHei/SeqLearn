@@ -18,7 +18,7 @@ from sklearn.svm import SVC
 from seqlearner.Embedding import Embedding
 from seqlearner.SemiSupervisedLearner import SemiSupervisedLearner
 
-sys.setrecursionlimit(35000)
+sys.setrecursionlimit(100000)
 
 
 class MultiTaskLearner:

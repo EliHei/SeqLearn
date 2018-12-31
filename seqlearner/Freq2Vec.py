@@ -1,3 +1,5 @@
+import os
+
 import numpy as np
 import pandas as pd
 from keras.callbacks import CSVLogger
@@ -68,8 +70,13 @@ class Freq2Vec(WordEmbedder):
                            activation='softmax'))
         freq2vec.compile(loss=self.loss,
                          optimizer=self.optimizer)
+        path = os.getcwd()
+        if os.getcwd().endswith("/SeqLearner"):
+            path += "/seqlearner/"
+        else:
+            path += "/"
         csv_logger = CSVLogger(
-            ''.join(['../logs/freq2vec', '_',
+            ''.join([path + 'logs/freq2vec', '_',
                      str(self.emb_dim), '_',
                      str(self.window_size), '_',
                      str(self.word_length), '.log']))
@@ -91,7 +98,7 @@ class Freq2Vec(WordEmbedder):
         #            freq2vec.layers[0].get_weights()[0])
         # print(np.array(freq2vec.layers[0].get_weights()).shape)
         self.embedding_layer = freq2vec.layers[0].get_weights()[0]
-        filename = ''.join(['../data/freq2vec_embedding', '_',
+        filename = ''.join([path + 'data/freq2vec_embedding', '_',
                             str(self.emb_dim), '_',
                             str(self.window_size), '_',
                             str(self.word_length), '.csv'])

@@ -1,3 +1,5 @@
+import os
+
 import numpy as np
 from keras.callbacks import CSVLogger
 from keras.layers import Embedding, Reshape, Dense
@@ -89,7 +91,7 @@ class SkipGram(WordEmbedder):
         skipgram.compile(loss=self.loss,
                          optimizer=self.optimizer)
         csv_logger = CSVLogger(
-            ''.join(['../logs/skipgram', '_',
+            ''.join([os.getcwd() + '/seqlearner/logs/skipgram', '_',
                      str(self.emb_dim), '_',
                      str(self.window_size), '_',
                      str(self.word_length), '.log']))
@@ -105,7 +107,7 @@ class SkipGram(WordEmbedder):
                                 self.adj_matrix,
                                 verbose=2,
                                 batch_size=100))
-        filename = ''.join(['../data/skipgram_embedding', '_',
+        filename = ''.join([os.getcwd() + '/seqlearner/data/skipgram_embedding', '_',
                             str(self.emb_dim), '_',
                             str(self.window_size), '_',
                             str(self.word_length), '.csv'])

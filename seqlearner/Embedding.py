@@ -88,7 +88,12 @@ class Embedding:
         elif func is "weighted_average":
             self.frequency = skipgram.frequency
             self.__weighted_average()
-        self.__save_embedding(skipgram, file_path="../results/embeddings/")
+        path = os.getcwd()
+        if os.getcwd().endswith("/SeqLearner"):
+            path += "/seqlearner/"
+        else:
+            path += "/"
+        self.__save_embedding(skipgram, file_path=path + "results/embeddings/")
         return self.encoding
 
     def freq2vec(self, func="sum", window_size=10, emb_dim=20, loss="mean_squared_error", epochs=100):
@@ -139,7 +144,12 @@ class Embedding:
         elif func is "weighted_average":
             self.frequency = freq2vec.frequency
             self.__weighted_average()
-        self.__save_embedding(freq2vec, file_path="../results/embeddings/")
+        path = os.getcwd()
+        if os.getcwd().endswith("/SeqLearner"):
+            path += "/seqlearner/"
+        else:
+            path += "/"
+        self.__save_embedding(freq2vec, file_path=path + "results/embeddings/")
         return self.encoding
 
     def word2vec(self, func="sum", window_size=10, emb_dim=20, workers=2, epochs=1000):
@@ -188,7 +198,12 @@ class Embedding:
         elif func is "weighted_average":
             self.frequency = gensim_wor2vec.frequency
             self.__weighted_average()
-        self.__save_embedding(gensim_wor2vec, file_path="../results/embeddings/")
+        path = os.getcwd()
+        if os.getcwd().endswith("/SeqLearner"):
+            path += "/seqlearner/"
+        else:
+            path += "/"
+        self.__save_embedding(gensim_wor2vec, file_path=path + "results/embeddings/")
         return self.encoding
 
     def sent2vec(self, emb_dim=100, epochs=1000, lr=1., wordNgrams=10, loss="ns", neg=10, thread=10,
@@ -237,7 +252,12 @@ class Embedding:
                        bucket)
         self.encoding = s2v.sent2vec_maker()
         s2v.__name__ = "Sent2Vec"
-        self.__save_embedding(s2v, file_path="../results/embeddings/")
+        path = os.getcwd()
+        if os.getcwd().endswith("/SeqLearner"):
+            path += "/seqlearner/"
+        else:
+            path += "/"
+        self.__save_embedding(s2v, file_path=path + "results/embeddings/")
         return self.encoding
 
     def load_embedding(self, func, file):
@@ -278,7 +298,12 @@ class Embedding:
         elif func is "weighted_average":
             self.frequency = embed.frequency
             self.__weighted_average()
-        self.__save_embedding(embed, file_path="../results/embeddings/")
+        path = os.getcwd()
+        if os.getcwd().endswith("/SeqLearner"):
+            path += "/seqlearner/"
+        else:
+            path += "/"
+        self.__save_embedding(embed, file_path=path + "results/embeddings/")
         return self.encoding
 
     def ELMo(self):
@@ -305,9 +330,15 @@ class Embedding:
         encoding = np.array(self.encoding)
         np.savetxt(fname=file_path + embedding_algorithm + "_Encoding.csv", X=encoding, delimiter=',')
 
-    def __save_embedding(self, embedding=None, file_path="../results/embeddings/"):
+    def __save_embedding(self, embedding=None, file_path=None):
         if embedding is None:
             raise Exception("embedding has to be a WordEmbedder child class like Freq2Vec, ... .")
+        if file_path is None:
+            file_path = os.getcwd()
+            if os.getcwd().endswith("/SeqLearner"):
+                file_path += "/seqlearner/results/embeddings/"
+            else:
+                file_path += "/results/embeddings/"
         file_path += embedding.__name__ + "/"
         os.makedirs(file_path, exist_ok=True)
         embedding_weights = pd.concat([pd.Series(embedding.vocab_indices), pd.DataFrame(embedding.embedding_layer)],
