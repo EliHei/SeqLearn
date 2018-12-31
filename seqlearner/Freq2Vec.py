@@ -62,11 +62,11 @@ class Freq2Vec(WordEmbedder):
         freq2vec = Sequential()
         freq2vec.add(Embedding(input_dim=(len(self.vocab)),
                                output_dim=self.emb_dim,
-                               init='glorot_uniform',
+                               embeddings_initializer='glorot_uniform',
                                input_length=1))
         freq2vec.add(Reshape((self.emb_dim,)))
         freq2vec.add(Dense(input_dim=self.emb_dim,
-                           output_dim=(len(self.vocab)),
+                           units=(len(self.vocab)),
                            activation='softmax'))
         freq2vec.compile(loss=self.loss,
                          optimizer=self.optimizer)

@@ -2,6 +2,7 @@ from __future__ import print_function
 
 from hyperopt import Trials, tpe, fmin
 from hyperopt.hp import choice
+from sklearn import svm
 
 from seqlearner.MultiTaskLearner import MultiTaskLearner
 
@@ -49,6 +50,13 @@ def hyper_optimize(space):
         options = {"func": func,
                    "emb_dim": emb_dim,
                    "window_size": window_size}
+    options["alg"] = svm.SVC(C=1.0, cache_size=200, class_weight=None,
+                             coef0=0.0,
+                             decision_function_shape='ovr', degree=3,
+                             gamma='auto', kernel='rbf',
+                             max_iter=-1, probability=False,
+                             random_state=None, shrinking=True,
+                             tol=0.001, verbose=False)
 
     mtl = MultiTaskLearner(labeled_sequence_path, unlabeled_sequence_path)
     class_scores, overall_score, class_freq = mtl.learner(word_length=word_length, k=k, embedding=embedding_method,
@@ -88,7 +96,7 @@ def optimize(embedding_method=None, labeled_sequence=None, unlabeled_sequence=No
 
 
 if __name__ == '__main__':
-    data_path = "./data/mohimani/"
+    data_path = "./seqlearner/data/mohimani/"
     labeled_sequences_path = data_path + "labeled.xlsx"
     unlabeled_sequences_path = data_path + "unlabeled.xlsx"
 

@@ -7,6 +7,7 @@ import pandas as pd
 import pomegranate as pm
 import umap
 from matplotlib import pyplot as plt
+from sklearn import svm
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.manifold import TSNE
@@ -19,6 +20,12 @@ from seqlearner.Embedding import Embedding
 from seqlearner.SemiSupervisedLearner import SemiSupervisedLearner
 
 sys.setrecursionlimit(100000)
+
+path = os.getcwd()
+if os.getcwd().endswith("/SeqLearner"):
+    path += "/seqlearner/"
+else:
+    path += "/"
 
 
 class MultiTaskLearner:
@@ -38,6 +45,7 @@ class MultiTaskLearner:
         MultiTaskLearner.learner : computes embedding and label the sequences respectively
         MultiTaskLearner.embed : computes embedding with the specified embedding method
     """
+
     def __init__(self, file_labeled, file_unlabeled):
         self.file_labeled = file_labeled
         self.file_unlabeled = file_unlabeled
@@ -122,6 +130,10 @@ class MultiTaskLearner:
                           labelings))
         self.class_scores = dict(zip(self.classes, scores))
         self.__calc_overal_score()
+        results = pd.DataFrame(self.class_scores)
+
+        results.to_csv(path + "results/ssl/class_scores.csv")
+
         return self.class_scores, self.overall_score, self.class_freq
 
     def embed(self, word_length, **options):
@@ -241,7 +253,7 @@ class MultiTaskLearner:
             if options.get("ssl", None) is None:
                 raise Exception("The semi-supervised learning method must specified")
             self.ssl = options.get("ssl", None)
-        if self.ssl is "label_spreading":
+        if self.ssl == "label_spreading":
             score = SSL.label_spreading(
                 kernel=options.get("kernel", "rbf"),
                 gamma=options.get("gamma", 20),
@@ -253,7 +265,7 @@ class MultiTaskLearner:
             )
             print(score)
             return score
-        elif self.ssl is "label_propagation":
+        elif self.ssl == "label_propagation":
             score = SSL.label_propagation(
                 kernel=options.get("kernel", "rbf"),
                 gamma=options.get("gamma", 20),
@@ -264,7 +276,7 @@ class MultiTaskLearner:
             )
             print(score)
             return score
-        elif self.ssl is "naive_bayes":
+        elif self.ssl == "naive_bayes":
             score = SSL.naive_bayes(
                 distributions=options.get("distributions", pm.NormalDistribution),
                 verbose=options.get("verbose", True),
@@ -275,7 +287,7 @@ class MultiTaskLearner:
             )
             print(score)
             return score
-        elif self.ssl is "bayes_classifier":
+        elif self.ssl == "bayes_classifier":
             score = SSL.bayes_classifier(
                 distributions=options.get("distributions", pm.MultivariateGaussianDistribution),
                 max_iter=options.get("max_iter", 1e8),
@@ -283,9 +295,15 @@ class MultiTaskLearner:
             )
             print(score)
             return score
-        elif self.ssl is "pseudo_labeling":
+        elif self.ssl == "pseudo_labeling":
             score = SSL.pseudo_labeling(
-                alg=options.get("alg"),
+                alg=options.get("alg", svm.SVC(C=1.0, cache_size=200, class_weight=None,
+                                               coef0=0.0,
+                                               decision_function_shape='ovr', degree=3,
+                                               gamma='auto', kernel='rbf',
+                                               max_iter=-1, probability=False,
+                                               random_state=None, shrinking=True,
+                                               tol=0.001, verbose=False)),
                 sample_rate=options.get("sample_rate", .2)
             )
             print(score)
@@ -296,7 +314,7 @@ class MultiTaskLearner:
         #         sample_rate=options.get("sample_rate", .2)
         #     )
         #     return score
-        elif self.ssl is "TSVM":
+        elif self.ssl == "TSVM":
             score = SSL.TSVM(
                 kernel=options.get("kernel", 'RBF'),
                 C=options.get("C", 1e-4),
