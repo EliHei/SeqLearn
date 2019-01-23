@@ -164,6 +164,7 @@ class MultiTaskLearner:
                 raise Exception("The embedding must have specified")
             self.embedding_method = options.get("embedding", None)
         embed = Embedding(self.sequences, word_length)
+        print("Start Embedding with %s" % self.embedding_method)
         if self.embedding_method.lower() == "skipgram":
             self.embedding = embed.skipgram(
                 func=options.get("func", "sum"),
@@ -450,34 +451,73 @@ class MultiTaskLearner:
 
     def visualize(self, method="TSNE", family=None, proportion=1.5):
         if family is None:
-            protein_family = str(pd.Series(self.labels).value_counts().index[0])
-            protein_family_freq = pd.Series(self.labels).value_counts().iloc[0]
+            for i in range(10):
+                protein_family = str(pd.Series(self.labels).value_counts().index[i])
+                protein_family_freq = pd.Series(self.labels).value_counts().iloc[i]
+                print("Start visualizing for %s with %s..." % (protein_family, method))
+                random_samples = np.random.choice(len(self.labels), int(proportion * protein_family_freq), replace=False)
+                embedding_weights = pd.DataFrame(self.embedding)
+                embedding_weights = pd.concat(
+                    [embedding_weights.iloc[random_samples], embedding_weights.iloc[random_samples]],
+                    axis=0)
+                embedding_weights.dropna(axis=1, how='all', inplace=True)
+                # print(embedding_weights.shape)
+                # print(np.isnan(embedding_weights))
+                # print(np.where(np.isnan(embedding_weights)))
+                # embedding_weights = np.nan_to_num(embedding_weights)
+                protein_families = pd.DataFrame(self.labels, columns=["label"])
+                p_samples = protein_families[protein_families["label"] == protein_family].index.tolist()
+                protein_families = pd.concat([protein_families.iloc[random_samples], protein_families.iloc[p_samples]],
+                                            axis=0)
+                protein_families = pd.DataFrame(protein_families).reset_index()
+                if method == "TSNE":
+                    tsne = TSNE(n_components=2)
+                    embedding = tsne.fit_transform(embedding_weights)
+                else:
+                    embedding = umap.UMAP(n_components=2, metric="correlation").fit_transform(embedding_weights)
+                embedding = pd.DataFrame(embedding)
+                embedding["label"] = protein_families["label"]
+                pfam_emb = embedding.loc[embedding["label"] == protein_family, [0, 1]]
+                pfam_emb_others = embedding.loc[embedding["label"] != protein_family, [0, 1]]
+                if protein_family.__contains__("/"):
+                    protein_family = '-'.join(protein_family.split('/'))
+                self.__plot([pfam_emb[0], pfam_emb_others[0]], [pfam_emb[1], pfam_emb_others[1]],
+                            [protein_family, "Others"], method)
+
         else:
             protein_family = family
             protein_family_freq = pd.Series(self.labels).value_counts().loc[family]
-        random_samples = np.random.choice(len(self.labels), int(proportion * protein_family_freq), replace=False)
-        embedding_weights = pd.DataFrame(self.embedding)
-        embedding_weights = pd.concat(
-            [embedding_weights.iloc[random_samples], embedding_weights.iloc[random_samples]],
-            axis=0)
-        protein_families = pd.DataFrame(self.labels, columns=["label"])
-        p_samples = protein_families[protein_families["label"] == protein_family].index.tolist()
-        protein_families = pd.concat([protein_families.iloc[random_samples], protein_families.iloc[p_samples]],
-                                     axis=0)
-        protein_families = pd.DataFrame(protein_families).reset_index()
-        if method == "TSNE":
-            tsne = TSNE(n_components=2)
-            embedding = tsne.fit_transform(embedding_weights)
-        else:
-            embedding = umap.UMAP(n_components=2, metric="correlation").fit_transform(embedding_weights)
-        embedding = pd.DataFrame(embedding)
-        embedding["label"] = protein_families["label"]
-        pfam_emb = embedding.loc[embedding["label"] == protein_family, [0, 1]]
-        pfam_emb_others = embedding.loc[embedding["label"] != protein_family, [0, 1]]
-        if protein_family.__contains__("/"):
-            protein_family = '-'.join(protein_family.split('/'))
-        self.__plot([pfam_emb[0], pfam_emb_others[0]], [pfam_emb[1], pfam_emb_others[1]],
-                    [protein_family, "Others"], method)
+            random_samples = np.random.choice(len(self.labels), int(proportion * protein_family_freq), replace=False)
+            embedding_weights = pd.DataFrame(self.embedding)
+            embedding_weights = pd.concat(
+                [embedding_weights.iloc[random_samples], embedding_weights.iloc[random_samples]],
+                axis=0)
+            embedding_weights.dropna(axis=1, how='all', inplace=True)
+            # print(embedding_weights.shape)
+            # print(np.isnan(embedding_weights))
+            # print(np.where(np.isnan(embedding_weights)))
+            # embedding_weights = np.nan_to_num(embedding_weights)
+            protein_families = pd.DataFrame(self.labels, columns=["label"])
+            p_samples = protein_families[protein_families["label"] == protein_family].index.tolist()
+            protein_families = pd.concat([protein_families.iloc[random_samples], protein_families.iloc[p_samples]],
+                                        axis=0)
+            protein_families = pd.DataFrame(protein_families).reset_index()
+            if method == "TSNE":
+                tsne = TSNE(n_components=2)
+                embedding = tsne.fit_transform(embedding_weights)
+            else:
+                embedding = umap.UMAP(n_components=2, metric="correlation").fit_transform(embedding_weights)
+            embedding = pd.DataFrame(embedding)
+            embedding["label"] = protein_families["label"]
+            pfam_emb = embedding.loc[embedding["label"] == protein_family, [0, 1]]
+            pfam_emb_others = embedding.loc[embedding["label"] != protein_family, [0, 1]]
+            if protein_family.__contains__("/"):
+                protein_family = '-'.join(protein_family.split('/'))
+            self.__plot([pfam_emb[0], pfam_emb_others[0]], [pfam_emb[1], pfam_emb_others[1]],
+                        [protein_family, "Others"], method)
+
+
+
 
     def __plot(self, xs, ys, labels, method="tsne"):
         path = "../results/visualization/%s/%s/%s/" % (self.embedding_method, self.func, labels[0])

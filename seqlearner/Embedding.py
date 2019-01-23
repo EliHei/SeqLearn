@@ -73,8 +73,10 @@ class Embedding:
             >>> embed = Embedding(sequences, word_length=5)
             >>> skipgram_embedding = embed.skipgram(func="sum", window_size=50, emb_dim=25, loss="mean_squared_error", epochs=250)
         """
-        skipgram = SkipGram(self.sequences, self.word_length, window_size, emb_dim, loss, epochs)
+        skipgram = SkipGram(self.sequences, self.word_length,
+                            window_size, emb_dim, loss, epochs)
         skipgram.skipgram_maker()
+        print("Embedding with Skipgram has been finished!")
         skipgram.__name__ = "Skipgram"
         self.sentences = skipgram.sentences
         self.embedding_layer = skipgram.embedding_layer
@@ -129,8 +131,10 @@ class Embedding:
             >>> embed = Embedding(sequences, word_length=5)
             >>> skipgram_embedding = embed.freq2vec(func="sum", window_size=50, emb_dim=25, loss="mean_squared_error", epochs=250)
         """
-        freq2vec = Freq2Vec(self.sequences, self.word_length, window_size, emb_dim, loss, epochs)
+        freq2vec = Freq2Vec(self.sequences, self.word_length,
+                            window_size, emb_dim, loss, epochs)
         freq2vec.freq2vec_maker()
+        print("Embedding with Freq2Vec has been finished!")
         freq2vec.__name__ = "Freq2Vec"
         self.sentences = freq2vec.sentences
         self.embedding_layer = freq2vec.embedding_layer
@@ -147,8 +151,12 @@ class Embedding:
         path = os.getcwd()
         if os.getcwd().endswith("/SeqLearner"):
             path += "/seqlearner/"
-        else:
+        elif os.getcwd().endswith("/seqlearner"):
             path += "/"
+        elif os.getcwd().endswith("/examples"):
+            path += "/../"
+        else:
+            path += "/../"
         self.__save_embedding(freq2vec, file_path=path + "results/embeddings/")
         return self.encoding
 
@@ -183,8 +191,10 @@ class Embedding:
             >>> embed = Embedding(sequences, word_length=5)
             >>> skipgram_embedding = embed.word2vec(func="sum", window_size=50, emb_dim=25, workers=2, epochs=250)
         """
-        gensim_wor2vec = GensimWord2Vec(self.sequences, self.word_length, window_size, emb_dim, workers, epochs)
+        gensim_wor2vec = GensimWord2Vec(
+            self.sequences, self.word_length, window_size, emb_dim, workers, epochs)
         gensim_wor2vec.word2vec_maker()
+        print("Embedding with Word2Vec has been finished!")
         gensim_wor2vec.__name__ = "Word2Vec"
         self.sentences = gensim_wor2vec.sentences
         self.embedding_layer = gensim_wor2vec.embedding_layer
@@ -201,9 +211,14 @@ class Embedding:
         path = os.getcwd()
         if os.getcwd().endswith("/SeqLearner"):
             path += "/seqlearner/"
-        else:
+        elif os.getcwd().endswith("/seqlearner"):
             path += "/"
-        self.__save_embedding(gensim_wor2vec, file_path=path + "results/embeddings/")
+        elif os.getcwd().endswith("/examples"):
+            path += "/../"
+        else:
+            path += "/../"
+        self.__save_embedding(
+            gensim_wor2vec, file_path=path + "results/embeddings/")
         return self.encoding
 
     def sent2vec(self, emb_dim=100, epochs=1000, lr=1., wordNgrams=10, loss="ns", neg=10, thread=10,
@@ -251,12 +266,18 @@ class Embedding:
                        dropoutK,
                        bucket)
         self.encoding = s2v.sent2vec_maker()
+        print("Embedding with Sent2Vec has been finished!")
         s2v.__name__ = "Sent2Vec"
         path = os.getcwd()
         if os.getcwd().endswith("/SeqLearner"):
             path += "/seqlearner/"
-        else:
+        elif os.getcwd().endswith("/seqlearner"):
             path += "/"
+        elif os.getcwd().endswith("/examples"):
+            path += "/../"
+        else:
+            path += "/../"
+        print("Saving the embedding layer...")
         self.__save_embedding(s2v, file_path=path + "results/embeddings/")
         return self.encoding
 
@@ -285,6 +306,7 @@ class Embedding:
         """
         embed = EmbeddingLoader(self.sequences, self.word_length, file)
         embed.embed()
+        print("Embedding with LoadEmbedder has been finished!")
         embed.__name__ = "LoadEmbedding"
         self.sentences = embed.sentences
         self.embedding_layer = embed.embedding_layer
@@ -310,29 +332,36 @@ class Embedding:
         pass
 
     def __sum(self):
-        self.encoding = list(map(lambda sent: np.add.reduce(self.embedding_layer[sent, :]), self.sentences))
+        self.encoding = list(map(lambda sent: np.add.reduce(
+            self.embedding_layer[sent, :]), self.sentences))
 
     def __average(self):
         self.__sum()
-        self.encoding = [np.divide(self.encoding[i], len(self.sentences[i])) for i in range(len(self.encoding))]
+        self.encoding = [np.divide(self.encoding[i], len(
+            self.sentences[i])) for i in range(len(self.encoding))]
 
     def __weighted_sum(self):
         self.frequency = np.array(list(self.frequency))
         self.frequency = np.reciprocal(self.frequency)
-        self.sentences = list(map(lambda sent: (self.embedding_layer[sent].T * self.frequency[sent]).T, self.sentences))
-        self.encoding = list(map(lambda sent: np.add.reduce(sent), self.sentences))
+        self.sentences = list(map(lambda sent: (
+            self.embedding_layer[sent].T * self.frequency[sent]).T, self.sentences))
+        self.encoding = list(
+            map(lambda sent: np.add.reduce(sent), self.sentences))
 
     def __weighted_average(self):
         self.__weighted_sum()
-        self.encoding = [np.divide(self.encoding[i], len(self.sentences[i])) for i in range(len(self.encoding))]
+        self.encoding = [np.divide(self.encoding[i], len(
+            self.sentences[i])) for i in range(len(self.encoding))]
 
     def __save_encoding(self, embedding_algorithm="Freq2Vec", file_path="../data/uniprot/"):
         encoding = np.array(self.encoding)
-        np.savetxt(fname=file_path + embedding_algorithm + "_Encoding.csv", X=encoding, delimiter=',')
+        np.savetxt(fname=file_path + embedding_algorithm +
+                   "_Encoding.csv", X=encoding, delimiter=',')
 
     def __save_embedding(self, embedding=None, file_path=None):
         if embedding is None:
-            raise Exception("embedding has to be a WordEmbedder child class like Freq2Vec, ... .")
+            raise Exception(
+                "embedding has to be a WordEmbedder child class like Freq2Vec, ... .")
         if file_path is None:
             file_path = os.getcwd()
             if os.getcwd().endswith("/SeqLearner"):
@@ -341,9 +370,18 @@ class Embedding:
                 file_path += "/results/embeddings/"
         file_path += embedding.__name__ + "/"
         os.makedirs(file_path, exist_ok=True)
-        embedding_weights = pd.concat([pd.Series(embedding.vocab_indices), pd.DataFrame(embedding.embedding_layer)],
-                                      axis=1)
-        embedding_weights.columns = ["words"] + ["dim_%d" % i for i in range(embedding.emb_dim)]
-        save_path = file_path + embedding.__name__ + "_" + "_".join(
-            [str(embedding.emb_dim), str(embedding.window_size), str(embedding.word_length)]) + ".csv"
+        if embedding.__name__.lower() == "sent2vec":
+            embedding_weights = pd.DataFrame(self.encoding)
+            embedding_weights.columns = ["dim_%d" %
+                                         i for i in range(embedding.emb_dim)]
+            save_path = file_path + embedding.__name__ + "_" + "_".join(
+                [str(embedding.emb_dim), str(embedding.word_length)]) + ".csv"
+        else:
+            embedding_weights = pd.concat([pd.Series(
+                embedding.vocab_indices), pd.DataFrame(embedding.embedding_layer)], axis=1)
+            embedding_weights.columns = [
+                "words"] + ["dim_%d" % i for i in range(embedding.emb_dim)]
+            save_path = file_path + embedding.__name__ + "_" + "_".join(
+                [str(embedding.emb_dim), str(embedding.window_size), str(embedding.word_length)]) + ".csv"
         embedding_weights.to_csv(save_path)
+        print("%s Embedding Layer has been saved" % embedding.__name__)

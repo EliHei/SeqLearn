@@ -95,7 +95,7 @@ class SkipGram(WordEmbedder):
                      str(self.emb_dim), '_',
                      str(self.window_size), '_',
                      str(self.word_length), '.log']))
-        
+
         skipgram.fit_generator(self.__generate_data(),
                                callbacks=[csv_logger],
                                epochs=self.epochs,
@@ -107,7 +107,16 @@ class SkipGram(WordEmbedder):
                                 self.adj_matrix,
                                 verbose=2,
                                 batch_size=100))
-        filename = ''.join([os.getcwd() + '/seqlearner/data/skipgram_embedding', '_',
+        path = os.getcwd()
+        if os.getcwd().endswith("/SeqLearner"):
+            path += "/seqlearner/"
+        elif os.getcwd().endswith("/seqlearner"):
+            path += "/"
+        elif os.getcwd().endswith("/examples"):
+            path += "/../"
+        else:
+            path += "/../"
+        filename = ''.join([path + 'seqlearner/data/skipgram_embedding', '_',
                             str(self.emb_dim), '_',
                             str(self.window_size), '_',
                             str(self.word_length), '.csv'])

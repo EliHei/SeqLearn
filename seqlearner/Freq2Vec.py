@@ -73,8 +73,14 @@ class Freq2Vec(WordEmbedder):
         path = os.getcwd()
         if os.getcwd().endswith("/SeqLearner"):
             path += "/seqlearner/"
-        else:
+        elif os.getcwd().endswith("/seqlearner"):
             path += "/"
+        elif os.getcwd().endswith("/examples"):
+            length = len(path.split("/"))
+            path = '/'.join(path.split("/")[:length])
+            path += "/../"
+        else:
+            path += "/../"
         csv_logger = CSVLogger(
             ''.join([path + 'logs/freq2vec', '_',
                      str(self.emb_dim), '_',

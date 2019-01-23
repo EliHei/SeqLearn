@@ -1,10 +1,13 @@
 import os
+import sys
+
+sys.path.append("/home/mohsen/Mohsen/SeqLearner")
+
 import warnings
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import sklearn.svm as svm
 import umap
 from sklearn.manifold import TSNE
 
@@ -13,6 +16,7 @@ from seqlearner.MultiTaskLearner import MultiTaskLearner
 warnings.filterwarnings("ignore")
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 data_path = "../data/uniprot/"
+AMINO_ACIDS = "PGMWLYINVDCTFESHAKQR"
 
 
 def preprocess():
@@ -24,12 +28,45 @@ def preprocess():
 
     data.dropna(axis=0, how='any', inplace=True)
 
-    n_samples = data.shape[0]
-    print(data["Protein families"].value_counts().shape[0])
-    labeled_data = data.iloc[:n_samples // 100, :]
-    unlabeled_data = data.iloc[n_samples // 100: n_samples // 100 + 1, :]
+    n_samples = data.shape[0] - 1
+    # print(data["Protein families"].value_counts().shape[0])
+    labeled_data = data.iloc[:n_samples, :]
+    unlabeled_data = data.iloc[n_samples: n_samples + 1, :]
+    pd.DataFrame.reset_index(labeled_data, inplace=True)
+    pd.DataFrame.reset_index(unlabeled_data, inplace=True)
 
-    pd.DataFrame.to_csv(labeled_data, data_path + "labeled.csv", header=["sequence", "label"])
+    remove_indices = []
+    data = labeled_data['Sequence']
+    for i in range(data.shape[0]):
+        if data.iloc[i].find('X') != -1:
+            remove_indices += [i]
+        if data.iloc[i].find('U') != -1:
+            remove_indices += [i]
+        if data.iloc[i].find('Z') != -1:
+            remove_indices += [i]
+        if data.iloc[i].find('B') != -1:
+            remove_indices += [i]
+        if data.iloc[i].find('O') != -1:
+            remove_indices += [i]
+    labeled_data.drop(remove_indices, axis=0, inplace=True)
+
+    remove_indices = []
+    data = unlabeled_data['Sequence']
+    for i in range(data.shape[0]):
+        if data.iloc[i].find('X') != -1:
+            remove_indices += [i]
+        if data.iloc[i].find('U') != -1:
+            remove_indices += [i]
+        if data.iloc[i].find('Z') != -1:
+            remove_indices += [i]
+        if data.iloc[i].find('B') != -1:
+            remove_indices += [i]
+        if data.iloc[i].find('O') != -1:
+            remove_indices += [i]
+    unlabeled_data.drop(remove_indices, axis=0, inplace=True)
+
+    pd.DataFrame.to_csv(labeled_data[["Sequence", "Protein families"]], data_path + "labeled.csv",
+                        header=["sequence", "label"])
     pd.DataFrame.to_csv(pd.DataFrame(unlabeled_data["Sequence"]), data_path + "unlabeled.csv",
                         header=["sequence"])
 
@@ -39,12 +76,19 @@ def preprocess():
 
 def train():
     np.seterr(divide='ignore', invalid='ignore')
+    # preprocess()
     mtl = MultiTaskLearner(data_path + "labeled.csv", data_path + "unlabeled.csv")
 
-    # freq2vec_embedding = mtl.embed(word_length=3, embedding="freq2vec", func="weighted_average", emb_dim=25, gamma=0.1,
-    #                                epochs=1)
-    # mtl.visualize(method="TNSE", family="ATCase/OTCase family", proportion=2.0)
-    # mtl.visualize(method="UMAP", family="ATCase/OTCase family", proportion=2.0)
+    freq2vec = mtl.embed(word_length=3, embedding="freq2vec", func="weighted_average", emb_dim=50, gamma=0.1, epochs=50)
+    mtl.visualize(method="TSNE", family=None, proportion=2.0)
+    mtl.visualize(method="UMAP", family=None, proportion=2.0)
+    #
+    # mtl = MultiTaskLearner(data_path + "labeled.csv", data_path + "unlabeled.csv")
+
+    # skipgram_embedding = mtl.embed(word_length=3, embedding="skipgram", func="weighted_average", emb_dim=50, gamma=0.1, epochs=50)
+    # mtl.visualize(method="TSNE", family=None, proportion=2.0)
+    # mtl.visualize(method="UMAP", family=None, proportion=2.0)
+
     # class_scores, overall_score, class_freqs = mtl.learner(3, 5, "freq2vec", "label_spreading", func="sum", emb_dim=2,
     #                                                        gamma=0.1, epochs=1)
 
@@ -80,16 +124,16 @@ def train():
     #                         random_state=None, shrinking=True,
     #                         tol=0.001, verbose=False))
 
-    mtl.learner(3, 5, "sent2vec", "pseudo_labeling", emb_dim=50,
-                file="../data/skipgram_embedding_50_10_3.txt",
-                func="weighted_average", sample_rate=0.0,
-                alg=svm.SVC(C=1.0, cache_size=200, class_weight=None,
-                            coef0=0.0,
-                            decision_function_shape='ovr', degree=3,
-                            gamma='auto', kernel='rbf',
-                            max_iter=-1, probability=False,
-                            random_state=None, shrinking=True,
-                            tol=0.001, verbose=False))
+    # mtl.learner(3, 5, "sent2vec", "pseudo_labeling", emb_dim=51,
+    #             file="../data/skipgram_embedding_51_10_3.txt",
+    #             func="weighted_average", sample_rate=0.0,
+    #             alg=svm.SVC(C=1.0, cache_size=200, class_weight=None,
+    #                         coef0=0.0,
+    #                         decision_function_shape='ovr', degree=3,
+    #                         gamma='auto', kernel='rbf',
+    #                         max_iter=-1, probability=False,
+    #                         random_state=None, shrinking=True,
+    #                         tol=0.001, verbose=False))
     #
     # mtl.learner(3, 5, "load_embedding", "pseudo_labeling",
     #             file="../data/skipgram_embedding_50_10_3.txt",

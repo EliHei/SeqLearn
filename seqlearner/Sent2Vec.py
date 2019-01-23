@@ -94,7 +94,7 @@ class Sent2Vec:
         if not os.path.exists("../models/sent2vec.bin"):
 
             self.__corpus_maker()
-            embed = ('./fastText/./fasttext sent2vec'
+            embed = ('../fastText/./fasttext sent2vec'
                      ' -input ../aux/Sent2Vec_sentences_aux.txt'
                      ' -output ../models/sent2vec'
                      ' -dim {}'
@@ -115,7 +115,7 @@ class Sent2Vec:
                                            self.bucket)
             print(embed)
             self.__sh(embed)
-        if not os.path.exists("../aux/sent2vec_embedding.txt"):
+        if not os.path.exists("../data/sent2vec_embedding.txt"):
             ret = ('cat ../aux/Sent2Vec_sentences_aux.txt |'
                    ' ../fastText/./fasttext print-sentence-vectors ../models/sent2vec.bin'
                    ' > ../data/sent2vec_embedding.txt')
