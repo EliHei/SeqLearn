@@ -91,7 +91,7 @@ class WordEmbedder:
         list(map(lambda i: __adder(word, word_list[i]), rng))
 
     def __adj_matrix_maker(self):
-        self.adj_matrix = pd.read_csv("/Users/Future/Desktop/Fall-2018/Research-Interests/Bioinformatics/SeqLearner/seqlearner/data/20amineMat", header=None, delimiter= "\t").values
+        self.adj_matrix = pd.read_csv("../data/20amineMat", header=None, delimiter= "\t").values
         # self.adj_matrix = np.zeros(((len(self.vocab)), (len(self.vocab))))
         # list(map(lambda words: list(map(lambda idx: self.__neighbor_counter(idx, words), range(len(words)))),
         #          self.corpus))

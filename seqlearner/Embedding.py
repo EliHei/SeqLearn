@@ -154,7 +154,8 @@ class Embedding:
         elif os.getcwd().endswith("/seqlearner"):
             path += "/"
         elif os.getcwd().endswith("/examples"):
-            path += "/../"
+            length = len(path.split("/"))
+            path = '/'.join(path.split("/")[:length - 1]) + "/"
         else:
             path += "/../"
         self.__save_embedding(freq2vec, file_path=path + "results/embeddings/")
@@ -214,7 +215,8 @@ class Embedding:
         elif os.getcwd().endswith("/seqlearner"):
             path += "/"
         elif os.getcwd().endswith("/examples"):
-            path += "/../"
+            length = len(path.split("/"))
+            path = '/'.join(path.split("/")[:length - 1]) + "/"
         else:
             path += "/../"
         self.__save_embedding(
@@ -274,7 +276,8 @@ class Embedding:
         elif os.getcwd().endswith("/seqlearner"):
             path += "/"
         elif os.getcwd().endswith("/examples"):
-            path += "/../"
+            length = len(path.split("/"))
+            path = '/'.join(path.split("/")[:length - 1]) + "/"
         else:
             path += "/../"
         print("Saving the embedding layer...")
@@ -323,8 +326,13 @@ class Embedding:
         path = os.getcwd()
         if os.getcwd().endswith("/SeqLearner"):
             path += "/seqlearner/"
-        else:
+        elif os.getcwd().endswith("/seqlearner"):
             path += "/"
+        elif os.getcwd().endswith("/examples"):
+            length = len(path.split("/"))
+            path = '/'.join(path.split("/")[:length - 1]) + "/"
+        else:
+            path += "/../"
         self.__save_embedding(embed, file_path=path + "results/embeddings/")
         return self.encoding
 

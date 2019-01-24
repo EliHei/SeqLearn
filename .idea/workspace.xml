@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="Fix some minor bugs">
+    <list default="true" id="779271d3-1931-48ad-818b-e77389881c25" name="Default" comment="Fix minor bug in SSL">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seqlearner/Embedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/seqlearner/Embedding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seqlearner/EmbeddingLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/seqlearner/EmbeddingLoader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seqlearner/Freq2Vec.py" beforeDir="false" afterPath="$PROJECT_DIR$/seqlearner/Freq2Vec.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seqlearner/HyperOptimization.py" beforeDir="false" afterPath="$PROJECT_DIR$/seqlearner/HyperOptimization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seqlearner/MultiTaskLearner.py" beforeDir="false" afterPath="$PROJECT_DIR$/seqlearner/MultiTaskLearner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seqlearner/WordEmbedder.py" beforeDir="false" afterPath="$PROJECT_DIR$/seqlearner/WordEmbedder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seqlearner/examples/train_uniprot.py" beforeDir="false" afterPath="$PROJECT_DIR$/seqlearner/examples/train_uniprot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +16,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/SeqLearner$train_uniprot.coverage" NAME="train_uniprot Coverage Results" MODIFIED="1543952870967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner/examples" />
+    <SUITE FILE_PATH="coverage/SeqLearner$train_uniprot.coverage" NAME="train_uniprot Coverage Results" MODIFIED="1548336505321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner/examples" />
     <SUITE FILE_PATH="coverage/SeqLearn$MultiTaskLearner.coverage" NAME="MultiTaskLearner Coverage Results" MODIFIED="1543234456562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner" />
     <SUITE FILE_PATH="coverage/SeqLearner$MultiTaskLearner.coverage" NAME="MultiTaskLearner Coverage Results" MODIFIED="1545854687471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner" />
     <SUITE FILE_PATH="coverage/SeqLearn$Embedding__1_.coverage" NAME="Embedding (1) Coverage Results" MODIFIED="1543230833653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner" />
     <SUITE FILE_PATH="coverage/SeqLearner$aux.coverage" NAME="aux Coverage Results" MODIFIED="1546255564789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner" />
+    <SUITE FILE_PATH="coverage/SeqLearner$WordEmbedder.coverage" NAME="WordEmbedder Coverage Results" MODIFIED="1548182582139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner" />
+    <SUITE FILE_PATH="coverage/SeqLearner$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1548256245468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner" />
     <SUITE FILE_PATH="coverage/SeqLearn$train_uniprot.coverage" NAME="train_uniprot Coverage Results" MODIFIED="1543235423565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner/examples" />
     <SUITE FILE_PATH="coverage/SeqLearn$EmbeddingHyperOptimization.coverage" NAME="EmbeddingHyperOptimization Coverage Results" MODIFIED="1543172359173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner" />
     <SUITE FILE_PATH="coverage/SeqLearner$EmbeddingHyperOptimization.coverage" NAME="EmbeddingHyperOptimization Coverage Results" MODIFIED="1546238582417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seqlearner" />
@@ -26,58 +30,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seqlearner/HyperOptimization.py">
+        <entry file="file://$PROJECT_DIR$/seqlearner/test2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="58" column="53" lean-forward="true" selection-start-line="52" selection-start-column="29" selection-end-line="58" selection-end-column="53" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seqlearner/SkipGram.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="109" column="42" selection-start-line="109" selection-start-column="42" selection-end-line="109" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/seqlearner/data/20amineMat">
+          <provider selected="true" editor-type-id="LargeFileEditor">
+            <state relative-caret-position="45">
+              <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seqlearner/Sent2Vec.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="92" column="11" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/seqlearner/MultiTaskLearner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="300" column="50" selection-start-line="300" selection-start-column="50" selection-end-line="300" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seqlearner/examples/train_uniprot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="143" column="55" selection-start-line="137" selection-start-column="18" selection-end-line="143" selection-end-column="55" />
+            <state relative-caret-position="2760">
+              <caret line="203" column="43" selection-start-line="203" selection-start-column="43" selection-end-line="203" selection-end-column="43" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -88,11 +62,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seqlearner/Embedding.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-240">
-              <caret line="305" column="54" selection-start-line="305" selection-start-column="54" selection-end-line="305" selection-end-column="54" />
+            <state relative-caret-position="5160">
+              <caret line="353" column="20" selection-start-line="353" selection-start-column="20" selection-end-line="353" selection-end-column="20" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seqlearner/EmbeddingLoader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/seqlearner/examples/train_uniprot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="29" column="50" lean-forward="true" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -100,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seqlearner/Freq2Vec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="71" column="31" lean-forward="true" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+            <state relative-caret-position="1455">
+              <caret line="105" column="66" selection-start-line="105" selection-start-column="66" selection-end-line="105" selection-end-column="66" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -110,12 +105,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seqlearner/PseudoLabeler.py">
+        <entry file="file://$PROJECT_DIR$/seqlearner/WordEmbedder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+            <state relative-caret-position="1350">
+              <caret line="93" column="88" selection-start-line="93" selection-start-column="88" selection-end-line="93" selection-end-column="88" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -150,6 +145,8 @@
       <find>Freq2Vec_vocab</find>
       <find>Freq2Vec</find>
       <find>make_table</find>
+      <find>self.vocab</find>
+      <find>X</find>
     </findStrings>
     <replaceStrings>
       <replace>Word2Vec</replace>
@@ -166,7 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/code/SkipGram.py" />
         <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sklearn/semi_supervised/label_propagation.py" />
         <option value="$PROJECT_DIR$/code/tester.py" />
         <option value="$PROJECT_DIR$/code/MultiTaskLearner.py" />
@@ -177,7 +173,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/seqlearner/test.py" />
         <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/seqlearner/EmbeddingLoader.py" />
         <option value="$PROJECT_DIR$/seqlearner/PseudoLabeler.py" />
         <option value="$PROJECT_DIR$/seqlearner/semisup/examples/compare_gaussian_methods.py" />
         <option value="$PROJECT_DIR$/seqlearner/semisup/examples/compare_linsvm_methods.py" />
@@ -187,7 +182,6 @@
         <option value="$PROJECT_DIR$/seqlearner/__init__.py" />
         <option value="$PROJECT_DIR$/seqlearner/__init__.py" />
         <option value="$PROJECT_DIR$/seqlearner/GensimWord2Vec.py" />
-        <option value="$PROJECT_DIR$/seqlearner/examples/train_uniprot.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/docs/installation.md" />
         <option value="$PROJECT_DIR$/docs/index.md" />
@@ -210,20 +204,22 @@
         <option value="$PROJECT_DIR$/docs/Visualization/UMAP.md" />
         <option value="$PROJECT_DIR$/docs/HyperparameterOptimization/hyperopt.md" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/seqlearner/WordEmbedder.py" />
         <option value="$PROJECT_DIR$/seqlearner/SkipGram.py" />
-        <option value="$PROJECT_DIR$/seqlearner/Embedding.py" />
         <option value="$PROJECT_DIR$/seqlearner/aux.py" />
-        <option value="$PROJECT_DIR$/seqlearner/Freq2Vec.py" />
         <option value="$PROJECT_DIR$/seqlearner/HyperOptimization.py" />
         <option value="$PROJECT_DIR$/seqlearner/MultiTaskLearner.py" />
+        <option value="$PROJECT_DIR$/seqlearner/Freq2Vec.py" />
+        <option value="$PROJECT_DIR$/seqlearner/test2.py" />
+        <option value="$PROJECT_DIR$/seqlearner/WordEmbedder.py" />
+        <option value="$PROJECT_DIR$/seqlearner/Embedding.py" />
+        <option value="$PROJECT_DIR$/seqlearner/EmbeddingLoader.py" />
+        <option value="$PROJECT_DIR$/seqlearner/examples/train_uniprot.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="714" />
-    <option name="height" value="825" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -233,28 +229,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="SeqLearner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SeqLearner" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SeqLearner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SeqLearner" type="462c0819:PsiDirectoryNode" />
-              <item name="seqlearner" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SeqLearner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SeqLearner" type="462c0819:PsiDirectoryNode" />
-              <item name="seqlearner" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -277,6 +251,32 @@
               <item name="Deepoo" type="cbb8eebc:String" user="Deepoo" />
               <item name="semisup" type="cbb8eebc:String" user="semisup" />
               <item name="methods" type="cbb8eebc:String" user="methods" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SeqLearner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeqLearner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SeqLearner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeqLearner" type="462c0819:PsiDirectoryNode" />
+              <item name="seqlearner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SeqLearner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeqLearner" type="462c0819:PsiDirectoryNode" />
+              <item name="seqlearner" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SeqLearner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -315,29 +315,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.aux">
-    <configuration name="Embedding (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="SeqLearner" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/seqlearner" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/seqlearner/Embedding.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.train_uniprot">
     <configuration name="EmbeddingHyperOptimization" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SeqLearner" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -360,7 +338,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="MultiTaskLearner" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="WordEmbedder" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SeqLearner" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -373,7 +351,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/seqlearner/MultiTaskLearner.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/seqlearner/WordEmbedder.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -396,6 +374,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/seqlearner/aux.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SeqLearner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/seqlearner" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/seqlearner/test2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -427,19 +427,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Embedding (1)" />
       <item itemvalue="Python.EmbeddingHyperOptimization" />
-      <item itemvalue="Python.MultiTaskLearner" />
       <item itemvalue="Python.aux" />
       <item itemvalue="Python.train_uniprot" />
+      <item itemvalue="Python.test2" />
+      <item itemvalue="Python.WordEmbedder" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.train_uniprot" />
+        <item itemvalue="Python.test2" />
+        <item itemvalue="Python.WordEmbedder" />
         <item itemvalue="Python.aux" />
         <item itemvalue="Python.EmbeddingHyperOptimization" />
-        <item itemvalue="Python.MultiTaskLearner" />
-        <item itemvalue="Python.train_uniprot" />
-        <item itemvalue="Python.Embedding (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -460,21 +460,12 @@
       <workItem from="1545496402290" duration="1402000" />
       <workItem from="1545735873224" duration="348000" />
       <workItem from="1545478086992" duration="1396000" />
-      <workItem from="1546004361532" duration="13047000" />
-    </task>
-    <task id="LOCAL-00072" summary="Update home">
-      <created>1544390866706</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1544390866706</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Update home">
-      <created>1544390957075</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1544390957075</updated>
+      <workItem from="1546004361532" duration="14733000" />
+      <workItem from="1546336058315" duration="3000" />
+      <workItem from="1547907522574" duration="1106000" />
+      <workItem from="1548102276316" duration="19034000" />
+      <workItem from="1548336487045" duration="1117000" />
+      <workItem from="1548360767907" duration="301000" />
     </task>
     <task id="LOCAL-00074" summary="Update home and add new logo">
       <created>1544478537901</created>
@@ -805,11 +796,25 @@
       <option name="project" value="LOCAL" />
       <updated>1546240136243</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="Fix minor bug in SSL">
+      <created>1546257354097</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1546257354097</updated>
+    </task>
+    <task id="LOCAL-00122" summary="Update and fix bugs">
+      <created>1548251853279</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1548251853280</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41656000" />
+    <option name="totallyTimeSpent" value="64903000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -821,23 +826,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17310444" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18383405" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32771084" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" visible="true" weight="0.42289156" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" weight="0.34698796" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.6373494" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32969698" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32969698" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32891566" />
       <window_info anchor="bottom" id="Messages" order="8" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32891566" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32969698" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.38072288" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50208336" side_tool="true" weight="0.32900944" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
@@ -848,6 +853,7 @@
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="R Packages" order="6" />
+      <window_info anchor="right" id="make" order="7" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -897,8 +903,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/semisup" />
     </ignored-roots>
-    <MESSAGE value="Update LabelPropagation example" />
-    <MESSAGE value="Add LabelSpreading doc" />
     <MESSAGE value="Add Naive Bayes doc and fix some comments on semi-supervised learning" />
     <MESSAGE value="Add PseudoLabeling doc" />
     <MESSAGE value="Add General Info about SemiSupervised Doc" />
@@ -922,47 +926,11 @@
     <MESSAGE value="Update Hyperopt and MTL" />
     <MESSAGE value="Save vocab" />
     <MESSAGE value="Fix some minor bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix some minor bugs" />
+    <MESSAGE value="Fix minor bug in SSL" />
+    <MESSAGE value="Update and fix bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update and fix bugs" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/about.md" />
-    <entry file="file://$PROJECT_DIR$/docs/installation.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="315">
-            <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/embeddings/sent2vec.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/embeddings/skipgram.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="510">
-            <caret line="34" column="109" selection-start-line="34" selection-start-column="109" selection-end-line="34" selection-end-column="109" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seqlearner/GensimWord2Vec.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1159,12 +1127,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aux/Freq2Vec_vocab.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seqlearner/aux/Freq2Vec_vocab_aux.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/aux/Freq2Vec_vocab.txt" />
+    <entry file="file://$PROJECT_DIR$/seqlearner/aux/Freq2Vec_vocab_aux.txt" />
     <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/h5py/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
@@ -1179,70 +1143,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seqlearner/WordEmbedder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-271">
-          <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seqlearner/SkipGram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="109" column="42" selection-start-line="109" selection-start-column="42" selection-end-line="109" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seqlearner/Embedding.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-240">
-          <caret line="305" column="54" selection-start-line="305" selection-start-column="54" selection-end-line="305" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seqlearner/aux.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seqlearner/Sent2Vec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="92" column="11" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seqlearner/Freq2Vec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="71" column="31" lean-forward="true" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seqlearner/PseudoLabeler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1253,33 +1157,161 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seqlearner/examples/train_uniprot.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/builtins.pyi">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="143" column="55" selection-start-line="137" selection-start-column="18" selection-end-line="143" selection-end-column="55" />
+        <state relative-caret-position="268">
+          <caret line="814" column="4" selection-start-line="814" selection-start-column="4" selection-end-line="814" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.3/python_stubs/-2010535109/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="768" column="31" selection-start-line="768" selection-start-column="31" selection-end-line="768" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/PseudoLabeler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seqlearner/HyperOptimization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="58" column="53" lean-forward="true" selection-start-line="52" selection-start-column="29" selection-end-line="58" selection-end-column="53" />
+        <state relative-caret-position="383">
+          <caret line="58" column="53" selection-start-line="52" selection-start-column="29" selection-end-line="58" selection-end-column="53" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seqlearner/MultiTaskLearner.py">
+    <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/pandas/io/parsers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="300" column="50" selection-start-line="300" selection-start-column="50" selection-end-line="300" selection-end-column="50" />
+        <state relative-caret-position="357">
+          <caret line="708" selection-start-line="708" selection-end-line="708" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/Sent2Vec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="785">
+          <caret line="114" column="55" selection-start-line="114" selection-start-column="55" selection-end-line="114" selection-end-column="55" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/SkipGram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="111" column="34" selection-start-line="111" selection-start-column="34" selection-end-line="111" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/data/uniprot/labeled.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/data/uniprot/uniprot.tab">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/lib/seqlearner/Embedding.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="126" column="19" selection-start-line="126" selection-start-column="19" selection-end-line="126" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.3/python_stubs/-2010535109/numpy/core/umath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-355">
+          <caret line="1248" column="38" selection-start-line="1248" selection-start-column="38" selection-end-line="1248" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/data/freq2vec_embedding_50_10_3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/data/freq2vec_embedding_50_10_3.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/data/20amineMat">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="45">
+          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/MultiTaskLearner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2760">
+          <caret line="203" column="43" selection-start-line="203" selection-start-column="43" selection-end-line="203" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/Embedding.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5160">
+          <caret line="353" column="20" selection-start-line="353" selection-start-column="20" selection-end-line="353" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/EmbeddingLoader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/Freq2Vec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1455">
+          <caret line="105" column="66" selection-start-line="105" selection-start-column="66" selection-end-line="105" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/WordEmbedder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="93" column="88" selection-start-line="93" selection-start-column="88" selection-end-line="93" selection-end-column="88" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seqlearner/examples/train_uniprot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="29" column="50" lean-forward="true" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
         </state>
       </provider>
     </entry>

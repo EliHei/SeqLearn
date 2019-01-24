@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 
 class EmbeddingLoader:
@@ -27,7 +28,7 @@ class EmbeddingLoader:
         self.sequences = sequences
         self.word_length = word_length
         self.sentences = []
-        emb_df = pd.read_csv(file, delimiter=' ', header=None)
+        emb_df = pd.read_csv(file)
         self.vocab = emb_df.index
         self.embedding_layer = emb_df.values
         self.frequency = None
@@ -44,6 +45,7 @@ class EmbeddingLoader:
         list(map(lambda sent: list(map(lambda word: adder(word), sent)), self.sentences))
         self.frequency = {k: v / total for total in (sum(self.frequency.values()),) for k, v in self.frequency.items()}
         self.frequency = self.frequency.values()
+        self.frequency = np.array(list(self.frequency)).astype(int)
 
     def __corpus_maker(self):
         list(map(lambda seq: self.__seq_splitter(seq), self.sequences))

@@ -77,8 +77,8 @@ class Freq2Vec(WordEmbedder):
             path += "/"
         elif os.getcwd().endswith("/examples"):
             length = len(path.split("/"))
-            path = '/'.join(path.split("/")[:length])
-            path += "/../"
+            path = '/'.join(path.split("/")[:length-1]) + "/"
+            # path += "/../"
         else:
             path += "/../"
         csv_logger = CSVLogger(

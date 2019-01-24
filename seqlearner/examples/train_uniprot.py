@@ -5,7 +5,10 @@ sys.path.append("/home/mohsen/Mohsen/SeqLearner")
 
 import warnings
 
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
+
 import numpy as np
 import pandas as pd
 import umap
@@ -17,7 +20,7 @@ warnings.filterwarnings("ignore")
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 data_path = "../data/uniprot/"
 AMINO_ACIDS = "PGMWLYINVDCTFESHAKQR"
-
+os.chdir("./seqlearner/examples/")
 
 def preprocess():
     data_filename = "uniprot.tab"
@@ -79,7 +82,13 @@ def train():
     # preprocess()
     mtl = MultiTaskLearner(data_path + "labeled.csv", data_path + "unlabeled.csv")
 
-    freq2vec = mtl.embed(word_length=3, embedding="freq2vec", func="weighted_average", emb_dim=50, gamma=0.1, epochs=50)
+    freq2vec = mtl.embed(word_length=3,
+                         embedding="load_embedding",
+                         func="weighted_average",
+                         emb_dim=50,
+                         gamma=0.1,
+                         epochs=50,
+                         file="../data/freq2vec_embedding_50_10_3.csv")
     mtl.visualize(method="TSNE", family=None, proportion=2.0)
     mtl.visualize(method="UMAP", family=None, proportion=2.0)
     #
