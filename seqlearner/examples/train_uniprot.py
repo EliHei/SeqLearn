@@ -6,6 +6,7 @@ sys.path.append("/home/mohsen/Mohsen/SeqLearner")
 import warnings
 
 import matplotlib
+
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
@@ -21,6 +22,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 data_path = "../data/uniprot/"
 AMINO_ACIDS = "PGMWLYINVDCTFESHAKQR"
 os.chdir("./seqlearner/examples/")
+
 
 def preprocess():
     data_filename = "uniprot.tab"
