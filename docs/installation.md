@@ -1,5 +1,5 @@
 ## Installation
-- __Install Keras from PyPI (recommended)__:
+- __Install SeqLearner from PyPI (recommended)__:
 
 The easiest way to get SeqLearner is through pip using the following command:
 ```python
@@ -11,7 +11,7 @@ pip install seqlearner
 ```
 This should install all the dependencies in addition to the package.
 
-- __Alternatively: install Keras from the GitHub source:__
+- __Alternatively: install SeqLearner from the GitHub source:__
 
 You can also get SeqLearner from Github using the following steps:
 First, clone SeqLearner using `git`:
